@@ -14,15 +14,13 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_up"):
 		motion.y = -motion_speed 
 		
-	if Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("ui_down"):
 		motion.y = motion_speed
-
 	
-	if Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_left"):
 		motion.x = -motion_speed
 	
-	
-	if Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_right"):
 		motion.x = motion_speed
 	
 	
