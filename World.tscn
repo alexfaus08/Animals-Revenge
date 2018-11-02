@@ -5,12 +5,12 @@
 [ext_resource path="res://Player.gd" type="Script" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12.3954, 11.7907 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 30, 30 )
@@ -47,7 +47,7 @@ script = ExtResource( 1 )
 
 position = Vector2( 28.5577, 57.1154 )
 scale = Vector2( 2.33462, 2.7122 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Stove" index="1"]
 
@@ -72,7 +72,7 @@ motion_speed = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Player" index="1"]
 
