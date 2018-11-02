@@ -1,21 +1,20 @@
-extends KinematicBody2D
+extends Area2D
 
-var motion = Vector2()
+export (int) var speed = 100 # How fast the player will move (pixels/sec).
+var screensize  # Size of the game window.
 
-func _physics_process(delta):
-	if Input.is_action_pressed("ui_right"):
-		motion.x = 100
-		move_and_slide(motion)
-	elif Input.is_action_pressed("ui_left"):
-		motion.x = -100
-		move_and_slide(motion)
-	elif Input.is_action_pressed("ui_up"):
-		motion.y = -100
-		move_and_slide(motion)
-	elif Input.is_action_pressed("ui_down"):
-		motion.y = 100
-		move_and_slide(motion)
-	else:
-		motion.x = 0
-		motion.y = 0
-	pass
+func _ready():
+    screensize = get_viewport_rect().size
+	
+func _process(delta):
+    var velocity = Vector2() # The player's movement vector.
+    if Input.is_action_pressed("ui_right"):
+        velocity.x += 1
+    if Input.is_action_pressed("ui_left"):
+        velocity.x -= 1
+    if Input.is_action_pressed("ui_down"):
+        velocity.y += 1
+    if Input.is_action_pressed("ui_up"):
+        velocity.y -= 1
+    if velocity.length() > 0:
+        velocity = velocity.normalized() * speed
