@@ -17,14 +17,16 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("ui_down"):
 		motion.y = motion_speed
 	
-	elif Input.is_action_pressed("ui_left"):
+	else:
+		motion.y = 0
+	
+	if Input.is_action_pressed("ui_left"):
 		motion.x = -motion_speed
 	
 	elif Input.is_action_pressed("ui_right"):
 		motion.x = motion_speed
 	
+	else:
+		motion.x = 0
 	
-		# RayNode.set_rotd(90)
 	move_and_slide(motion)
-	motion.x = 0
-	motion.y =0
