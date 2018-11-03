@@ -7,6 +7,7 @@ var motion = Vector2()
 
 func _ready():
 	set_physics_process(true)
+	$AnimatedSprite.play("Idle Right")
 	pass
 	
 func _physics_process(delta):
@@ -39,6 +40,8 @@ func _physics_process(delta):
 	
 	else:
 		motion.x = 0
-		$AnimatedSprite.play("Idle Right")
+		if(Input.is_action_just_released("ui_right") or 
+		Input.is_action_just_released("ui_left")):
+			$AnimatedSprite.play("Idle Right")
 	
 	move_and_slide(motion)
