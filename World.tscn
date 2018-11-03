@@ -118,7 +118,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Stove" type="RigidBody2D" parent="." index="1"]
 
-position = Vector2( 266, 16 )
+position = Vector2( 266, 6 )
 scale = Vector2( 0.8125, 0.8125 )
 input_pickable = false
 collision_layer = 1
@@ -145,8 +145,8 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove" index="0"]
 
-position = Vector2( 31, 54.7692 )
-scale = Vector2( 2.2, 2 )
+position = Vector2( 31, 43.8173 )
+scale = Vector2( 2.2, 1.34803 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
