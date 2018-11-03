@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Floor_Tiles.png" type="Texture" id=1]
 
-[node name="Tiles" type="Node2D" index="0"]
+[node name="Tiles" type="Node2D"]
 
 position = Vector2( 80, 50 )
 
