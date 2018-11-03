@@ -1,7 +1,7 @@
 [gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Stove.gd" type="Script" id=1]
-[ext_resource path="res://sprite_0.png" type="Texture" id=2]
+[ext_resource path="res://stove.png" type="Texture" id=2]
 [ext_resource path="res://Player.gd" type="Script" id=3]
 [ext_resource path="res://Turkey_Character/tile001.png" type="Texture" id=4]
 [ext_resource path="res://Turkey_Character/tile002.png" type="Texture" id=5]
@@ -47,12 +47,12 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12.3954, 11.7907 )
+extents = Vector2( 12.3954, 13.7981 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 20, 20 )
+extents = Vector2( 16.0465, 16.0465 )
 
 [sub_resource type="SpriteFrames" id=3]
 
@@ -116,12 +116,16 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove" index="0"]
 
-position = Vector2( 28.5577, 57.1154 )
-scale = Vector2( 2.33462, 2.7122 )
+position = Vector2( 31, 54.7692 )
+scale = Vector2( 2.2, 2 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Stove" index="1"]
 
@@ -134,11 +138,13 @@ _sections_unfolded = [ "Offset" ]
 [node name="Player" type="KinematicBody2D" parent="." index="1"]
 
 position = Vector2( 130, 160 )
+scale = Vector2( 2, 2 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 3 )
+_sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -146,9 +152,10 @@ motion_speed = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="0"]
 
-position = Vector2( 1.5, -1.5 )
-scale = Vector2( 0.934783, 0.934783 )
+position = Vector2( 0.8, -1 )
+scale = Vector2( 0.83, 1 )
 shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player" index="1"]
 
