@@ -17,7 +17,7 @@ func _physics_process(delta):
 		
 	elif Input.is_action_pressed("ui_down"):
 		motion.y = motion_speed
-		$AnimatedSprite.play("Walk Up")
+		$AnimatedSprite.play("Walk Down")
 	
 	else:
 		motion.y = 0
