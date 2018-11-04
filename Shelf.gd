@@ -6,6 +6,7 @@ var player_near_shelf
 func _ready():
 	player_near_shelf = false
 	
+	
 func _process(delta):
 	pass
 

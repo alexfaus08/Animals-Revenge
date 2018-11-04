@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Mixing_Station_Animation_1_1.png-abf2788f820156b2f60182dbce415e49.stex"
+
+[deps]
+
+source_file="res://Mixing Station/Mixing_Station_Animation_1_1.png"
+dest_files=[ "res://.import/Mixing_Station_Animation_1_1.png-abf2788f820156b2f60182dbce415e49.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
