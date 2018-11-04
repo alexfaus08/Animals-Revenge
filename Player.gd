@@ -69,6 +69,7 @@ func _physics_process(delta):
 func add_object(object):
 	if (holding.size() == 0):
 		holding.append(object)
+		print("You are holding a %s" % holding[0])
 	else:
 		print("You can only hold one object at a time with your tiny wings.")
 	
