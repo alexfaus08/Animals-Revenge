@@ -2,7 +2,8 @@ extends KinematicBody2D
 
 # export allows us to change spped in the 2D editor Inspector
 export var motion_speed = 100
-
+# an array for what the character is holding
+var holding = []
 # a 2 dimensional vector for motion
 var motion = Vector2()
 
@@ -64,5 +65,12 @@ func _physics_process(delta):
 	# this tells the object where to move
 	# motion is our Vector2 
 	move_and_slide(motion)
+	
+func add_object(object):
+	if (holding.size() == 0):
+		holding.append(object)
+	else:
+		print("You can only hold one object at a time with your tiny wings.")
+	
 
 	
