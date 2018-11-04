@@ -1,14 +1,14 @@
 extends Area2D
-var player_near 
+var player_near_stove
 var stove_off
-onready var t = get_node("../Timer")
+onready var t = get_node("Stove Timer")
 
 func _ready():
 	stove_off = true
 	$StoveSprite.play("Idle")
 	
 func _process(delta):
-	if(player_near and stove_off):
+	if(player_near_stove and stove_off):
 		if(Input.is_action_just_pressed("ui_select")):
 			stove_off = false
 			$StoveSprite.play("Cooking")
@@ -25,11 +25,11 @@ func _process(delta):
 
 func _on_Stove_body_entered(body):
 	if(body.get_name() == "Player"):
-		player_near = true
+		player_near_stove = true
 		
 	
 
 
 func _on_Stove_body_exited(body):
 	if(body.get_name() == "Player"):
-		player_near = false
+		player_near_stove = false
