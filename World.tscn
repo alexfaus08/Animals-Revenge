@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
@@ -63,9 +63,11 @@
 [ext_resource path="res://ShelfMenu.gd" type="Script" id=61]
 [ext_resource path="res://Shelf Pop Up/Background.png" type="Texture" id=62]
 [ext_resource path="res://Shelf Pop Up/test_button_potato.png" type="Texture" id=63]
-[ext_resource path="res://Window.gd" type="Script" id=64]
-[ext_resource path="res://icon.png" type="Texture" id=65]
-[ext_resource path="res://Pause.gd" type="Script" id=66]
+[ext_resource path="res://FridgeMenu.gd" type="Script" id=64]
+[ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=65]
+[ext_resource path="res://Window.gd" type="Script" id=66]
+[ext_resource path="res://icon.png" type="Texture" id=67]
+[ext_resource path="res://Pause.gd" type="Script" id=68]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -171,6 +173,14 @@ animations = [ {
 } ]
 _sections_unfolded = [ "Resource" ]
 
+[sub_resource type="DynamicFont" id=12]
+
+size = 10
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 65 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [sub_resource type="RectangleShape2D" id=11]
 
 custom_solver_bias = 0.0
@@ -269,7 +279,6 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="Stove" type="Area2D" parent="Appliances" index="1"]
 
-editor/display_folded = true
 position = Vector2( 41.9048, 5.33333 )
 scale = Vector2( 1.08333, 1.08333 )
 input_pickable = true
@@ -306,7 +315,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Shelf" type="Area2D" parent="Appliances" index="2"]
 
-editor/display_folded = true
 position = Vector2( 148.571, 1.52381 )
 scale = Vector2( 0.761905, 0.761905 )
 input_pickable = true
@@ -396,7 +404,6 @@ animation = "Idle Right"
 
 [node name="ShelfMenu" type="PopupMenu" parent="." index="4"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -465,10 +472,111 @@ flat = true
 align = 1
 _sections_unfolded = [ "Grow Direction", "Margin", "Material", "Mouse", "Size Flags", "Theme", "Visibility" ]
 
-[node name="RecipieGenerator" type="Node2D" parent="." index="5"]
+[node name="FridgeMenu" type="PopupMenu" parent="." index="5"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 143.0
+margin_top = 29.0
+margin_right = 163.0
+margin_bottom = 49.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+items = [  ]
+hide_on_state_item_selection = false
+script = ExtResource( 64 )
+_sections_unfolded = [ "Popup" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="FridgeMenu" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+
+[node name="Milk" type="Button" parent="FridgeMenu" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1.0
+margin_top = -2.0
+margin_right = 43.0
+margin_bottom = 23.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Milk"
+flat = true
+align = 1
+_sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts" ]
+
+[node name="Butter" type="Button" parent="FridgeMenu" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1.0
+margin_top = 11.0
+margin_right = 43.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Butter"
+flat = true
+align = 1
+_sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts" ]
+
+[node name="RecipieGenerator" type="Node2D" parent="." index="6"]
 
 [node name="Window" type="Area2D" parent="RecipieGenerator" index="0"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -476,7 +584,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 64 )
+script = ExtResource( 66 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -484,7 +592,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="RecipieGenerator/Window" index="0"]
 
 position = Vector2( 602, 251 )
-texture = ExtResource( 65 )
+texture = ExtResource( 67 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RecipieGenerator/Window" index="1"]
 
@@ -493,7 +601,7 @@ scale = Vector2( 4, 4 )
 shape = SubResource( 11 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Pause" type="Control" parent="." index="6"]
+[node name="Pause" type="Control" parent="." index="7"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -510,7 +618,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 66 )
+script = ExtResource( 68 )
 _sections_unfolded = [ "Pause" ]
 
 [node name="BlackOverlay" type="ColorRect" parent="Pause" index="0"]
@@ -544,6 +652,10 @@ color = Color( 0, 0, 0, 0.530353 )
 [connection signal="body_exited" from="Appliances/Mixing Station" to="Appliances/Mixing Station" method="_on_Mixing_Station_body_exited"]
 
 [connection signal="pressed" from="ShelfMenu/Potato" to="ShelfMenu" method="_on_Potato_pressed"]
+
+[connection signal="pressed" from="FridgeMenu/Milk" to="FridgeMenu" method="_on_Milk_pressed"]
+
+[connection signal="pressed" from="FridgeMenu/Butter" to="FridgeMenu" method="_on_Butter_pressed"]
 
 [connection signal="body_entered" from="RecipieGenerator/Window" to="RecipieGenerator/Window" method="_on_Window_body_entered"]
 
