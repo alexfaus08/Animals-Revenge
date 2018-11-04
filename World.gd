@@ -13,12 +13,20 @@ class Recipe:
 		cook_time = p_cook_time
 		appliance = p_appliance
 		
+	func get_ingredients():
+		return ingredients
+		
+	func get_cook_time():
+		return cook_time
+	
+	func get_appliance():
+		return appliance
+		
 
 func _ready():
 	# initialize all recipes here
 	var Mashed_Potatoes = Recipe.new(["Potatoes", "Butter", "Milk"], 10, "Stove")
 	recipes.append(Mashed_Potatoes)
-	pass
 	
 func get_recipes():
 	return recipes

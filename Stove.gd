@@ -6,13 +6,19 @@ onready var player = $"../../Player"
 onready var world = $"../../../World"
 var stove_contents = []
 var stove_recipes = []
+var recipe_ready
+var recipe
 
 func _ready():
 	# when the game starts the stove is off
+	recipe_ready = false
 	stove_off = true
-	
 	# when the game starts set the stove animation to idle
 	$StoveSprite.play("Idle")
+	world._ready()
+	for x in world.get_recipes():
+		if(x.get_appliance() == "Stove"):
+			stove_recipes.append(x)
 	
 func _process(delta):
 	# if the player is near the stove and the stove is off
@@ -22,19 +28,34 @@ func _process(delta):
 		if(Input.is_action_just_pressed("ui_select")):
 			if(player.holding.size() > 0):
 				stove_contents.append(player.holding.pop_front())
-				# the stove is now on
-				stove_off = false
-				# play the cooking animation
-				$StoveSprite.play("Cooking")
-				# wait 5 seconds
-				t.set_wait_time(5)
-				# start the stove timer
-				t.start()
-				# wait until the timer completes it's wait time
-				yield(t, "timeout")
-				# cooking is over, go back to idle
-				$StoveSprite.play("Idle")
-				stove_off = true
+				print("The stove contains: %s" % stove_contents[0])
+				# does the stove contain a valid recipe?
+				if(stove_contents in stove_recipes):
+					for x in stove_recipes:
+						if(stove_contents in stove_contents):
+							recipe = x
+					# the stove is now on
+					stove_off = false
+					# play the cooking animation
+					$StoveSprite.play("Cooking")
+					# wait 5 seconds
+					t.set_wait_time(5)
+					# start the stove timer
+					t.start()
+					# wait until the timer completes it's wait time
+					yield(t, "timeout")
+					# cooking is over, go back to idle
+					$StoveSprite.play("Idle")
+					stove_off = true
+					stove_contents.clear()
+					# add a recipe
+					stove_contents.append(recipe)
+					recipe_ready = true
+				else:
+					if (recipe_ready):
+						player.add_object(recipe)
+					
+				
 
 # if any body has enter the collision area of the stove this signal fires
 func _on_Stove_body_entered(body):
