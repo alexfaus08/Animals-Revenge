@@ -6,12 +6,10 @@ func _ready():
 
 
 func _on_Shelf_body_entered(body):
-	if(body.get_name()):
-		print("hi")
+	if(body.get_name() == "Player"):
 		player_near_shelf = true
 
 
 func _on_Shelf_body_exited(body):
-	if(body.get_name()):
-		print("bye")
+	if(body.get_name()  == "Player"):
 		player_near_shelf = false 

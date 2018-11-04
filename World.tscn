@@ -188,7 +188,6 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="Stove" type="Area2D" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( 322, 73 )
 scale = Vector2( 1.42188, 1.42188 )
 input_pickable = true
@@ -214,7 +213,7 @@ autostart = false
 
 rotation = -0.00197645
 frames = SubResource( 4 )
-animation = "On"
+animation = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove" index="2"]
 
@@ -250,8 +249,7 @@ shape = SubResource( 8 )
 
 [node name="Player" type="KinematicBody2D" parent="." index="4"]
 
-editor/display_folded = true
-position = Vector2( 220, 169 )
+position = Vector2( 87, 228 )
 scale = Vector2( 2, 2 )
 input_pickable = false
 collision_layer = 1
@@ -274,7 +272,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player" index="1"]
 
 frames = SubResource( 3 )
-animation = "Walk Up"
+animation = "Idle Right"
 
 [node name="Pause" type="Control" parent="." index="5"]
 
