@@ -2,13 +2,13 @@ extends Area2D
 
 # Stove.gd uses a very similiar layout. See Stove.gd for documentation.
 
-var player_near_fridge
+var player_near_counter
 func _ready():
-	player_near_fridge = false
+	player_near_counter = false
 	
 
 func _process(delta):
-	if(player_near_fridge):
+	if(player_near_counter):
 		if(Input.is_action_just_pressed("ui_select")):
 			print("open")
 
