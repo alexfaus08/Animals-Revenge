@@ -1,5 +1,7 @@
 extends Area2D
 
+# Stove.gd uses a very similiar layout. See Stove.gd for documentation.
+
 var player_near_counter
 func _ready():
 	player_near_counter = false

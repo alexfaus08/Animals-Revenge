@@ -5,8 +5,9 @@ func _ready():
 
 func _input(event):
 	# pauses all proccesses
+	# the following code was copied from this 
+	# YouTube video: https://www.youtube.com/watch?v=Jf7F3JhY9Fg
 	if (event.is_action_pressed("pause")):
-		print("Pause")
 		var new_pause_state = not get_tree().paused
 		get_tree().paused = new_pause_state
 		visible = new_pause_state 
