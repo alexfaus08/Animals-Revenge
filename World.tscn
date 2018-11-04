@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Fridge.png" type="Texture" id=2]
@@ -48,6 +48,11 @@
 [ext_resource path="res://Turkey_Character/tile017.png" type="Texture" id=46]
 [ext_resource path="res://Turkey_Character/tile018.png" type="Texture" id=47]
 [ext_resource path="res://Turkey_Character/tile019.png" type="Texture" id=48]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 18, 18 )
 
 [sub_resource type="SpriteFrames" id=4]
 
@@ -154,13 +159,17 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="FridgeSprite" type="Sprite" parent="Fridge" index="0"]
 
 texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fridge" index="1"]
+
+position = Vector2( -0.761906, -6.19048 )
+scale = Vector2( 1, 1.03002 )
+shape = SubResource( 6 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="Stove" type="Area2D" parent="." index="2"]
 
