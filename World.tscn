@@ -122,7 +122,7 @@ animations = [ {
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 position = Vector2( -3, 0 )
 
@@ -246,6 +246,7 @@ animation = "Walk Down"
 
 [node name="Pause" type="Control" parent="." index="4"]
 
+pause_mode = 2
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -259,6 +260,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 50 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="BlackOverlay" type="ColorRect" parent="Pause" index="0"]
 
