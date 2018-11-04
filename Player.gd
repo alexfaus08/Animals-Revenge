@@ -44,3 +44,5 @@ func _physics_process(delta):
 			$AnimatedSprite.play("Idle Right")
 	
 	move_and_slide(motion)
+
+	

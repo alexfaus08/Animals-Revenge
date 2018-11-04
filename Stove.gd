@@ -1,12 +1,35 @@
-extends RigidBody2D
-
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+extends Area2D
+var player_near 
+var stove_off
+onready var t = get_node("../Timer")
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	set_use_custom_integrator(true)
+	stove_off = true
+	$StoveSprite.play("Idle")
 	
-	pass
+func _process(delta):
+	if(player_near and stove_off):
+		if(Input.is_action_just_pressed("ui_select")):
+			stove_off = false
+			$StoveSprite.play("Cooking")
+			# wait 5 seconds
+			t.set_wait_time(5)
+			t.start()
+			yield(t, "timeout")
+			$StoveSprite.play("On")
+			t.set_wait_time(3)
+			t.start()
+			yield(t, "timeout")
+			$StoveSprite.play("Idle")
+			stove_off = true
+
+func _on_Stove_body_entered(body):
+	if(body.get_name() == "Player"):
+		player_near = true
+		
+	
+
+
+func _on_Stove_body_exited(body):
+	if(body.get_name() == "Player"):
+		player_near = false
