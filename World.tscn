@@ -475,6 +475,7 @@ _sections_unfolded = [ "Grow Direction", "Margin", "Material", "Mouse", "Size Fl
 [node name="FridgeMenu" type="PopupMenu" parent="." index="5"]
 
 editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

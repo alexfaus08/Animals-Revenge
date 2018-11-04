@@ -16,9 +16,11 @@ func _ready():
 	# when the game starts set the stove animation to idle
 	$StoveSprite.play("Idle")
 	world._ready()
+	# search for specifically stove recipes in all the recipes in the game
 	for x in world.get_recipes():
 		if(x.get_appliance() == "Stove"):
 			stove_recipes.append(x.get_ingredients())
+	
 	
 func _process(delta):
 	# if the player is near the stove and the stove is off
@@ -27,24 +29,20 @@ func _process(delta):
 		# if the spacebar is pressed (see: project settings: input map)
 		if(Input.is_action_just_pressed("ui_select")):
 			if(player.holding.size() > 0):
+				# removes item from the players holding array and adds it to the stove content array
 				stove_contents.append(player.holding.pop_front())
-				print("The stove contains: ")
-				for food in stove_contents:
-					print(food)
-				print(stove_contents)
-				print(stove_recipes)
-				# does the stove contain a valid recipe?
+				# all the recipes need to be sorted in order to be recognized
 				stove_contents.sort()
+				# does the stove contain a valid recipe?
 				if(stove_contents in stove_recipes):
-					for x in stove_recipes:
-						if(stove_contents in stove_contents):
-							recipe = x
+					# use the helper function recipe lookup from the world node
+					recipe = world.recipe_lookup(stove_contents)
 					# the stove is now on
 					stove_off = false
 					# play the cooking animation
 					$StoveSprite.play("Cooking")
 					# wait 5 seconds
-					t.set_wait_time(5)
+					t.set_wait_time(recipe.get_cook_time())
 					# start the stove timer
 					t.start()
 					# wait until the timer completes it's wait time
@@ -56,9 +54,9 @@ func _process(delta):
 					# add a recipe
 					stove_contents.append(recipe)
 					recipe_ready = true
-				else:
-					if (recipe_ready):
-						player.add_object(recipe)
+			else:
+				if (recipe_ready):
+					player.add_object(stove_contents.pop_front())
 					
 				
 
