@@ -3,6 +3,7 @@ extends Area2D
 # Stove.gd uses a very similiar layout. See Stove.gd for documentation.
 onready var popup = $"../../ShelfMenu"
 var player_near_shelf
+
 func _ready():
 	player_near_shelf = false
 	

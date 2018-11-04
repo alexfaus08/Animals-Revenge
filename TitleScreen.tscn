@@ -118,7 +118,7 @@ group = null
 text = "Start"
 flat = false
 align = 1
-_sections_unfolded = [ "Focus", "Hint", "Margin", "Material", "Mouse", "Size Flags", "Theme", "Visibility", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Focus", "Hint", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_fonts", "custom_styles" ]
 
 [node name="QuitGameButton" type="Button" parent="CenterContainer/VBoxContainer" index="2"]
 

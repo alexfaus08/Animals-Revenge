@@ -18,7 +18,7 @@ func _ready():
 	world._ready()
 	for x in world.get_recipes():
 		if(x.get_appliance() == "Stove"):
-			stove_recipes.append(x)
+			stove_recipes.append(x.get_ingredients())
 	
 func _process(delta):
 	# if the player is near the stove and the stove is off
@@ -28,7 +28,11 @@ func _process(delta):
 		if(Input.is_action_just_pressed("ui_select")):
 			if(player.holding.size() > 0):
 				stove_contents.append(player.holding.pop_front())
-				print("The stove contains: %s" % stove_contents[0])
+				print("The stove contains: ")
+				for food in stove_contents:
+					print(food)
+				print(stove_contents)
+				print(stove_recipes)
 				# does the stove contain a valid recipe?
 				if(stove_contents in stove_recipes):
 					for x in stove_recipes:
