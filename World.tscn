@@ -109,7 +109,7 @@ _sections_unfolded = [ "Resource" ]
 custom_solver_bias = 0.0
 extents = Vector2( 7.42857, 10 )
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=7]
 
 animations = [ {
 "frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
@@ -123,18 +123,18 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="CapsuleShape2D" id=7]
+[sub_resource type="CapsuleShape2D" id=9]
 
 custom_solver_bias = 0.0
 radius = 11.0
 height = 16.0
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=10]
 
 animations = [ {
 "frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
@@ -168,6 +168,11 @@ animations = [ {
 "speed": 5.0
 } ]
 _sections_unfolded = [ "Resource" ]
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [node name="World" type="Node2D" index="0"]
 
@@ -237,7 +242,6 @@ scale = Vector2( 1.3125, 1.3125 )
 
 [node name="Fridge" type="Area2D" parent="Appliances" index="0"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -343,7 +347,7 @@ __meta__ = {
 
 [node name="MixSprite" type="AnimatedSprite" parent="Appliances/Mixing Station" index="0"]
 
-frames = SubResource( 9 )
+frames = SubResource( 7 )
 animation = "Mix"
 frame = 4
 
@@ -351,7 +355,7 @@ frame = 4
 
 position = Vector2( 0, -15.2619 )
 scale = Vector2( 1, 1.40842 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="MixingTimer" type="Timer" parent="Appliances/Mixing Station" index="2"]
 
@@ -362,8 +366,7 @@ autostart = false
 
 [node name="Player" type="KinematicBody2D" parent="." index="3"]
 
-editor/display_folded = true
-position = Vector2( 156, 218 )
+position = Vector2( 160.694, 211.35 )
 scale = Vector2( 2, 2 )
 input_pickable = false
 collision_layer = 1
@@ -380,13 +383,13 @@ motion_speed = 150
 
 position = Vector2( 0.250001, -0.5 )
 scale = Vector2( 1.13462, 1 )
-shape = SubResource( 7 )
+shape = SubResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player" index="1"]
 
-frames = SubResource( 8 )
-animation = "Walk Up"
+frames = SubResource( 10 )
+animation = "Idle Right"
 
 [node name="ShelfMenu" type="PopupMenu" parent="." index="4"]
 
@@ -491,6 +494,26 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 0, 0, 0, 0.530353 )
+
+[node name="RecipieGenerator" type="Node2D" parent="." index="5"]
+
+[node name="Window" type="Area2D" parent="RecipieGenerator" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 61 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecipieGenerator/Window" index="0"]
+
+position = Vector2( 600, 250 )
+scale = Vector2( 4, 4 )
+shape = SubResource( 11 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="Appliances/Fridge" to="Appliances/Fridge" method="_on_Fridge_body_entered"]
 
