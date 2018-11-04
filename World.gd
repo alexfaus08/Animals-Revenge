@@ -7,6 +7,7 @@ class Recipe:
 	var ingredients = []
 	var cook_time = 0.0
 	var appliance
+	var poisoned
 	
 	func _init(p_name, p_ingredients, p_cook_time, p_appliance):
 		r_name = p_name
@@ -15,6 +16,7 @@ class Recipe:
 		ingredients.sort()
 		cook_time = p_cook_time
 		appliance = p_appliance
+		poisoned = false
 		
 	func get_ingredients():
 		return ingredients
