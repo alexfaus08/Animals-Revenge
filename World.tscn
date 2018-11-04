@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Fridge.gd" type="Script" id=2]
@@ -49,6 +49,7 @@
 [ext_resource path="res://Turkey_Character/tile017.png" type="Texture" id=47]
 [ext_resource path="res://Turkey_Character/tile018.png" type="Texture" id=48]
 [ext_resource path="res://Turkey_Character/tile019.png" type="Texture" id=49]
+[ext_resource path="res://Pause.gd" type="Script" id=50]
 
 [sub_resource type="RectangleShape2D" id=6]
 
@@ -153,6 +154,7 @@ __meta__ = {
 
 [node name="Fridge" type="Area2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 206, 64 )
 scale = Vector2( 1.3125, 1.3125 )
 input_pickable = true
@@ -216,6 +218,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Player" type="KinematicBody2D" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( 130, 160 )
 scale = Vector2( 2, 2 )
 input_pickable = false
@@ -240,6 +243,36 @@ _sections_unfolded = [ "Transform" ]
 
 frames = SubResource( 3 )
 animation = "Walk Down"
+
+[node name="Pause" type="Control" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 576.0
+margin_bottom = 256.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 50 )
+
+[node name="BlackOverlay" type="ColorRect" parent="Pause" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 0.530353 )
 
 [connection signal="body_entered" from="Fridge" to="Fridge" method="_on_Fridge_body_entered"]
 
