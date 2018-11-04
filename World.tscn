@@ -52,7 +52,7 @@
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 18, 18 )
+extents = Vector2( 9, 18 )
 
 [sub_resource type="SpriteFrames" id=4]
 
@@ -76,13 +76,14 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12, 10 )
+extents = Vector2( 8, 10 )
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=7]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16.0465, 16.0465 )
+radius = 8.0
+height = 12.0
 
 [sub_resource type="SpriteFrames" id=3]
 
@@ -159,6 +160,9 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="FridgeSprite" type="Sprite" parent="Fridge" index="0"]
 
@@ -198,7 +202,7 @@ animation = "On"
 position = Vector2( 4.70877e-06, -6.5 )
 scale = Vector2( 1.4, 1.25 )
 shape = SubResource( 5 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Player" type="KinematicBody2D" parent="." index="3"]
 
@@ -217,9 +221,9 @@ motion_speed = 150
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="Player" index="0"]
 
-position = Vector2( 0.8, -1 )
-scale = Vector2( 0.83, 1 )
-shape = SubResource( 2 )
+position = Vector2( 0.250001, -0.5 )
+scale = Vector2( 1.13462, 1 )
+shape = SubResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player" index="1"]
