@@ -9,6 +9,6 @@ func _process(delta):
 
 
 func _on_Potato_pressed():
-	Player.add_object("Potato")
+	Player.add_object("Potatoes")
 	hide()
 

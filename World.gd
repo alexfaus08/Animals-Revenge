@@ -10,6 +10,7 @@ class Recipe:
 	func _init(p_ingredients, p_cook_time, p_appliance):
 		for x in p_ingredients:
 			ingredients.append(x)
+		ingredients.sort()
 		cook_time = p_cook_time
 		appliance = p_appliance
 		

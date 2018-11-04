@@ -34,6 +34,7 @@ func _process(delta):
 				print(stove_contents)
 				print(stove_recipes)
 				# does the stove contain a valid recipe?
+				stove_contents.sort()
 				if(stove_contents in stove_recipes):
 					for x in stove_recipes:
 						if(stove_contents in stove_contents):
