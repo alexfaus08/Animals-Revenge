@@ -56,7 +56,7 @@ func _process(delta):
 					recipe_ready = true
 			else:
 				if (recipe_ready):
-					player.add_object(stove_contents.pop_front())
+						player.add_object(stove_contents.pop_front())
 					
 				
 
