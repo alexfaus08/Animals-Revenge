@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
@@ -20,26 +20,26 @@
 [ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_3.png" type="Texture" id=18]
 [ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_4.png" type="Texture" id=19]
 [ext_resource path="res://Player.gd" type="Script" id=20]
-[ext_resource path="res://Turkey_Character/tile016.png" type="Texture" id=21]
-[ext_resource path="res://Turkey_Character/tile017.png" type="Texture" id=22]
-[ext_resource path="res://Turkey_Character/tile018.png" type="Texture" id=23]
-[ext_resource path="res://Turkey_Character/tile019.png" type="Texture" id=24]
-[ext_resource path="res://Turkey_Character/tile031.png" type="Texture" id=25]
-[ext_resource path="res://Turkey_Character/tile032.png" type="Texture" id=26]
-[ext_resource path="res://Turkey_Character/tile033.png" type="Texture" id=27]
-[ext_resource path="res://Turkey_Character/tile034.png" type="Texture" id=28]
-[ext_resource path="res://Turkey_Character/tile035.png" type="Texture" id=29]
-[ext_resource path="res://Turkey_Character/tile036.png" type="Texture" id=30]
-[ext_resource path="res://Turkey_Character/tile037.png" type="Texture" id=31]
-[ext_resource path="res://Turkey_Character/tile038.png" type="Texture" id=32]
-[ext_resource path="res://Turkey_Character/tile039.png" type="Texture" id=33]
-[ext_resource path="res://Turkey_Character/tile040.png" type="Texture" id=34]
-[ext_resource path="res://Turkey_Character/tile041.png" type="Texture" id=35]
-[ext_resource path="res://Turkey_Character/tile042.png" type="Texture" id=36]
-[ext_resource path="res://Turkey_Character/tile021.png" type="Texture" id=37]
-[ext_resource path="res://Turkey_Character/tile022.png" type="Texture" id=38]
-[ext_resource path="res://Turkey_Character/tile023.png" type="Texture" id=39]
-[ext_resource path="res://Turkey_Character/tile024.png" type="Texture" id=40]
+[ext_resource path="res://Turkey_Character/tile021.png" type="Texture" id=21]
+[ext_resource path="res://Turkey_Character/tile022.png" type="Texture" id=22]
+[ext_resource path="res://Turkey_Character/tile023.png" type="Texture" id=23]
+[ext_resource path="res://Turkey_Character/tile024.png" type="Texture" id=24]
+[ext_resource path="res://Turkey_Character/tile016.png" type="Texture" id=25]
+[ext_resource path="res://Turkey_Character/tile017.png" type="Texture" id=26]
+[ext_resource path="res://Turkey_Character/tile018.png" type="Texture" id=27]
+[ext_resource path="res://Turkey_Character/tile019.png" type="Texture" id=28]
+[ext_resource path="res://Turkey_Character/tile031.png" type="Texture" id=29]
+[ext_resource path="res://Turkey_Character/tile032.png" type="Texture" id=30]
+[ext_resource path="res://Turkey_Character/tile033.png" type="Texture" id=31]
+[ext_resource path="res://Turkey_Character/tile034.png" type="Texture" id=32]
+[ext_resource path="res://Turkey_Character/tile035.png" type="Texture" id=33]
+[ext_resource path="res://Turkey_Character/tile036.png" type="Texture" id=34]
+[ext_resource path="res://Turkey_Character/tile037.png" type="Texture" id=35]
+[ext_resource path="res://Turkey_Character/tile038.png" type="Texture" id=36]
+[ext_resource path="res://Turkey_Character/tile039.png" type="Texture" id=37]
+[ext_resource path="res://Turkey_Character/tile040.png" type="Texture" id=38]
+[ext_resource path="res://Turkey_Character/tile041.png" type="Texture" id=39]
+[ext_resource path="res://Turkey_Character/tile042.png" type="Texture" id=40]
 [ext_resource path="res://Turkey_Character/tile026.png" type="Texture" id=41]
 [ext_resource path="res://Turkey_Character/tile027.png" type="Texture" id=42]
 [ext_resource path="res://Turkey_Character/tile028.png" type="Texture" id=43]
@@ -65,9 +65,8 @@
 [ext_resource path="res://Shelf Pop Up/Background.png" type="Texture" id=63]
 [ext_resource path="res://Shelf Pop Up/test_button_potato.png" type="Texture" id=64]
 [ext_resource path="res://Window.gd" type="Script" id=65]
-[ext_resource path="res://icon.png" type="Texture" id=66]
-[ext_resource path="res://Pause.gd" type="Script" id=67]
-[ext_resource path="res://Order.gd" type="Script" id=68]
+[ext_resource path="res://Pause.gd" type="Script" id=66]
+[ext_resource path="res://Order.gd" type="Script" id=67]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -143,17 +142,17 @@ height = 16.0
 animations = [ {
 "frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
 "loop": true,
+"name": "Idle Up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": true,
 "name": "Walk Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ) ],
 "loop": true,
 "name": "Idle Right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ) ],
-"loop": true,
-"name": "Idle Up",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ) ],
@@ -398,15 +397,14 @@ animation = "Idle Right"
 
 [node name="FridgeMenu" type="PopupMenu" parent="." index="4"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 207.0
-margin_top = 65.0
-margin_right = 227.0
-margin_bottom = 85.0
+margin_left = 146.0
+margin_top = 47.0
+margin_right = 166.0
+margin_bottom = 67.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -418,6 +416,7 @@ popup_exclusive = false
 items = [  ]
 hide_on_state_item_selection = false
 script = ExtResource( 61 )
+_sections_unfolded = [ "Popup" ]
 
 [node name="ShelfMenu" type="PopupMenu" parent="." index="5"]
 
@@ -492,11 +491,8 @@ _sections_unfolded = [ "Grow Direction", "Margin", "Material", "Mouse", "Size Fl
 
 [node name="RecipeGenerator" type="Node2D" parent="." index="6"]
 
-editor/display_folded = true
-
 [node name="Window" type="Area2D" parent="RecipeGenerator" index="0"]
 
-editor/display_folded = true
 position = Vector2( 600, 250 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -513,7 +509,6 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="RecipeGenerator/Window" index="0"]
 
-texture = ExtResource( 66 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RecipeGenerator/Window" index="1"]
@@ -539,7 +534,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 67 )
+script = ExtResource( 66 )
 _sections_unfolded = [ "Pause" ]
 
 [node name="BlackOverlay" type="ColorRect" parent="Pause" index="0"]
@@ -558,7 +553,6 @@ color = Color( 0, 0, 0, 0.530353 )
 
 [node name="Order" type="AcceptDialog" parent="." index="8"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -577,7 +571,7 @@ popup_exclusive = false
 window_title = "Alert!"
 resizable = false
 dialog_hide_on_ok = true
-script = ExtResource( 68 )
+script = ExtResource( 67 )
 _sections_unfolded = [ "Rect" ]
 
 [connection signal="body_entered" from="Appliances/Fridge" to="Appliances/Fridge" method="_on_Fridge_body_entered"]
