@@ -33,24 +33,8 @@ class Recipe:
 
 func _ready():
 	# initialize all recipes here
-	var Turkey = Recipe.new(["Turkey"], 20, "Oven")
-	recipes.append(Turkey)
-	var Chicken = Recipe.new(["Chicken"], 20, "Oven")
-	recipes.append(Chicken)
-	var Ham = Recipe.new(["Ham"], 20, "Oven")
-	recipes.append(Ham)
-	var Mashed_Potatoes = Recipe.new(["Potatoes", "Butter", "Milk"], 10, "Stove")
+	var Mashed_Potatoes = Recipe.new("Mashed Potatoes", ["Potatoes", "Butter", "Milk"], 10, "Stove")
 	recipes.append(Mashed_Potatoes)
-	var Green_Beans = Recipe.new(["Green Beans", "Butter"], 10, "Stove")
-	recipes.append(Green_Beans) 
-	var Cranberry_Sauce = Recipe.new(["Cranberries"], 8, "Stove")
-	recipes.append(Cranberry_Sauce)
-	var Creamed_Corn = Recipe.new(["Corn", "Milk", "Cheese"], 10, "Oven")
-	recipes.append(Creamed_Corn)
-	var Stuffing= Recipe.new(["Bread", "Celery", "Broth", "Butter", "Apples", "Onions"], 5, "Oven")
-	recipes.append(Stuffing)
-	
-	
 	
 func get_recipes():
 	return recipes
@@ -60,4 +44,4 @@ func recipe_lookup(arr):
 	for r in recipes:
 		if (r.get_ingredients() == arr):
 			return r
-
+	
