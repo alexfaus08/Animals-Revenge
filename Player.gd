@@ -22,12 +22,18 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_up"):
 		# negative values for the y part of the vectors make the object move up
 		motion.y = -motion_speed 
-		$AnimatedSprite.play("Walk Up")
+		if(holding.size() > 0):
+			$AnimatedSprite.play("Holding Up")
+		else:
+			$AnimatedSprite.play("Walk Up")
 		
 	elif Input.is_action_pressed("ui_down"):
 		# positive y values for Vector2 make the object move down
 		motion.y = motion_speed
-		$AnimatedSprite.play("Walk Down")
+		if(holding.size() > 0):
+			$AnimatedSprite.play("Holding Down")
+		else:
+			$AnimatedSprite.play("Walk Down")
 	
 	else:
 		# if neither up or down arrows are being pressed, the object is not moving in
@@ -47,12 +53,18 @@ func _physics_process(delta):
 		# the default animated sprite for the walk right is facing right
 		# using .flip_h, it flips the animation to now face left
 		$AnimatedSprite.flip_h = true
-		$AnimatedSprite.play("Walk Right")
+		if(holding.size() > 0):
+			$AnimatedSprite.play("Holding Right")
+		else:
+			$AnimatedSprite.play("Walk Right")
 	
 	elif Input.is_action_pressed("ui_right"):
 		motion.x = motion_speed
 		$AnimatedSprite.flip_h = false
-		$AnimatedSprite.play("Walk Right")
+		if(holding.size() > 0):
+			$AnimatedSprite.play("Holding Right")
+		else:
+			$AnimatedSprite.play("Walk Right")
 	
 	else:
 		motion.x = 0
