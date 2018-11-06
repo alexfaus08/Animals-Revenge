@@ -109,7 +109,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 5 )
+extents = Vector2( 21.2245, 5 )
 _sections_unfolded = [ "Resource" ]
 
 [sub_resource type="RectangleShape2D" id=13]
@@ -234,6 +234,7 @@ scale = Vector2( 1.42188, 1.42188 )
 
 [node name="Counter" type="StaticBody2D" parent="Counters" index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -241,11 +242,18 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Counters/Counter" index="0"]
 
+position = Vector2( 0, 2.10988 )
 frames = SubResource( 1 )
 animation = "idle"
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Counters/Counter" index="1"]
 
@@ -303,7 +311,6 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="Stove" type="StaticBody2D" parent="Appliances" index="1"]
 
-editor/display_folded = true
 position = Vector2( 41.9048, 6.09524 )
 input_pickable = false
 collision_layer = 1
@@ -333,7 +340,7 @@ animation = "Cooking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Stove" index="2"]
 
-position = Vector2( 0, -9.7106 )
+position = Vector2( 0.761856, -7.61905 )
 scale = Vector2( 1.4, 1.83379 )
 shape = SubResource( 6 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -355,7 +362,6 @@ shape = SubResource( 13 )
 
 [node name="Shelf" type="StaticBody2D" parent="Appliances" index="2"]
 
-editor/display_folded = true
 position = Vector2( 148.571, 1.52381 )
 input_pickable = false
 collision_layer = 1
@@ -377,7 +383,7 @@ texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Shelf" index="1"]
 
-position = Vector2( 0.000427246, 1.52381 )
+position = Vector2( 0.000427246, -9.14286 )
 scale = Vector2( 3.5332, 1.51923 )
 shape = SubResource( 7 )
 
