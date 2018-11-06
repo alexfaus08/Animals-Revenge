@@ -343,7 +343,7 @@ animation = "Cooking"
 position = Vector2( 0.761856, -7.61905 )
 scale = Vector2( 1.4, 1.83379 )
 shape = SubResource( 6 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="Appliances/Stove" index="3"]
 
