@@ -80,7 +80,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 18.5085 )
+extents = Vector2( 10, 47.7333 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -109,7 +109,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 8, 2.81319 )
+extents = Vector2( 10, 5 )
 _sections_unfolded = [ "Resource" ]
 
 [sub_resource type="RectangleShape2D" id=13]
@@ -249,7 +249,7 @@ animation = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Counters/Counter" index="1"]
 
-position = Vector2( 3.21865e-06, -13.8077 )
+position = Vector2( 0, -8.43953 )
 scale = Vector2( 1.56889, 0.279943 )
 shape = SubResource( 2 )
 
@@ -260,6 +260,7 @@ scale = Vector2( 1.3125, 1.3125 )
 
 [node name="Fridge" type="StaticBody2D" parent="Appliances" index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -269,9 +270,13 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Area2D" type="Area2D" parent="Appliances/Fridge" index="0"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -299,7 +304,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 [node name="Stove" type="StaticBody2D" parent="Appliances" index="1"]
 
 editor/display_folded = true
-position = Vector2( 41.9048, 5.33333 )
+position = Vector2( 41.9048, 6.09524 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -309,6 +314,9 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Stove Timer" type="Timer" parent="Appliances/Stove" index="0"]
 
@@ -325,13 +333,14 @@ animation = "Cooking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Stove" index="2"]
 
-position = Vector2( 0, -12.6593 )
-scale = Vector2( 1.4, 1.25 )
+position = Vector2( 0, -9.7106 )
+scale = Vector2( 1.4, 1.83379 )
 shape = SubResource( 6 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="Appliances/Stove" index="3"]
 
+position = Vector2( -0.761955, 5.33334 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -346,6 +355,7 @@ shape = SubResource( 13 )
 
 [node name="Shelf" type="StaticBody2D" parent="Appliances" index="2"]
 
+editor/display_folded = true
 position = Vector2( 148.571, 1.52381 )
 input_pickable = false
 collision_layer = 1
@@ -356,6 +366,9 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Appliances/Shelf" index="0"]
 
@@ -364,7 +377,7 @@ texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Shelf" index="1"]
 
-position = Vector2( 0, -34.75 )
+position = Vector2( 0.000427246, 1.52381 )
 scale = Vector2( 3.5332, 1.51923 )
 shape = SubResource( 7 )
 
@@ -386,6 +399,7 @@ shape = SubResource( 14 )
 
 [node name="Mixing Station" type="StaticBody2D" parent="Appliances" index="3"]
 
+editor/display_folded = true
 position = Vector2( 203.429, -9.14286 )
 input_pickable = false
 collision_layer = 1
@@ -396,6 +410,9 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="MixSprite" type="AnimatedSprite" parent="Appliances/Mixing Station" index="0"]
 
@@ -405,7 +422,7 @@ frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Mixing Station" index="1"]
 
-position = Vector2( 0, -15.2619 )
+position = Vector2( 0, 3.02381 )
 scale = Vector2( 1, 1.40842 )
 shape = SubResource( 9 )
 
@@ -418,6 +435,8 @@ autostart = false
 
 [node name="Area2D" type="Area2D" parent="Appliances/Mixing Station" index="3"]
 
+position = Vector2( 8.38052, 2.28572 )
+scale = Vector2( 1, 1.07143 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -428,7 +447,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Mixing Station/Area2D" index="0"]
 
-position = Vector2( -0.000427246, 11.4286 )
+visible = false
+position = Vector2( -8.38095, 11.3778 )
 shape = SubResource( 15 )
 
 [node name="Player" type="KinematicBody2D" parent="." index="3"]
