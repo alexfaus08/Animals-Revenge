@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fridge.png-9212c74f8b8ca74b84b0f425d88f0982.stex"
+path="res://.import/WalkPlateUp_WalkUpPlate_3.png-2ef104e9950de4c4021b90ea637d8075.stex"
 
 [deps]
 
-source_file="res://Fridge.png"
-dest_files=[ "res://.import/Fridge.png-9212c74f8b8ca74b84b0f425d88f0982.stex" ]
+source_file="res://Turkey Sprite/WalkPlateUp_WalkUpPlate_3.png"
+dest_files=[ "res://.import/WalkPlateUp_WalkUpPlate_3.png-2ef104e9950de4c4021b90ea637d8075.stex" ]
 
 [params]
 
@@ -24,6 +24,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
-size_limit=1
+size_limit=0
 detect_3d=false
 svg/scale=1.0
