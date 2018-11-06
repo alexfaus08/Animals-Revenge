@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 var player_near_stove
 var stove_off
 onready var t = get_node("Stove Timer")
@@ -61,14 +61,15 @@ func _process(delta):
 				
 
 # if any body has enter the collision area of the stove this signal fires
-func _on_Stove_body_entered(body):
+func _on_Area2D_body_entered(body):
 	# check to see if that body is the player 
 	if(body.get_name() == "Player"):
 		# set player near stove to true because they are intersecting 
 		player_near_stove = true
 		
 # if any body exits the collision area of the stove this signal fires		
-func _on_Stove_body_exited(body):
+func _on_Area2D_body_exited(body):
 	# check to see if the body is the player
 	if(body.get_name() == "Player"):
 		player_near_stove = false
+

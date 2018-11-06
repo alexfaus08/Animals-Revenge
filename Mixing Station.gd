@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 
 var player_near_mixing_station
 var mixing
@@ -28,13 +28,15 @@ func _process(delta):
 	
 
 
-func _on_Mixing_Station_body_entered(body):
+func _on_Area2D_body_entered(body):
 	# check to see if that body is the player 
 	if(body.get_name() == "Player"):
 		player_near_mixing_station = true
 	
 
 
-func _on_Mixing_Station_body_exited(body):
+func _on_Area2D_body_exited(body):
 	if(body.get_name() == "Player"):
 		player_near_mixing_station = false
+
+

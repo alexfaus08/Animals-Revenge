@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 
 
 # Stove.gd uses a very similiar layout. See Stove.gd for documentation.
@@ -13,11 +13,10 @@ func _process(delta):
 		if(Input.is_action_just_pressed("ui_select")):
 			popup.show()
 
-func _on_Fridge_body_entered(body):
+func _on_Area2D_body_entered(body):
 	if (body.get_name() == "Player"):
 		player_near_fridge = true
 
-
-func _on_Fridge_body_exited(body):
-	if (body.get_name() == "Player"):
-		player_near_fridge = false
+func _on_Area2D_body_exited(body):
+		if (body.get_name() == "Player"):
+			player_near_fridge = false
