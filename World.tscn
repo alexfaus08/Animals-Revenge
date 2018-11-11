@@ -16,12 +16,12 @@
 [ext_resource path="res://Shelf.gd" type="Script" id=14]
 [ext_resource path="res://Full_Shelf.png" type="Texture" id=15]
 [ext_resource path="res://Mixing Station.gd" type="Script" id=16]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_0.png" type="Texture" id=17]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_1.png" type="Texture" id=18]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_2.png" type="Texture" id=19]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_3.png" type="Texture" id=20]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_4.png" type="Texture" id=21]
-[ext_resource path="res://Mixing Station/Mixing_Station_Idle.png" type="Texture" id=22]
+[ext_resource path="res://Mixing Station/Mixing_Station_Idle.png" type="Texture" id=17]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_0.png" type="Texture" id=18]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_1.png" type="Texture" id=19]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_2.png" type="Texture" id=20]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_3.png" type="Texture" id=21]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_4.png" type="Texture" id=22]
 [ext_resource path="res://Player.gd" type="Script" id=23]
 [ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateUp_Idle_0.png" type="Texture" id=24]
 [ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateUp_Idle_1.png" type="Texture" id=25]
@@ -196,15 +196,15 @@ extents = Vector2( 22.0957, 10 )
 [sub_resource type="SpriteFrames" id=13]
 
 animations = [ {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "Mix",
-"speed": 6.0
-}, {
-"frames": [ ExtResource( 22 ) ],
+"frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "Mix",
+"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=14]
@@ -296,6 +296,24 @@ use_filter = false
 font_data = ExtResource( 106 )
 _sections_unfolded = [ "Font", "Settings" ]
 
+[sub_resource type="SpriteFrames" id=19]
+
+animations = [ {
+"frames": [ ExtResource( 110 ) ],
+"loop": true,
+"name": "Appear",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=20]
+
+animations = [ {
+"frames": [ ExtResource( 110 ) ],
+"loop": true,
+"name": "Appear",
+"speed": 5.0
+} ]
+
 [sub_resource type="SpriteFrames" id=21]
 
 animations = [ {
@@ -305,30 +323,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=22]
-
-animations = [ {
-"frames": [ ExtResource( 110 ) ],
-"loop": true,
-"name": "Appear",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=23]
-
-animations = [ {
-"frames": [ ExtResource( 110 ) ],
-"loop": true,
-"name": "Appear",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=22]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="SpriteFrames" id=20]
+[sub_resource type="SpriteFrames" id=23]
 
 animations = [ {
 "frames": [ ExtResource( 112 ) ],
@@ -955,8 +955,9 @@ _sections_unfolded = [ "Grow Direction", "Margin", "Material", "Mouse", "Size Fl
 [node name="Recipe2" type="AnimatedSprite" parent="." index="6"]
 
 editor/display_folded = true
-position = Vector2( 53, 260 )
-frames = SubResource( 21 )
+position = Vector2( 37, 164 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 19 )
 animation = "Appear"
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
@@ -972,8 +973,9 @@ blend_times = [  ]
 [node name="Recipe3" type="AnimatedSprite" parent="." index="7"]
 
 editor/display_folded = true
-position = Vector2( 133, 260 )
-frames = SubResource( 22 )
+position = Vector2( 101, 164 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 20 )
 animation = "Appear"
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
@@ -989,8 +991,9 @@ blend_times = [  ]
 [node name="Recipe4" type="AnimatedSprite" parent="." index="8"]
 
 editor/display_folded = true
-position = Vector2( 213, 260 )
-frames = SubResource( 23 )
+position = Vector2( 165, 164 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 21 )
 animation = "Appear"
 _sections_unfolded = [ "Transform", "Z Index" ]
 
@@ -1024,12 +1027,12 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RecipeGenerator/Window" index="0"]
 
 scale = Vector2( 4, 4 )
-shape = SubResource( 19 )
+shape = SubResource( 22 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="RecipeGenerator/Window" index="1"]
 
-frames = SubResource( 20 )
+frames = SubResource( 23 )
 animation = "Idle"
 
 [node name="Pause" type="Control" parent="." index="10"]
