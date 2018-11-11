@@ -18,6 +18,7 @@ config/icon="res://Turkey_Character/tile001.png"
 
 window/size/width=320
 window/size/height=200
+window/size/fullscreen=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
