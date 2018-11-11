@@ -10,14 +10,11 @@ func _process(delta):
 func _on_Milk_pressed():
 	Player.add_object("Milk")
 	hide()
-
-
+	
 
 func _on_Butter_pressed():
 	Player.add_object("Butter")
 	hide()
-	
-	
 
 
 func _on_Turkey_pressed():

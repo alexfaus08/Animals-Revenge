@@ -41,10 +41,16 @@ func _physics_process(delta):
 		motion.y = 0
 		# if the up arrow was just released make the idle animation the Idle Up
 		if(Input.is_action_just_released("ui_up")):
-			$AnimatedSprite.play("Idle Up")
+			if(holding.size() > 0):
+				$AnimatedSprite.play("Idle Up Plate")
+			else:
+				$AnimatedSprite.play("Idle Up")
 		# if the down arrow was just released make the idle animation the Idle Down
 		elif(Input.is_action_just_released("ui_down")):
-			$AnimatedSprite.play("Idle Down")
+			if(holding.size() > 0):
+				$AnimatedSprite.play("Idle Down Plate")
+			else:
+				$AnimatedSprite.play("Idle Down")
 	
 	# if the left arrow key is being pressed down
 	if Input.is_action_pressed("ui_left"):
@@ -72,7 +78,10 @@ func _physics_process(delta):
 		# just released, the flipping of the animation already occured.
 		if(Input.is_action_just_released("ui_right") or 
 		Input.is_action_just_released("ui_left")):
-			$AnimatedSprite.play("Idle Right")
+			if(holding.size() > 0):
+				$AnimatedSprite.play("Idle Right Plate")
+			else:
+				$AnimatedSprite.play("Idle Right")
 	
 	# this tells the object where to move
 	# motion is our Vector2 
