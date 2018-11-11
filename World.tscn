@@ -1,6 +1,5 @@
 [gd_scene load_steps=134 format=2]
 
-
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://Counters/brown.png" type="Texture" id=3]
@@ -196,16 +195,12 @@ extents = Vector2( 22.0957, 10 )
 [sub_resource type="SpriteFrames" id=13]
 
 animations = [ {
-
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-
 "loop": true,
 "name": "Mix",
 "speed": 6.0
 }, {
-
 "frames": [ ExtResource( 22 ) ],
-
 "loop": true,
 "name": "Idle",
 "speed": 5.0
@@ -232,7 +227,6 @@ height = 16.0
 animations = [ {
 "frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
 "loop": true,
-
 "name": "Idle Right Plate",
 "speed": 5.0
 }, {
@@ -257,30 +251,23 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ) ],
-
 "loop": true,
-"name": "Holding Up",
+"name": "Idle Up",
 "speed": 5.0
 }, {
-
 "frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
-
 "loop": true,
 "name": "Holding Right",
 "speed": 5.0
 }, {
-
 "frames": [ ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ) ],
 "loop": true,
 "name": "Walk Down",
-
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ) ],
 "loop": true,
-
 "name": "Holding Up",
-
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ) ],
@@ -290,7 +277,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ) ],
 "loop": true,
-"name": "Holding Down",
+"name": "Walk Right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ) ],
@@ -313,73 +300,14 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-
-[sub_resource type="SpriteFrames" id=17]
+[sub_resource type="SpriteFrames" id=20]
 
 animations = [ {
-"frames": [ ExtResource( 80 ) ],
+"frames": [ ExtResource( 111 ) ],
 "loop": true,
-"name": "Appear",
+"name": "Idle",
 "speed": 5.0
 } ]
-
-[sub_resource type="Animation" id=18]
-
-resource_name = "slide1"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 601.674, 252.351 ), Vector2( 53, 260 ) ]
-}
-
-[sub_resource type="Animation" id=19]
-
-resource_name = "slide2"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 603, 250 ), Vector2( 133, 260 ) ]
-}
-
-[sub_resource type="Animation" id=20]
-
-resource_name = "slide3"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 603, 250 ), Vector2( 213, 260 ) ]
-}
-
 
 [node name="World" type="Node2D" index="0"]
 
@@ -926,6 +854,7 @@ _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
 [node name="ShelfMenu" type="PopupMenu" parent="." index="5"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -998,9 +927,7 @@ _sections_unfolded = [ "Grow Direction", "Margin", "Material", "Mouse", "Size Fl
 
 [node name="Window" type="Area2D" parent="RecipeGenerator" index="0"]
 
-
 position = Vector2( 296, 160 )
-
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -1014,11 +941,10 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecipeGenerator/Window" index="0"]
 
-[node name="Turkey" type="Sprite" parent="RecipeGenerator/Window" index="0"]
-
-scale = Vector2( 1, 2.35124 )
-
+scale = Vector2( 4, 4 )
+shape = SubResource( 19 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="RecipeGenerator/Window" index="1"]
@@ -1067,10 +993,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 20.0
-margin_top = 231.0
-margin_right = 118.0
-margin_bottom = 303.0
+margin_left = 521.0
+margin_top = 216.0
+margin_right = 619.0
+margin_bottom = 288.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -1083,57 +1009,6 @@ resizable = false
 dialog_hide_on_ok = true
 script = ExtResource( 113 )
 _sections_unfolded = [ "Rect" ]
-
-[node name="Recipe2" type="AnimatedSprite" parent="." index="9"]
-
-position = Vector2( 53, 260 )
-frames = SubResource( 17 )
-animation = "Appear"
-_sections_unfolded = [ "Transform" ]
-
-[node name="slide1" type="AnimationPlayer" parent="Recipe2" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/slide1 = SubResource( 18 )
-blend_times = [  ]
-
-[node name="Recipe3" type="AnimatedSprite" parent="." index="10"]
-
-position = Vector2( 133, 260 )
-frames = SubResource( 17 )
-animation = "Appear"
-_sections_unfolded = [ "Transform" ]
-
-[node name="slide2" type="AnimationPlayer" parent="Recipe3" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/slide2 = SubResource( 19 )
-blend_times = [  ]
-
-[node name="Recipe4" type="AnimatedSprite" parent="." index="11"]
-
-position = Vector2( 213, 260 )
-frames = SubResource( 17 )
-animation = "Appear"
-_sections_unfolded = [ "Transform" ]
-
-[node name="slide3" type="AnimationPlayer" parent="Recipe4" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/slide3 = SubResource( 20 )
-blend_times = [  ]
 
 [connection signal="body_entered" from="Appliances/Fridge/Area2D" to="Appliances/Fridge" method="_on_Area2D_body_entered"]
 
