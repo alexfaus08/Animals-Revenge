@@ -13,30 +13,26 @@ func _on_Potato_pressed():
 	hide()
 
 
-
-func _on_Potatos_pressed():
-	pass # replace with function body
-
-
 func _on_Celery_pressed():
-	pass # replace with function body
+	Player.add_object("Celery")
+	hide()
 
 
 func _on_Corn_pressed():
-	pass # replace with function body
+	Player.add_object("Corn")
+	hide()
 
 
 func _on_Cranberries_pressed():
-	pass # replace with function body
+	Player.add_object("Cranberries")
+	hide()
 
 
 func _on_Bread_pressed():
-	pass # replace with function body
+	Player.add_object("Bread")
+	hide()
 
 
 func _on_Apples_pressed():
-	pass # replace with function body
-
-
-func _on_Onions_pressed():
-	pass # replace with function body
+	Player.add_object("Apples")
+	hide()

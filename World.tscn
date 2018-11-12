@@ -432,7 +432,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Fridge" type="StaticBody2D" parent="Appliances" index="0"]
 
-position = Vector2( -60, -1 )
+position = Vector2( -76, -1 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -442,6 +442,9 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Appliances/Fridge" index="0"]
 
@@ -473,7 +476,6 @@ shape = SubResource( 4 )
 
 [node name="Stove" type="StaticBody2D" parent="Appliances" index="1"]
 
-editor/display_folded = true
 position = Vector2( -22, -10 )
 input_pickable = false
 collision_layer = 1
@@ -484,6 +486,9 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Stove Timer" type="Timer" parent="Appliances/Stove" index="0"]
 
@@ -507,8 +512,6 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="Appliances/Stove" index="3"]
 
-editor/display_folded = true
-visible = false
 position = Vector2( -1, 5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -523,6 +526,8 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Stove/Area2D" index="0"]
 
+position = Vector2( 0, 6.5 )
+scale = Vector2( 1, 1.11538 )
 shape = SubResource( 8 )
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -701,7 +706,6 @@ animation = "Holding Down"
 
 [node name="FridgeMenu" type="NinePatchRect" parent="." index="4"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
