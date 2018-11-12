@@ -4,7 +4,6 @@ extends Area2D
 
 onready var world = $"../../../World"
 onready var popup = $"../../Order"
-onready var turkey = $Turkey
 onready var Recipe2 = $"../../Recipe2"
 onready var Recipe3 = $"../../Recipe3"
 onready var Recipe4 = $"../../Recipe4"
