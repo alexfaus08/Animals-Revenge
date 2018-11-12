@@ -8,7 +8,7 @@ func _process(delta):
 		hide()
 
 
-func _on_Potato_pressed():
+func _on_Potatoes_pressed():
 	Player.add_object("Potatoes")
 	hide()
 

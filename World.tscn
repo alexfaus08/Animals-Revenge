@@ -950,7 +950,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="Potatos" type="Button" parent="ShelfMenu/GridContainer/VBoxContainer" index="0"]
+[node name="Potatoes" type="Button" parent="ShelfMenu/GridContainer/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1301,7 +1301,7 @@ _sections_unfolded = [ "Rect" ]
 
 [connection signal="pressed" from="FridgeMenu/GridContainer/Cheese" to="FridgeMenu" method="_on_Cheese_pressed"]
 
-[connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Potatos" to="ShelfMenu" method="_on_Potatos_pressed"]
+[connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Potatoes" to="ShelfMenu" method="_on_Potatoes_pressed"]
 
 [connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Celery" to="ShelfMenu" method="_on_Celery_pressed"]
 
