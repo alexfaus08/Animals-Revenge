@@ -1,4 +1,4 @@
-extends PopupMenu
+extends NinePatchRect
 
 onready var Player = $"../Player"
 onready var Shelf = $"../Appliances/Shelf"

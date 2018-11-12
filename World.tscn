@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=2]
+[gd_scene load_steps=136 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
@@ -106,11 +106,12 @@
 [ext_resource path="res://Menu Items/menu.png" type="Texture" id=104]
 [ext_resource path="res://NinePatchRect.gd" type="Script" id=105]
 [ext_resource path="res://munro/munro-small.ttf" type="DynamicFontData" id=106]
-[ext_resource path="res://icon.png" type="Texture" id=107]
-[ext_resource path="res://Window.gd" type="Script" id=108]
-[ext_resource path="res://Objects/Order Table/Order Table Empty_Animation 1_0.png" type="Texture" id=109]
-[ext_resource path="res://Pause.gd" type="Script" id=110]
-[ext_resource path="res://Order.gd" type="Script" id=111]
+[ext_resource path="res://ShelfMenu.gd" type="Script" id=107]
+[ext_resource path="res://icon.png" type="Texture" id=108]
+[ext_resource path="res://Window.gd" type="Script" id=109]
+[ext_resource path="res://Objects/Order Table/Order Table Empty_Animation 1_0.png" type="Texture" id=110]
+[ext_resource path="res://Pause.gd" type="Script" id=111]
+[ext_resource path="res://Order.gd" type="Script" id=112]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -124,22 +125,22 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 47.7333 )
+extents = Vector2( 8, 40 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 15, 20 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 16.7619, 10 )
+extents = Vector2( 10, 15 )
 
 [sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
-extents = Vector2( 9, 37.3156 )
+extents = Vector2( 9, 25 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [sub_resource type="SpriteFrames" id=6]
 
@@ -158,7 +159,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
-extents = Vector2( 21.2245, 5 )
+extents = Vector2( 10, 5.5 )
 _sections_unfolded = [ "Resource" ]
 
 [sub_resource type="RectangleShape2D" id=8]
@@ -296,7 +297,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 [sub_resource type="SpriteFrames" id=19]
 
 animations = [ {
-"frames": [ ExtResource( 107 ) ],
+"frames": [ ExtResource( 108 ) ],
 "loop": true,
 "name": "Appear",
 "speed": 5.0
@@ -305,7 +306,7 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=20]
 
 animations = [ {
-"frames": [ ExtResource( 107 ) ],
+"frames": [ ExtResource( 108 ) ],
 "loop": true,
 "name": "Appear",
 "speed": 5.0
@@ -314,7 +315,7 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=21]
 
 animations = [ {
-"frames": [ ExtResource( 107 ) ],
+"frames": [ ExtResource( 108 ) ],
 "loop": true,
 "name": "Appear",
 "speed": 5.0
@@ -328,7 +329,7 @@ extents = Vector2( 10, 10 )
 [sub_resource type="SpriteFrames" id=23]
 
 animations = [ {
-"frames": [ ExtResource( 109 ) ],
+"frames": [ ExtResource( 110 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
@@ -401,7 +402,7 @@ shape = SubResource( 2 )
 
 [node name="Island" type="StaticBody2D" parent="Counters" index="1"]
 
-position = Vector2( -176, 64 )
+position = Vector2( -208, 64 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -426,13 +427,11 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Appliances" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( 207, 65 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Fridge" type="StaticBody2D" parent="Appliances" index="0"]
 
-editor/display_folded = true
 position = Vector2( -60, -1 )
 input_pickable = false
 collision_layer = 1
@@ -443,13 +442,21 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="Area2D" type="Area2D" parent="Appliances/Fridge" index="0"]
+[node name="Sprite" type="Sprite" parent="Appliances/Fridge" index="0"]
 
-editor/display_folded = true
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, -4, 33, 52 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Fridge" index="1"]
+
+position = Vector2( -1, -8 )
+scale = Vector2( 1, 0.5717 )
+shape = SubResource( 5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Appliances/Fridge" index="2"]
+
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -461,19 +468,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Fridge/Area2D" index="0"]
 
+visible = false
 shape = SubResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Fridge" index="1"]
-
-position = Vector2( 0, -11.4286 )
-scale = Vector2( 1, 0.5717 )
-shape = SubResource( 5 )
-_sections_unfolded = [ "Material", "Transform", "Visibility" ]
-
-[node name="Sprite" type="Sprite" parent="Appliances/Fridge" index="2"]
-
-texture = ExtResource( 6 )
-region_rect = Rect2( 0, -4, 33, 52 )
 
 [node name="Stove" type="StaticBody2D" parent="Appliances" index="1"]
 
@@ -488,9 +484,6 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Stove Timer" type="Timer" parent="Appliances/Stove" index="0"]
 
@@ -507,14 +500,16 @@ animation = "Cooking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Stove" index="2"]
 
-position = Vector2( 0.761856, -7.61905 )
-scale = Vector2( 1.4, 1.83379 )
+position = Vector2( 6, 10 )
+scale = Vector2( 1.02533, 1.83379 )
 shape = SubResource( 7 )
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="Appliances/Stove" index="3"]
 
-position = Vector2( -0.761955, 5.33334 )
+editor/display_folded = true
+visible = false
+position = Vector2( -1, 5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -522,6 +517,9 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Stove/Area2D" index="0"]
 
@@ -529,6 +527,7 @@ shape = SubResource( 8 )
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
 
+editor/display_folded = true
 position = Vector2( -142, -21 )
 input_pickable = false
 collision_layer = 1
@@ -579,7 +578,6 @@ shape = SubResource( 8 )
 
 [node name="Shelf" type="StaticBody2D" parent="Appliances" index="3"]
 
-editor/display_folded = true
 position = Vector2( 51, -14 )
 input_pickable = false
 collision_layer = 1
@@ -617,8 +615,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Shelf/Area2D" index="0"]
 
-position = Vector2( 0.000427246, -3.04762 )
-scale = Vector2( 1, 1.43773 )
+position = Vector2( 0.000427246, 3.63095 )
+scale = Vector2( 1, 1.95147 )
 shape = SubResource( 12 )
 
 [node name="Mixing Station" type="StaticBody2D" parent="Appliances" index="4"]
@@ -677,7 +675,7 @@ shape = SubResource( 15 )
 
 [node name="Player" type="KinematicBody2D" parent="." index="3"]
 
-position = Vector2( 61, 143 )
+position = Vector2( 61, 127 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -704,6 +702,7 @@ animation = "Holding Down"
 [node name="FridgeMenu" type="NinePatchRect" parent="." index="4"]
 
 editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -880,6 +879,7 @@ _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
 [node name="ShelfMenu" type="NinePatchRect" parent="." index="5"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -899,6 +899,7 @@ patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
+script = ExtResource( 107 )
 _sections_unfolded = [ "Axis Stretch", "Hint", "Patch Margin", "Rect" ]
 __meta__ = {
 "_edit_group_": true
@@ -1196,7 +1197,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 108 )
+script = ExtResource( 109 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
@@ -1230,7 +1231,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 110 )
+script = ExtResource( 111 )
 _sections_unfolded = [ "Pause" ]
 
 [node name="BlackOverlay" type="ColorRect" parent="Pause" index="0"]
@@ -1268,7 +1269,7 @@ popup_exclusive = false
 window_title = "Alert!"
 resizable = false
 dialog_hide_on_ok = true
-script = ExtResource( 111 )
+script = ExtResource( 112 )
 _sections_unfolded = [ "Rect" ]
 
 [connection signal="body_entered" from="Appliances/Fridge/Area2D" to="Appliances/Fridge" method="_on_Area2D_body_entered"]
