@@ -1302,6 +1302,20 @@ _sections_unfolded = [ "Rect" ]
 
 [connection signal="pressed" from="FridgeMenu/GridContainer/Cheese" to="FridgeMenu" method="_on_Cheese_pressed"]
 
+[connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Potatos" to="ShelfMenu" method="_on_Potatos_pressed"]
+
+[connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Celery" to="ShelfMenu" method="_on_Celery_pressed"]
+
+[connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Corn" to="ShelfMenu" method="_on_Corn_pressed"]
+
+[connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Cranberries" to="ShelfMenu" method="_on_Cranberries_pressed"]
+
+[connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Bread" to="ShelfMenu" method="_on_Bread_pressed"]
+
+[connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Apples" to="ShelfMenu" method="_on_Apples_pressed"]
+
+[connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Onions" to="ShelfMenu" method="_on_Onions_pressed"]
+
 [connection signal="body_entered" from="RecipeGenerator/Window" to="RecipeGenerator/Window" method="_on_Window_body_entered"]
 
 [connection signal="body_exited" from="RecipeGenerator/Window" to="RecipeGenerator/Window" method="_on_Window_body_exited"]
