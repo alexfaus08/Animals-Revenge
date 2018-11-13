@@ -4,13 +4,13 @@ extends Area2D
 
 onready var world = $"../../../World"
 onready var popup = $"../../Order"
-onready var turkey = $Turkey
 onready var Recipe2 = $"../../Recipe2"
 onready var Recipe3 = $"../../Recipe3"
 onready var Recipe4 = $"../../Recipe4"
 onready var slide1 = $"../../Recipe2/slide1"
 onready var slide2 = $"../../Recipe3/slide2"
 onready var slide3 = $"../../Recipe4/slide3"
+onready var player = $"../../Player"
 #onready var animation = $"../../slide"
 var recipe1 = false
 var recipe2 = false
@@ -48,7 +48,7 @@ func _recipes_Sides():
 	
 
 func _process(delta):
-	if(player_near_window):
+	if(player_near_window and player.holding == 0):
 		var main_recipe = _recipes_Main_Course()
 		var side_recipe = _recipes_Sides()
 		if(Input.is_action_just_pressed("ui_select")):
@@ -79,10 +79,21 @@ func _process(delta):
 			elif(recipe1 == true and recipe2 == true and recipe3 == true):
 				print("Backed up orders")
 					
+	elif(player_near_window and player.holding > 0):
+		# the order table is gonna need an array 
+		# maybe 2 arrays? one for contents (orders turned in)
+		# another for orders waiting to be turned in 
+		# if what the player is holding is not a string, it's a Recipe type
+		if(typeof(player.holding[0]) != TYPE_STRING):
+			# TODO: APPEND RECIPE TO ORDER TABLE
+			# add the recipe to the table
+			# update the order table sprite
+			# if the order table has 2 objects:
+				# check if the main and side dish match an order that is ready
+					# if it is, complete that order, update score, (just make it an int for now), 
+					# and have order table go back to having nothing on it 
+			 pass
 			
-			
-		#else:
-			#print("too many orders on the counter")
 
 
 func _on_Window_body_entered(body):
