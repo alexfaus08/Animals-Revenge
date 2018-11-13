@@ -11,6 +11,7 @@ onready var slide1 = $"../../Recipe2/slide1"
 onready var slide2 = $"../../Recipe3/slide2"
 onready var slide3 = $"../../Recipe4/slide3"
 onready var player = $"../../Player"
+onready var screenprint = $"../../Bottom Box/TextPrint"
 
 #onready var animation = $"../../slide"
 var recipe1 = false
@@ -79,6 +80,7 @@ func _process(delta):
 				print("\n")
 			elif(recipe1 == true and recipe2 == true and recipe3 == true):
 				print("Backed up orders")
+				screenprint.append_bbcode("Backed up orders\n")
 					
 	elif(player_near_window and player.holding.size() > 0):
 		# the order table is gonna need an array 
