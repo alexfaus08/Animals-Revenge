@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=2]
+[gd_scene load_steps=139 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
@@ -111,8 +111,9 @@
 [ext_resource path="res://munro/munro-small.ttf" type="DynamicFontData" id=109]
 [ext_resource path="res://ShelfMenu.gd" type="Script" id=110]
 [ext_resource path="res://Pause.gd" type="Script" id=111]
-[ext_resource path="res://icon.png" type="Texture" id=112]
-[ext_resource path="res://Order.gd" type="Script" id=113]
+[ext_resource path="res://TextPrint.gd" type="Script" id=112]
+[ext_resource path="res://icon.png" type="Texture" id=113]
+[ext_resource path="res://Order.gd" type="Script" id=114]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -317,7 +318,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 [sub_resource type="SpriteFrames" id=22]
 
 animations = [ {
-"frames": [ ExtResource( 112 ) ],
+"frames": [ ExtResource( 113 ) ],
 "loop": true,
 "name": "Appear",
 "speed": 5.0
@@ -326,7 +327,7 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=23]
 
 animations = [ {
-"frames": [ ExtResource( 112 ) ],
+"frames": [ ExtResource( 113 ) ],
 "loop": true,
 "name": "Appear",
 "speed": 5.0
@@ -335,7 +336,7 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=24]
 
 animations = [ {
-"frames": [ ExtResource( 112 ) ],
+"frames": [ ExtResource( 113 ) ],
 "loop": true,
 "name": "Appear",
 "speed": 5.0
@@ -1242,21 +1243,35 @@ patch_margin_right = 5
 patch_margin_bottom = 5
 _sections_unfolded = [ "Patch Margin" ]
 
-[node name="Text" type="Container" parent="Bottom Box" index="0"]
+[node name="TextPrint" type="RichTextLabel" parent="Bottom Box" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 208.0
-margin_right = 320.0
-margin_bottom = 64.0
+margin_left = 232.0
+margin_top = 7.0
+margin_right = 312.0
+margin_bottom = 55.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
+rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = ""
+visible_characters = 100
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = true
+selection_enabled = false
+override_selected_font_color = true
+script = ExtResource( 112 )
+_sections_unfolded = [ "BBCode" ]
 
 [node name="Recipe2" type="AnimatedSprite" parent="." index="9"]
 
@@ -1333,7 +1348,7 @@ popup_exclusive = false
 window_title = "Alert!"
 resizable = false
 dialog_hide_on_ok = true
-script = ExtResource( 113 )
+script = ExtResource( 114 )
 _sections_unfolded = [ "Rect" ]
 
 [connection signal="body_entered" from="Appliances/Fridge/Area2D" to="Appliances/Fridge" method="_on_Area2D_body_entered"]

@@ -1,5 +1,6 @@
 extends Node2D
 
+onready var textprint = $"Bottom Box/TextPrint"
 var recipes = []
 
 class Recipe:
