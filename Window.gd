@@ -48,7 +48,7 @@ func _recipes_Sides():
 	
 
 func _process(delta):
-	if(player_near_window and player.holding == 0):
+	if(player_near_window and player.holding.size() == 0):
 		var main_recipe = _recipes_Main_Course()
 		var side_recipe = _recipes_Sides()
 		if(Input.is_action_just_pressed("ui_select")):
