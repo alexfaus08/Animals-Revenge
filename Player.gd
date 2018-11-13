@@ -7,6 +7,9 @@ var holding = []
 # a 2 dimensional vector for motion
 var motion = Vector2()
 
+onready var screen_print = $"../Bottom Box/TextPrint"
+var printstring
+
 # this function happens as the game starts
 func _ready():
 	# use physics for this node
@@ -90,9 +93,13 @@ func _physics_process(delta):
 func add_object(object):
 	if (holding.size() == 0):
 		holding.append(object)
-		print("You are holding a %s" % holding[0])
+		printstring = "You are holding %s \n" % holding[0]
+		screen_print.append_bbcode(printstring)
+		
 	else:
-		print("You can only hold one object at a time with your tiny wings.")
+		printstring = "You can only hold one object \n"
+		screen_print.append_bbcode(printstring)
+		
 	
 
 	

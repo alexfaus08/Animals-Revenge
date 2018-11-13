@@ -30,6 +30,7 @@ class Recipe:
 	
 	func get_name():
 		return r_name
+	
 		
 
 func _ready():

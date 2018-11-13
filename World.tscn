@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=2]
+[gd_scene load_steps=141 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
@@ -111,9 +111,10 @@
 [ext_resource path="res://munro/munro-small.ttf" type="DynamicFontData" id=109]
 [ext_resource path="res://ShelfMenu.gd" type="Script" id=110]
 [ext_resource path="res://Pause.gd" type="Script" id=111]
-[ext_resource path="res://TextPrint.gd" type="Script" id=112]
-[ext_resource path="res://icon.png" type="Texture" id=113]
-[ext_resource path="res://Order.gd" type="Script" id=114]
+[ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=112]
+[ext_resource path="res://TextPrint.gd" type="Script" id=113]
+[ext_resource path="res://icon.png" type="Texture" id=114]
+[ext_resource path="res://Order.gd" type="Script" id=115]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -315,10 +316,18 @@ use_filter = false
 font_data = ExtResource( 109 )
 _sections_unfolded = [ "Font", "Settings" ]
 
+[sub_resource type="DynamicFont" id=25]
+
+size = 10
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 112 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [sub_resource type="SpriteFrames" id=22]
 
 animations = [ {
-"frames": [ ExtResource( 113 ) ],
+"frames": [ ExtResource( 114 ) ],
 "loop": true,
 "name": "Appear",
 "speed": 5.0
@@ -327,7 +336,7 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=23]
 
 animations = [ {
-"frames": [ ExtResource( 113 ) ],
+"frames": [ ExtResource( 114 ) ],
 "loop": true,
 "name": "Appear",
 "speed": 5.0
@@ -336,7 +345,7 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=24]
 
 animations = [ {
-"frames": [ ExtResource( 113 ) ],
+"frames": [ ExtResource( 114 ) ],
 "loop": true,
 "name": "Appear",
 "speed": 5.0
@@ -379,6 +388,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Counter" type="StaticBody2D" parent="Counters" index="0"]
 
+editor/display_folded = true
 position = Vector2( -226, -9 )
 input_pickable = false
 collision_layer = 1
@@ -409,6 +419,7 @@ shape = SubResource( 2 )
 
 [node name="Island" type="StaticBody2D" parent="Counters" index="1"]
 
+editor/display_folded = true
 position = Vector2( -208, 64 )
 input_pickable = false
 collision_layer = 1
@@ -483,6 +494,7 @@ shape = SubResource( 5 )
 
 [node name="Stove" type="StaticBody2D" parent="Appliances" index="1"]
 
+editor/display_folded = true
 position = Vector2( -22, -10 )
 input_pickable = false
 collision_layer = 1
@@ -539,6 +551,7 @@ shape = SubResource( 8 )
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
 
+editor/display_folded = true
 position = Vector2( -142, -21 )
 input_pickable = false
 collision_layer = 1
@@ -590,6 +603,7 @@ shape = SubResource( 8 )
 
 [node name="Shelf" type="StaticBody2D" parent="Appliances" index="3"]
 
+editor/display_folded = true
 position = Vector2( 51, -14 )
 input_pickable = false
 collision_layer = 1
@@ -1249,7 +1263,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 232.0
+margin_left = 200.0
 margin_top = 7.0
 margin_right = 312.0
 margin_bottom = 55.0
@@ -1259,8 +1273,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 25 )
 bbcode_enabled = true
-bbcode_text = ""
+bbcode_text = "TEst"
 visible_characters = 100
 percent_visible = 1.0
 meta_underlined = true
@@ -1270,8 +1285,8 @@ scroll_active = true
 scroll_following = true
 selection_enabled = false
 override_selected_font_color = true
-script = ExtResource( 112 )
-_sections_unfolded = [ "BBCode" ]
+script = ExtResource( 113 )
+_sections_unfolded = [ "BBCode", "Visibility", "custom_fonts" ]
 
 [node name="Recipe2" type="AnimatedSprite" parent="." index="9"]
 
@@ -1348,7 +1363,7 @@ popup_exclusive = false
 window_title = "Alert!"
 resizable = false
 dialog_hide_on_ok = true
-script = ExtResource( 114 )
+script = ExtResource( 115 )
 _sections_unfolded = [ "Rect" ]
 
 [connection signal="body_entered" from="Appliances/Fridge/Area2D" to="Appliances/Fridge" method="_on_Area2D_body_entered"]
