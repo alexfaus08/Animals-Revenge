@@ -18,12 +18,12 @@ func _on_Butter_pressed():
 
 
 func _on_Turkey_pressed():
-	Player.add_object("Turkey")
+	Player.add_object("Raw Turkey")
 	hide()
 
 
 func _on_Chicken_pressed():
-	Player.add_object("Chicken")
+	Player.add_object("Raw Chicken")
 	hide()
 
 

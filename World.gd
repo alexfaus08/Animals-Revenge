@@ -35,11 +35,11 @@ class Recipe:
 
 func _ready():
 	# initialize all recipes here
-	var Turkey = Recipe.new("Turkey", ["Turkey"], 20, "Oven")
+	var Turkey = Recipe.new("Turkey", ["Raw Turkey"], 20, "Oven")
 	recipes.append(Turkey)
-	var Chicken = Recipe.new("Chicken", ["Chicken"], 20, "Oven")
+	var Chicken = Recipe.new("Chicken", ["Raw Chicken"], 20, "Oven")
 	recipes.append(Chicken)
-	var Ham = Recipe.new("Ham", ["Ham"], 20, "Oven")
+	var Ham = Recipe.new("Ham", ["Raw Ham"], 20, "Oven")
 	recipes.append(Ham)
 	var Mashed_Potatoes = Recipe.new("Mashed Potatoes", ["Potatoes", "Butter", "Milk"], 10, "Stove")
 	recipes.append(Mashed_Potatoes)

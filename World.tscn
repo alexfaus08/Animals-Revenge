@@ -378,7 +378,6 @@ animations = [ {
 
 [node name="World" type="Node2D" index="0"]
 
-editor/display_folded = true
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -442,7 +441,7 @@ shape = SubResource( 2 )
 [node name="Island" type="StaticBody2D" parent="Counters" index="1"]
 
 editor/display_folded = true
-position = Vector2( -208, 64 )
+position = Vector2( -176, 80 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -467,6 +466,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Appliances" type="Node2D" parent="." index="2"]
 
+editor/display_folded = true
 position = Vector2( 207, 65 )
 _sections_unfolded = [ "Transform" ]
 
@@ -573,6 +573,7 @@ shape = SubResource( 8 )
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
 
+editor/display_folded = true
 position = Vector2( -142, -29 )
 input_pickable = false
 collision_layer = 1
@@ -796,7 +797,6 @@ animation = "Holding Down"
 
 [node name="FridgeMenu" type="NinePatchRect" parent="." index="5"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -894,7 +894,7 @@ flat = true
 align = 1
 _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
-[node name="Turkey" type="Button" parent="FridgeMenu/GridContainer" index="2"]
+[node name="Raw Turkey" type="Button" parent="FridgeMenu/GridContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -920,7 +920,7 @@ flat = true
 align = 1
 _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
-[node name="Chicken" type="Button" parent="FridgeMenu/GridContainer" index="3"]
+[node name="Raw Chicken" type="Button" parent="FridgeMenu/GridContainer" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -974,7 +974,6 @@ _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
 [node name="ShelfMenu" type="NinePatchRect" parent="." index="6"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1296,7 +1295,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/normal_font = SubResource( 25 )
 bbcode_enabled = true
-bbcode_text = "TEst"
+bbcode_text = ""
 visible_characters = 100
 percent_visible = 1.0
 meta_underlined = true
@@ -1411,9 +1410,9 @@ _sections_unfolded = [ "Rect" ]
 
 [connection signal="pressed" from="FridgeMenu/GridContainer/Butter" to="FridgeMenu" method="_on_Butter_pressed"]
 
-[connection signal="pressed" from="FridgeMenu/GridContainer/Turkey" to="FridgeMenu" method="_on_Turkey_pressed"]
+[connection signal="pressed" from="FridgeMenu/GridContainer/Raw Turkey" to="FridgeMenu" method="_on_Turkey_pressed"]
 
-[connection signal="pressed" from="FridgeMenu/GridContainer/Chicken" to="FridgeMenu" method="_on_Chicken_pressed"]
+[connection signal="pressed" from="FridgeMenu/GridContainer/Raw Chicken" to="FridgeMenu" method="_on_Chicken_pressed"]
 
 [connection signal="pressed" from="FridgeMenu/GridContainer/Cheese" to="FridgeMenu" method="_on_Cheese_pressed"]
 
