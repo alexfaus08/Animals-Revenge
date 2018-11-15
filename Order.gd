@@ -1,7 +1,5 @@
 extends AcceptDialog
 
-onready var world = $"../../World"
-onready var Player = $"../Player"
 
 
 func _ready():

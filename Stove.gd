@@ -61,7 +61,7 @@ func _process(delta):
 		elif(Input.is_action_just_pressed("right_click")):
 			# clear the stove contents 
 			stove_contents.clear()
-			screen_print.append_bbcode("stove contents cleared.\n")
+			screen_print.append_bbcode("Stove contents cleared.\n")
 					
 				
 
