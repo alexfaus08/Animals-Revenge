@@ -8,6 +8,7 @@ var stove_contents = []
 var stove_recipes = []
 var recipe_ready
 var recipe
+onready var screen_print =$"../../Bottom Box/TextPrint"
 
 func _ready():
 	# when the game starts the stove is off
@@ -57,6 +58,10 @@ func _process(delta):
 			else:
 				if (recipe_ready):
 						player.add_object(stove_contents.pop_front())
+		elif(Input.is_action_just_pressed("right_click")):
+			# clear the stove contents 
+			stove_contents.clear()
+			screen_print.append_bbcode("stove contents cleared.\n")
 					
 				
 
