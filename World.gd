@@ -33,7 +33,7 @@ class Recipe:
 	
 		
 
-func _ready():
+func initrecipes():
 	# initialize all recipes here
 	var Turkey = Recipe.new("Turkey", ["Raw Turkey"], 20, "Oven")
 	recipes.append(Turkey)
@@ -55,7 +55,11 @@ func _ready():
 	
 	
 func get_recipes():
-	return recipes
+	if(recipes.size() == 0):
+		initrecipes()
+		return recipes
+	else:
+		return recipes
 
 func recipe_lookup(arr):
 	arr.sort()

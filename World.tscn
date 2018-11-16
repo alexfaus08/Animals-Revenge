@@ -593,27 +593,35 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Oven Timer" type="Timer" parent="Appliances/Oven" index="0"]
+[node name="Top Oven Timer" type="Timer" parent="Appliances/Oven" index="0"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="OvenSprite" type="AnimatedSprite" parent="Appliances/Oven" index="1"]
+[node name="Bottom Oven Timer" type="Timer" parent="Appliances/Oven" index="1"]
 
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="OvenSprite" type="AnimatedSprite" parent="Appliances/Oven" index="2"]
+
+visible = false
 rotation = -0.00197645
 frames = SubResource( 9 )
 animation = "Idle"
 
-[node name="OvenSprite2" type="CollisionShape2D" parent="Appliances/Oven" index="2"]
+[node name="OvenSprite2" type="CollisionShape2D" parent="Appliances/Oven" index="3"]
 
 position = Vector2( 0.761856, -7.61905 )
 scale = Vector2( 1.4, 1.83379 )
 shape = SubResource( 10 )
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
-[node name="Area2D" type="Area2D" parent="Appliances/Oven" index="3"]
+[node name="Area2D" type="Area2D" parent="Appliances/Oven" index="4"]
 
 position = Vector2( -0.761955, 5.33334 )
 input_pickable = true

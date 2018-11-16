@@ -16,7 +16,6 @@ func _ready():
 	stove_off = true
 	# when the game starts set the stove animation to idle
 	$StoveSprite.play("Idle")
-	world._ready()
 	# search for specifically stove recipes in all the recipes in the game
 	for x in world.get_recipes():
 		if(x.get_appliance() == "Stove"):
