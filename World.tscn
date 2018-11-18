@@ -544,6 +544,7 @@ shape = SubResource( 5 )
 
 [node name="Stove" type="StaticBody2D" parent="Appliances" index="1"]
 
+editor/display_folded = true
 position = Vector2( -22, -14 )
 input_pickable = false
 collision_layer = 1
@@ -604,6 +605,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 9 )
 animation = "ready"
+frame = 1
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -644,6 +646,7 @@ animation = "Idle"
 
 [node name="OvenReady" type="AnimatedSprite" parent="Appliances/Oven" index="3"]
 
+visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 27 )
 animation = "ready"
@@ -657,7 +660,8 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="Appliances/Oven" index="5"]
 
-position = Vector2( -0.761955, 5.33334 )
+position = Vector2( -1, 29 )
+scale = Vector2( 1, 1.25 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -1442,6 +1446,10 @@ _sections_unfolded = [ "Rect" ]
 [connection signal="body_entered" from="Appliances/Stove/Area2D" to="Appliances/Stove" method="_on_Area2D_body_entered"]
 
 [connection signal="body_exited" from="Appliances/Stove/Area2D" to="Appliances/Stove" method="_on_Area2D_body_exited"]
+
+[connection signal="timeout" from="Appliances/Oven/Top Oven Timer" to="Appliances/Oven" method="_on_Top_Oven_Timer_timeout"]
+
+[connection signal="timeout" from="Appliances/Oven/Bottom Oven Timer" to="Appliances/Oven" method="_on_Bottom_Oven_Timer_timeout"]
 
 [connection signal="body_entered" from="Appliances/Shelf/Area2D" to="Appliances/Shelf" method="_on_Area2D_body_entered"]
 
