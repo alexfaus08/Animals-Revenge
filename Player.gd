@@ -7,6 +7,8 @@ var holding = []
 # a 2 dimensional vector for motion
 var motion = Vector2()
 
+var obj_name
+
 onready var screen_print = $"../Bottom Box/TextPrint"
 var printstring
 
@@ -91,9 +93,13 @@ func _physics_process(delta):
 	move_and_slide(motion)
 	
 func add_object(object):
+	if(typeof(object) == TYPE_STRING):
+		obj_name = object
+	else:
+		obj_name  = object.get_name()
 	if (holding.size() == 0):
 		holding.append(object)
-		printstring = "You are holding %s \n" % holding[0]
+		printstring = "You are holding %s \n" % obj_name 
 		screen_print.append_bbcode(printstring)
 		
 	else:
