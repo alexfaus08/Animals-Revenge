@@ -2,6 +2,7 @@ extends StaticBody2D
 var player_near_stove
 var stove_off
 onready var t = get_node("Stove Timer")
+onready var ready = $"StoveReady"
 onready var player = $"../../Player"
 onready var world = $"../../../World"
 var stove_contents = []
@@ -12,6 +13,7 @@ onready var screen_print =$"../../Bottom Box/TextPrint"
 
 func _ready():
 	# when the game starts the stove is off
+	ready.hide()
 	recipe_ready = false
 	stove_off = true
 	# when the game starts set the stove animation to idle
@@ -54,9 +56,14 @@ func _process(delta):
 					# add a recipe
 					stove_contents.append(recipe)
 					recipe_ready = true
+					# show ! animation
+					ready.show()
+					ready.play("ready")
 			else:
 				if (recipe_ready):
 						player.add_object(stove_contents.pop_front())
+						# hide the !
+						ready.hide()
 		elif(Input.is_action_just_pressed("right_click")):
 			# clear the stove contents 
 			stove_contents.clear()
