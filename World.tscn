@@ -1,4 +1,4 @@
-[gd_scene load_steps=161 format=2]
+[gd_scene load_steps=162 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
@@ -219,6 +219,15 @@ animations = [ {
 "frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
 "loop": true,
 "name": "Bottom Cooking",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=27]
+
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "ready",
 "speed": 5.0
 } ]
 
@@ -595,7 +604,6 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 9 )
 animation = "ready"
-frame = 3
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -630,14 +638,15 @@ autostart = false
 
 [node name="OvenSprite" type="AnimatedSprite" parent="Appliances/Oven" index="2"]
 
-visible = false
 rotation = -0.00197645
 frames = SubResource( 10 )
 animation = "Idle"
 
 [node name="OvenReady" type="AnimatedSprite" parent="Appliances/Oven" index="3"]
 
-animation = "default"
+position = Vector2( 0, -16 )
+frames = SubResource( 27 )
+animation = "ready"
 
 [node name="OvenSprite2" type="CollisionShape2D" parent="Appliances/Oven" index="4"]
 

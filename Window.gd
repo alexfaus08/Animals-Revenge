@@ -30,7 +30,7 @@ func _ready():
 	player_near_window = false
 	world._ready()
 	for x in world.get_recipes():
-		if(x.get_ingredients()[0] == "Turkey" or x.get_ingredients()[0] == "Chicken" or x.get_ingredients()[0] == "Ham"):
+		if(x.get_ingredients()[0] == "Raw Turkey" or x.get_ingredients()[0] == "Raw Chicken" or x.get_ingredients()[0] == "Raw Ham"):
 			dishes.append(x)
 		else:
 			side_dishes.append(x)
@@ -102,9 +102,6 @@ func _process(delta):
 func _on_Window_body_entered(body):
 	if (body.get_name() == "Player"):
 		player_near_window = true
-
-	
-
 
 func _on_Window_body_exited(body):
 	if (body.get_name() == "Player"):
