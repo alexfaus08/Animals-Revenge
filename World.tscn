@@ -187,7 +187,7 @@ _sections_unfolded = [ "Resource" ]
 [sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 16, 12.8 )
 
 [sub_resource type="SpriteFrames" id=9]
 
@@ -605,7 +605,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 9 )
 animation = "ready"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1450,6 +1450,8 @@ _sections_unfolded = [ "Rect" ]
 [connection signal="timeout" from="Appliances/Oven/Top Oven Timer" to="Appliances/Oven" method="_on_Top_Oven_Timer_timeout"]
 
 [connection signal="timeout" from="Appliances/Oven/Bottom Oven Timer" to="Appliances/Oven" method="_on_Bottom_Oven_Timer_timeout"]
+
+[connection signal="body_entered" from="Appliances/Oven/Area2D" to="Appliances/Oven" method="_on_Area2D_body_entered"]
 
 [connection signal="body_entered" from="Appliances/Shelf/Area2D" to="Appliances/Shelf" method="_on_Area2D_body_entered"]
 
