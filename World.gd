@@ -35,7 +35,7 @@ class Recipe:
 
 func initrecipes():
 	# initialize all recipes here
-	var Turkey = Recipe.new("Turkey", ["Raw Turkey"], 20, "Oven")
+	var Turkey = Recipe.new("Turkey", ["Raw Turkey"], 5, "Oven")
 	recipes.append(Turkey)
 	var Chicken = Recipe.new("Chicken", ["Raw Chicken"], 20, "Oven")
 	recipes.append(Chicken)
