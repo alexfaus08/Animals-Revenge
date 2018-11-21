@@ -100,11 +100,13 @@ func _on_Top_Oven_Timer_timeout():
 func _on_Bottom_Oven_Timer_timeout():
 	print("DONE")
 	bottom_oven_off = true
+	recipe_ready = true
 	recipe = world.recipe_lookup(bottom_oven_contents)
 	bottom_oven_contents.clear()
 	bottom_oven_contents.append(recipe)
 	$OvenReady.show()
 	$OvenReady.play("ready")
+	bottom_timer.stop()
 	# add the recipe to the top oven contents and make it retrievable 
 	# play the Oven Ready animation
 
