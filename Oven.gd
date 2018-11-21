@@ -37,8 +37,13 @@ func _process(delta):
 					bottom_oven_contents.append(player.holding.pop_front())
 		# are they holding nothing?
 		elif(recipe_ready):
+			if(recipe.get_ingredients() in top_oven_contents):
+				top_oven_contents.clear()
+			else:
+				bottom_oven_contents.clear()
 			player.add_object(recipe)
 			$OvenReady.hide()
+			recipe_ready = false
 			# is there an oven that has a recipe ready?
 				# top oven has recipe ready:
 					# grab recipe from top oven 
@@ -115,3 +120,9 @@ func _on_Area2D_body_entered(body):
 	if(body.get_name() == "Player"):
 		# set player near stove to true because they are intersecting 
 		player_near_oven = true
+
+
+func _on_Area2D_body_exited(body):
+	# check to see if that body is the player 
+	if(body.get_name() == "Player"):
+		player_near_oven = false

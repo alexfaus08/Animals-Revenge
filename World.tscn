@@ -459,6 +459,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="TrashCan" index="0"]
 
 texture = ExtResource( 4 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrashCan" index="1"]
 
@@ -473,6 +474,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrashCan/TrashCanArea" index="0"]
 
@@ -480,7 +482,6 @@ shape = SubResource( 29 )
 
 [node name="Counters" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( 322, 73 )
 _sections_unfolded = [ "Transform" ]
 
@@ -1504,6 +1505,8 @@ _sections_unfolded = [ "Rect" ]
 [connection signal="timeout" from="Appliances/Oven/Bottom Oven Timer" to="Appliances/Oven" method="_on_Bottom_Oven_Timer_timeout"]
 
 [connection signal="body_entered" from="Appliances/Oven/Area2D" to="Appliances/Oven" method="_on_Area2D_body_entered"]
+
+[connection signal="body_exited" from="Appliances/Oven/Area2D" to="Appliances/Oven" method="_on_Area2D_body_exited"]
 
 [connection signal="body_entered" from="Appliances/Shelf/Area2D" to="Appliances/Shelf" method="_on_Area2D_body_entered"]
 

@@ -10,7 +10,6 @@ func _process(delta):
 	
 	if(player_near_trashcan and Input.is_action_just_pressed("ui_select") and player.holding.size() > 0):
 		object = player.holding.pop_front()
-		player.holding.clear()
 		if(typeof(object) == TYPE_STRING):
 			obj_name = object
 		else:
