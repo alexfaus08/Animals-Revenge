@@ -24,6 +24,7 @@ func _ready():
 			oven_recipes.append(x.get_ingredients())
 	
 func _process(delta):
+	print(top_timer.get_time_left())
 	# is the player near the oven and did they click left click? 
 	if(player_near_oven and Input.is_action_just_pressed("ui_select")):
 		# are they holding an ingredient?
@@ -52,13 +53,13 @@ func _process(delta):
 	top_oven_contents.sort()
 	bottom_oven_contents.sort()
 	# do any of the oven contents match a recipe?
-	if(top_oven_contents in oven_recipes):
+	if(top_oven_contents in oven_recipes and top_oven_off and not recipe_ready):
 		# the top oven has a valid recipe
 		recipe = world.recipe_lookup(top_oven_contents)
 		top_timer.set_wait_time(recipe.get_cook_time())
 		top_timer.start()
 		top_oven_off = false
-	elif(bottom_oven_contents in oven_recipes):
+	elif(bottom_oven_contents in oven_recipes and bottom_oven_off):
 		recipe = world.recipe_lookup(bottom_oven_contents)
 		bottom_timer.set_wait_time(recipe.get_cook_time())
 		bottom_timer.start()
@@ -79,6 +80,8 @@ func _process(delta):
 
 
 func _on_Top_Oven_Timer_timeout():
+	print("DONE")
+	recipe_ready = true
 	top_oven_off = true
 	recipe = world.recipe_lookup(top_oven_contents)
 	top_oven_contents.clear()
@@ -90,6 +93,7 @@ func _on_Top_Oven_Timer_timeout():
 
 
 func _on_Bottom_Oven_Timer_timeout():
+	print("DONE")
 	bottom_oven_off = true
 	recipe = world.recipe_lookup(bottom_oven_contents)
 	bottom_oven_contents.clear()
