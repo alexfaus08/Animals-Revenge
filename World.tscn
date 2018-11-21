@@ -1,4 +1,4 @@
-[gd_scene load_steps=177 format=2]
+[gd_scene load_steps=178 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
@@ -404,6 +404,11 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 7, 10 )
 
+[sub_resource type="RectangleShape2D" id=33]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
 [sub_resource type="DynamicFont" id=22]
 
 size = 30
@@ -690,7 +695,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 9 )
 animation = "ready"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1053,6 +1058,11 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Bottom Counters/book" index="0"]
 
 texture = ExtResource( 135 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom Counters/book" index="1"]
+
+position = Vector2( 2, 0 )
+shape = SubResource( 33 )
 
 [node name="FridgeMenu" type="NinePatchRect" parent="." index="7"]
 
