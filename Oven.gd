@@ -37,7 +37,8 @@ func _process(delta):
 					bottom_oven_contents.append(player.holding.pop_front())
 		# are they holding nothing?
 		elif(recipe_ready):
-			player.holding.append(recipe)
+			player.add_object(recipe)
+			$OvenReady.hide()
 			# is there an oven that has a recipe ready?
 				# top oven has recipe ready:
 					# grab recipe from top oven 
@@ -76,6 +77,9 @@ func _process(delta):
 	elif(not bottom_timer.is_stopped()):
 		# bottom timer running
 		$OvenSprite.play("Bottom Cooking")
+	
+	elif(top_oven_off and bottom_oven_off):
+		$OvenSprite.play("Idle")
 
 
 
@@ -88,6 +92,7 @@ func _on_Top_Oven_Timer_timeout():
 	top_oven_contents.append(recipe)
 	$OvenReady.show()
 	$OvenReady.play("ready")
+	top_timer.stop()
 	# add the recipe to the top oven contents and make it retrievable 
 	# play the Oven Ready animation
 
