@@ -5,9 +5,6 @@ onready var player = $"../Player"
 onready var screen_print = $"../Bottom Box/TextPrint"
 var object
 var obj_name
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 
 func _process(delta):
 	

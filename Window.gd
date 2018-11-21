@@ -84,11 +84,13 @@ func _process(delta):
 					
 	elif(player_near_window and player.holding.size() > 0):
 		# the order table is gonna need an array 
-		# maybe 2 arrays? one for contents (orders turned in)
+		# maybe 2 arrays? one for contents (items on the table)
 		# another for orders waiting to be turned in 
 		# if what the player is holding is not a string, it's a Recipe type
 		if(typeof(player.holding[0]) != TYPE_STRING):
 			# TODO: APPEND RECIPE TO ORDER TABLE
+			# dont let the player append another main dish if there is already a main dish and same w/
+			# side dishes
 			# add the recipe to the table
 			# update the order table sprite
 			# if the order table has 2 objects:
