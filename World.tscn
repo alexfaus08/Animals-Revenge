@@ -1,4 +1,4 @@
-[gd_scene load_steps=184 format=2]
+[gd_scene load_steps=183 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
@@ -149,7 +149,6 @@
 [ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=147]
 [ext_resource path="res://TextPrint.gd" type="Script" id=148]
 [ext_resource path="res://icon.png" type="Texture" id=149]
-[ext_resource path="res://Order.gd" type="Script" id=150]
 
 [sub_resource type="RectangleShape2D" id=28]
 
@@ -594,6 +593,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Appliances" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( 207, 65 )
 _sections_unfolded = [ "Transform" ]
 
@@ -705,7 +705,6 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 9 )
 animation = "ready"
-frame = 3
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -873,8 +872,6 @@ position = Vector2( -8.38095, 11.3778 )
 shape = SubResource( 16 )
 
 [node name="RecipeGenerator" type="Node2D" parent="." index="4"]
-
-editor/display_folded = true
 
 [node name="Window" type="Area2D" parent="RecipeGenerator" index="0"]
 
@@ -1690,30 +1687,6 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 blend_times = [  ]
-
-[node name="Order" type="AcceptDialog" parent="." index="14"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 521.0
-margin_top = 216.0
-margin_right = 619.0
-margin_bottom = 288.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-popup_exclusive = false
-window_title = "Alert!"
-resizable = false
-dialog_hide_on_ok = true
-script = ExtResource( 150 )
-_sections_unfolded = [ "Rect" ]
 
 [connection signal="body_entered" from="TrashCan/TrashCanArea" to="TrashCan" method="_on_TrashCanArea_body_entered"]
 
