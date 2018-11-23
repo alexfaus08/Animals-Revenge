@@ -706,7 +706,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 9 )
 animation = "ready"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1542,6 +1542,7 @@ color = Color( 0, 0, 0, 0.530353 )
 
 [node name="Bottom Box" type="NinePatchRect" parent="." index="10"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
