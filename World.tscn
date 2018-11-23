@@ -1,4 +1,4 @@
-[gd_scene load_steps=185 format=2]
+[gd_scene load_steps=182 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
@@ -149,7 +149,6 @@
 [ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=147]
 [ext_resource path="res://TextPrint.gd" type="Script" id=148]
 [ext_resource path="res://Recipe2.gd" type="Script" id=149]
-[ext_resource path="res://icon.png" type="Texture" id=150]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -452,24 +451,6 @@ use_filter = false
 font_data = ExtResource( 143 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="SpriteFrames" id=32]
-
-animations = [ {
-"frames": [ ExtResource( 150 ) ],
-"loop": true,
-"name": "Appear",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=33]
-
-animations = [ {
-"frames": [ ExtResource( 150 ) ],
-"loop": true,
-"name": "Appear",
-"speed": 5.0
-} ]
-
 [node name="World" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
@@ -713,7 +694,6 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 11 )
 animation = "ready"
-frame = 1
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1547,7 +1527,6 @@ color = Color( 0, 0, 0, 0.530353 )
 
 [node name="Bottom Box" type="NinePatchRect" parent="." index="10"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1592,7 +1571,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 201.0
+margin_left = 217.0
 margin_top = 8.0
 margin_right = 329.0
 margin_bottom = 88.0
@@ -1611,7 +1590,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 206.0
+margin_left = 222.0
 margin_top = 15.0
 margin_right = 326.0
 margin_bottom = 80.0
@@ -1649,9 +1628,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 9.0
+margin_left = 4.0
 margin_top = 256.0
-margin_right = 73.0
+margin_right = 68.0
 margin_bottom = 320.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1662,6 +1641,9 @@ size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
 script = ExtResource( 149 )
 _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="slide1" type="AnimationPlayer" parent="Recipe2" index="0"]
 
@@ -1682,6 +1664,7 @@ margin_left = -64.0
 margin_top = -32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
+focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
@@ -1689,15 +1672,15 @@ size_flags_vertical = 1
 custom_fonts/normal_font = SubResource( 31 )
 custom_colors/default_color = Color( 0.228937, 0.417969, 0.086515, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Ham[/center]"
+bbcode_text = "[center]Turkey[/center]"
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Ham"
+text = ""
 scroll_active = false
 scroll_following = false
-selection_enabled = false
+selection_enabled = true
 override_selected_font_color = false
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
@@ -1730,16 +1713,120 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
-[node name="Recipe3" type="AnimatedSprite" parent="." index="12"]
+[node name="Recipe3" type="ColorRect" parent="." index="12"]
 
-editor/display_folded = true
-position = Vector2( 101, 280 )
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 32 )
-animation = "Appear"
-_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 76.0
+margin_top = 256.0
+margin_right = 140.0
+margin_bottom = 320.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+script = ExtResource( 149 )
+_sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="slide2" type="AnimationPlayer" parent="Recipe3" index="0"]
+[node name="slide1" type="AnimationPlayer" parent="Recipe3" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+blend_times = [  ]
+
+[node name="Main1" type="RichTextLabel" parent="Recipe3" index="1"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 31 )
+custom_colors/default_color = Color( 0.228937, 0.417969, 0.086515, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Ham[/center]"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Ham"
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
+
+[node name="Side1" type="RichTextLabel" parent="Recipe3" index="2"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 34 )
+custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Cranberry Sauce[/center]"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Cranberry Sauce"
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
+
+[node name="Recipe4" type="ColorRect" parent="." index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 148.0
+margin_top = 256.0
+margin_right = 212.0
+margin_bottom = 320.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+script = ExtResource( 149 )
+_sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="slide1" type="AnimationPlayer" parent="Recipe4" index="0"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -1748,23 +1835,63 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 blend_times = [  ]
 
-[node name="Recipe4" type="AnimatedSprite" parent="." index="13"]
+[node name="Main1" type="RichTextLabel" parent="Recipe4" index="1"]
 
-editor/display_folded = true
-position = Vector2( 165, 280 )
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 33 )
-animation = "Appear"
-_sections_unfolded = [ "Transform", "Z Index" ]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 31 )
+custom_colors/default_color = Color( 0.228937, 0.417969, 0.086515, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Ham[/center]"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Ham"
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
-[node name="slide3" type="AnimationPlayer" parent="Recipe4" index="0"]
+[node name="Side1" type="RichTextLabel" parent="Recipe4" index="2"]
 
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-blend_times = [  ]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 34 )
+custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Cranberry Sauce[/center]"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Cranberry Sauce"
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
 [connection signal="body_entered" from="TrashCan/TrashCanArea" to="TrashCan" method="_on_TrashCanArea_body_entered"]
 

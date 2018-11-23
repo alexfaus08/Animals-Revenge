@@ -57,7 +57,6 @@ func _process(delta):
 			if(recipe1 == false):
 				recipe1 = true
 				Recipe2.show()
-				Recipe2.clear_text()
 				Recipe2.set_main(main_recipe)
 				Recipe2.set_side(side_recipe)
 				print(main_recipe.get_ingredients())
@@ -66,12 +65,16 @@ func _process(delta):
 			elif(recipe1 == true and recipe2 == false):
 				recipe2 = true
 				Recipe3.show()
+				Recipe3.set_main(main_recipe)
+				Recipe3.set_side(side_recipe)
 				print(main_recipe.get_ingredients())
 				print(side_recipe.get_ingredients())
 				print("\n")
 			elif(recipe1 == true and recipe2 == true and recipe3 == false):
 				recipe3 = true
 				Recipe4.show()
+				Recipe4.set_main(main_recipe)
+				Recipe4.set_side(side_recipe)
 				print(main_recipe.get_ingredients())
 				print(side_recipe.get_ingredients())
 				print("\n")
