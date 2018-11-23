@@ -57,24 +57,20 @@ func _process(delta):
 			if(recipe1 == false):
 				recipe1 = true
 				Recipe2.show()
-				Recipe2.play("Appear")			
-				slide1.play("slide1")
+				Recipe2.clear_text()
+				Recipe2.set_main(main_recipe.get_name())
 				print(main_recipe.get_ingredients())
 				print(side_recipe.get_ingredients())
 				print("\n")
 			elif(recipe1 == true and recipe2 == false):
 				recipe2 = true
 				Recipe3.show()
-				Recipe3.play("Appear")			
-				slide2.play("slide2")
 				print(main_recipe.get_ingredients())
 				print(side_recipe.get_ingredients())
 				print("\n")
 			elif(recipe1 == true and recipe2 == true and recipe3 == false):
 				recipe3 = true
 				Recipe4.show()
-				Recipe4.play("Appear")			
-				slide3.play("slide3")
 				print(main_recipe.get_ingredients())
 				print(side_recipe.get_ingredients())
 				print("\n")
