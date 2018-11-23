@@ -58,7 +58,8 @@ func _process(delta):
 				recipe1 = true
 				Recipe2.show()
 				Recipe2.clear_text()
-				Recipe2.set_main(main_recipe.get_name())
+				Recipe2.set_main(main_recipe)
+				Recipe2.set_side(side_recipe)
 				print(main_recipe.get_ingredients())
 				print(side_recipe.get_ingredients())
 				print("\n")

@@ -7,15 +7,21 @@ func _ready():
 	pass
 
 func set_main(main):
-	$"Main1".append_bbcode(main)
-	if(main == "Chicken"):
-		$Main1.set_tooltip("Cook Raw Chicken in Oven")
-	elif(main == "Ham"):
-		$Main1.set_tooltip("Cook Raw Ham in Oven")
-	elif(main == "Turkey"):
-		$Main1.set_tooltip("Cook Raw Turkey in Oven")
+	$"Main1".clear()
+	$"Main1".append_bbcode("[center] %s [/center]" % main.get_name())
+	var tooltip
+	tooltip = "Ingredients: %s \n Appliance: %s" % [main.get_ingredients(), main.get_appliance()]
+	$"Main1".set_tooltip(tooltip)
+
+func set_side(side):
+	$"Side1".clear()
+	$"Side1".append_bbcode("[center] %s [/center]" % side.get_name())
+	var tooltip
+	tooltip = "Ingredients: %s \n Appliance: %s" % [side.get_ingredients(), side.get_appliance()]
+	$"Side1".set_tooltip(tooltip)
+		
 	
-	print(main)
+	
 	
 func clear_text():
 	$"Main1".clear()
