@@ -3,7 +3,6 @@ extends Area2D
 # Stove.gd uses a very similiar layout. See Stove.gd for documentation.
 
 onready var world = $"../../../World"
-onready var popup = $"../../Order"
 onready var Recipe2 = $"../../Recipe2"
 onready var Recipe3 = $"../../Recipe3"
 onready var Recipe4 = $"../../Recipe4"
@@ -88,6 +87,14 @@ func _process(delta):
 		# another for orders waiting to be turned in 
 		# if what the player is holding is not a string, it's a Recipe type
 		if(typeof(player.holding[0]) != TYPE_STRING):
+			if(player.holding[0] in dishes):
+				# the player is holding a main dish
+				# append obj to main dish slot
+				pass
+			else:
+				# the player is holding a side dish
+				# append obj to side dish slot
+				pass
 			# TODO: APPEND RECIPE TO ORDER TABLE
 			# dont let the player append another main dish if there is already a main dish and same w/
 			# side dishes

@@ -23,6 +23,8 @@ func _ready():
 # function that is all the physics of the character
 # it runs 60 times per section
 func _physics_process(delta):
+	if(Input.is_action_just_pressed("unstick")):
+		unstick()
 	# if the up arrow is being held down (see Project Settings: Input Map)
 	if Input.is_action_pressed("ui_up"):
 		# negative values for the y part of the vectors make the object move up
@@ -105,6 +107,10 @@ func add_object(object):
 	else:
 		printstring = "You can only hold one object \n"
 		screen_print.append_bbcode(printstring)
+
+func unstick():
+	var position = Vector2(61,140)
+	set_position(position)
 		
 	
 

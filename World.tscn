@@ -694,6 +694,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 11 )
 animation = "ready"
+frame = 2
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -910,7 +911,7 @@ shape = SubResource( 22 )
 [node name="Player" type="KinematicBody2D" parent="." index="5"]
 
 editor/display_folded = true
-position = Vector2( 61, 127 )
+position = Vector2( 61, 145 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
