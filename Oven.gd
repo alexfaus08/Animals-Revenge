@@ -8,7 +8,6 @@ var recipe
 var player_near_oven = false
 var top_oven_off = true
 var bottom_oven_off = true
-var both_on = true
 onready var top_timer = $"Top Oven Timer"
 onready var bottom_timer = $"Bottom Oven Timer"
 onready var player = $"../../Player"
@@ -24,7 +23,6 @@ func _ready():
 			oven_recipes.append(x.get_ingredients())
 	
 func _process(delta):
-	print(top_timer.get_time_left())
 	# is the player near the oven and did they click left click? 
 	if(player_near_oven and Input.is_action_just_pressed("ui_select")):
 		# are they holding an ingredient?
@@ -32,14 +30,16 @@ func _process(delta):
 			if(typeof(player.holding[0]) == TYPE_STRING):
 			# is there an oven available?
 				if(top_oven_off):
+					print("stuff in oven")
 					top_oven_contents.append(player.holding.pop_front())
 				elif(bottom_oven_off):
+					print("stuff in oven")
 					bottom_oven_contents.append(player.holding.pop_front())
 		# are they holding nothing?
 		elif(recipe_ready):
-			if(recipe.get_ingredients() in top_oven_contents):
+			if(recipe in top_oven_contents):
 				top_oven_contents.clear()
-			else:
+			elif(recipe in bottom_oven_contents):
 				bottom_oven_contents.clear()
 			player.add_object(recipe)
 			$OvenReady.hide()
@@ -65,7 +65,7 @@ func _process(delta):
 		top_timer.set_wait_time(recipe.get_cook_time())
 		top_timer.start()
 		top_oven_off = false
-	elif(bottom_oven_contents in oven_recipes and bottom_oven_off):
+	elif(bottom_oven_contents in oven_recipes and bottom_oven_off and not recipe_ready):
 		recipe = world.recipe_lookup(bottom_oven_contents)
 		bottom_timer.set_wait_time(recipe.get_cook_time())
 		bottom_timer.start()
