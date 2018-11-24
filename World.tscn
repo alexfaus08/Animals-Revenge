@@ -702,7 +702,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 11 )
 animation = "ready"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1075,14 +1075,15 @@ shape = SubResource( 28 )
 
 [node name="PoisonMenu" type="NinePatchRect" parent="." index="7"]
 
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 27.0
+margin_left = 1.0
+margin_top = -19.0
+margin_right = 45.0
+margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -1096,6 +1097,9 @@ patch_margin_right = 5
 patch_margin_bottom = 5
 script = ExtResource( 142 )
 _sections_unfolded = [ "Axis Stretch", "Patch Margin" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="GridContainer" type="VBoxContainer" parent="PoisonMenu" index="0"]
 
@@ -1103,9 +1107,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
+margin_left = 5.0
 margin_top = 5.0
-margin_right = 100.0
+margin_right = 58.0
 margin_bottom = 95.0
 rect_scale = Vector2( 0.35, 0.35 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -1126,7 +1130,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 160.0
+margin_right = 97.0
 margin_bottom = 41.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1154,7 +1158,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 45.0
-margin_right = 160.0
+margin_right = 97.0
 margin_bottom = 86.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1182,7 +1186,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 90.0
-margin_right = 160.0
+margin_right = 97.0
 margin_bottom = 131.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2064,6 +2068,12 @@ _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "T
 [connection signal="body_entered" from="RecipeGenerator/Window" to="RecipeGenerator/Window" method="_on_Window_body_entered"]
 
 [connection signal="body_exited" from="RecipeGenerator/Window" to="RecipeGenerator/Window" method="_on_Window_body_exited"]
+
+[connection signal="pressed" from="PoisonMenu/GridContainer/Slight" to="PoisonMenu" method="_on_Slight_pressed"]
+
+[connection signal="pressed" from="PoisonMenu/GridContainer/Better" to="PoisonMenu" method="_on_Better_pressed"]
+
+[connection signal="pressed" from="PoisonMenu/GridContainer/Killer" to="PoisonMenu" method="_on_Killer_pressed"]
 
 [connection signal="pressed" from="FridgeMenu2/GridContainer/Milk" to="FridgeMenu2" method="_on_Milk_pressed"]
 
