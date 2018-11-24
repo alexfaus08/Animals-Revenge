@@ -2,6 +2,7 @@ extends StaticBody2D
 
 var player_near_mixing_station
 var mixing
+var item
 onready var t = get_node("MixingTimer")
 
 func _ready():
@@ -10,8 +11,9 @@ func _ready():
 	$MixSprite.play("Idle")
 
 func _process(delta):
-	if(player_near_mixing_station and not mixing):
-		if(Input.is_action_just_pressed("ui_select")):
+	if(player_near_mixing_station and not mixing and player.holding.size() > 0):
+		if(Input.is_action_just_pressed("ui_select") and typeof(player.holding[0] != TYPE_STRING)):
+			
 			# the mixing station is now mixing
 			mixing = true
 			# play the mixing animation

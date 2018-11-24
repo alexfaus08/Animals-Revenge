@@ -19,6 +19,15 @@ class Recipe:
 		appliance = p_appliance
 		poisoned = false
 		
+	func poision():
+		poisoned = true
+	
+	func is_poisoned():
+		if(poisioned):
+			return true
+		else:
+			return false
+		
 	func get_ingredients():
 		return ingredients
 		
