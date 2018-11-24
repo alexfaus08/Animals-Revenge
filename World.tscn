@@ -693,7 +693,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 11 )
 animation = "ready"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
