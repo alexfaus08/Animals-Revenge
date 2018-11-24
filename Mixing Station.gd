@@ -24,6 +24,7 @@ func _process(delta):
 		if(Input.is_action_just_pressed("ui_select") and item_ready):
 			player.add_object(item)
 			item_ready = false
+			$MixingDone.hide()
 	if(not player_near_mixing_station):
 		popup.hide()
 			
@@ -53,6 +54,8 @@ func poison():
 	# mixing is over, go back to idle
 	$MixSprite.play("Idle")
 	mixing = false
+	$MixingDone.show()
+	$"MixingDone".play("ready")
 	item_ready = true 
 
 
