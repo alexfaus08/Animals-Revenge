@@ -38,12 +38,12 @@
 [ext_resource path="res://Shelf.gd" type="Script" id=36]
 [ext_resource path="res://Full_Shelf.png" type="Texture" id=37]
 [ext_resource path="res://Mixing Station.gd" type="Script" id=38]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_0.png" type="Texture" id=39]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_1.png" type="Texture" id=40]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_2.png" type="Texture" id=41]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_3.png" type="Texture" id=42]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_4.png" type="Texture" id=43]
-[ext_resource path="res://Mixing Station/Mixing_Station_Idle.png" type="Texture" id=44]
+[ext_resource path="res://Mixing Station/Mixing_Station_Idle.png" type="Texture" id=39]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_0.png" type="Texture" id=40]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_1.png" type="Texture" id=41]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_2.png" type="Texture" id=42]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_3.png" type="Texture" id=43]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_4.png" type="Texture" id=44]
 [ext_resource path="res://Window.gd" type="Script" id=45]
 [ext_resource path="res://Objects/Order Table/Order Table Empty_Animation 1_0.png" type="Texture" id=46]
 [ext_resource path="res://Objects/Order Table/Order Table Orders_Animation 1_0.png" type="Texture" id=47]
@@ -274,15 +274,15 @@ extents = Vector2( 22.0957, 10 )
 [sub_resource type="SpriteFrames" id=17]
 
 animations = [ {
-"frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ],
-"loop": true,
-"name": "Mix",
-"speed": 6.0
-}, {
-"frames": [ ExtResource( 44 ) ],
+"frames": [ ExtResource( 39 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "Mix",
+"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=18]
@@ -443,7 +443,7 @@ use_filter = false
 font_data = ExtResource( 143 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=34]
+[sub_resource type="DynamicFont" id=32]
 
 size = 10
 use_mipmaps = false
@@ -694,7 +694,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 11 )
 animation = "ready"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1678,7 +1678,7 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = ""
+text = "Turkey"
 scroll_active = false
 scroll_following = false
 selection_enabled = true
@@ -1699,7 +1699,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 34 )
+custom_fonts/normal_font = SubResource( 32 )
 custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Cranberry Sauce[/center]"
@@ -1789,7 +1789,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 34 )
+custom_fonts/normal_font = SubResource( 32 )
 custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Cranberry Sauce[/center]"
@@ -1879,7 +1879,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 34 )
+custom_fonts/normal_font = SubResource( 32 )
 custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Cranberry Sauce[/center]"
