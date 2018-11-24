@@ -2,7 +2,7 @@ extends StaticBody2D
 
 
 # Stove.gd uses a very similiar layout. See Stove.gd for documentation.
-onready var popup = $"../../FridgeMenu"
+onready var popup = $"../../FridgeMenu2"
 var player_near_fridge
 func _ready():
 	player_near_fridge = false

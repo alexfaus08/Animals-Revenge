@@ -1,4 +1,4 @@
-[gd_scene load_steps=182 format=2]
+[gd_scene load_steps=184 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Kitchen_Tiles.tres" type="TileSet" id=2]
@@ -141,14 +141,15 @@
 [ext_resource path="res://Objects/Served Food Counter_Animation 1_4.png" type="Texture" id=139]
 [ext_resource path="res://Objects/Cookbook Open.png" type="Texture" id=140]
 [ext_resource path="res://Menu Items/menu.png" type="Texture" id=141]
-[ext_resource path="res://NinePatchRect.gd" type="Script" id=142]
+[ext_resource path="res://PoisonMenu.gd" type="Script" id=142]
 [ext_resource path="res://munro/munro-small.ttf" type="DynamicFontData" id=143]
-[ext_resource path="res://ShelfMenu.gd" type="Script" id=144]
-[ext_resource path="res://Pause.gd" type="Script" id=145]
-[ext_resource path="res://UI/Notepad.png" type="Texture" id=146]
-[ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=147]
-[ext_resource path="res://TextPrint.gd" type="Script" id=148]
-[ext_resource path="res://Recipe2.gd" type="Script" id=149]
+[ext_resource path="res://NinePatchRect.gd" type="Script" id=144]
+[ext_resource path="res://ShelfMenu.gd" type="Script" id=145]
+[ext_resource path="res://Pause.gd" type="Script" id=146]
+[ext_resource path="res://UI/Notepad.png" type="Texture" id=147]
+[ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=148]
+[ext_resource path="res://TextPrint.gd" type="Script" id=149]
+[ext_resource path="res://Recipe2.gd" type="Script" id=150]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -419,6 +420,14 @@ extents = Vector2( 7, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
+[sub_resource type="DynamicFont" id=33]
+
+size = 30
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 143 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [sub_resource type="DynamicFont" id=29]
 
 size = 30
@@ -432,7 +441,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 10
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 147 )
+font_data = ExtResource( 148 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Settings" ]
 
 [sub_resource type="DynamicFont" id=31]
@@ -582,7 +591,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Appliances" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
 position = Vector2( 207, 65 )
 _sections_unfolded = [ "Transform" ]
 
@@ -694,11 +702,12 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 11 )
 animation = "ready"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
 
+editor/display_folded = true
 position = Vector2( -142, -29 )
 input_pickable = false
 collision_layer = 1
@@ -1064,7 +1073,142 @@ texture = ExtResource( 140 )
 position = Vector2( 2, 0 )
 shape = SubResource( 28 )
 
-[node name="FridgeMenu" type="NinePatchRect" parent="." index="7"]
+[node name="PoisonMenu" type="NinePatchRect" parent="." index="7"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 1.0
+margin_top = -19.0
+margin_right = 45.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 141 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+script = ExtResource( 142 )
+_sections_unfolded = [ "Axis Stretch", "Patch Margin" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="GridContainer" type="VBoxContainer" parent="PoisonMenu" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 58.0
+margin_bottom = 95.0
+rect_scale = Vector2( 0.35, 0.35 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "custom_constants" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Slight" type="Button" parent="PoisonMenu/GridContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 97.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Has a 10% chance of killing subject.
+10 sec production time."
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 33 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Simple"
+flat = true
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Hint", "Margin", "Material", "Mouse", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="Better" type="Button" parent="PoisonMenu/GridContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 45.0
+margin_right = 97.0
+margin_bottom = 86.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Has a 30% chance of killing subject.
+25 sec production time."
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 33 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Better"
+flat = true
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Hint", "Margin", "Material", "Mouse", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="Killer" type="Button" parent="PoisonMenu/GridContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 90.0
+margin_right = 97.0
+margin_bottom = 131.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Has a 100% chance of killing subject.
+45 sec production time."
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 33 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Killer"
+flat = true
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Hint", "Margin", "Material", "Mouse", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="FridgeMenu2" type="NinePatchRect" parent="." index="8"]
 
 editor/display_folded = true
 visible = false
@@ -1087,13 +1231,13 @@ patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
-script = ExtResource( 142 )
+script = ExtResource( 144 )
 _sections_unfolded = [ "Axis Stretch", "Patch Margin" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="GridContainer" type="VBoxContainer" parent="FridgeMenu" index="0"]
+[node name="GridContainer" type="VBoxContainer" parent="FridgeMenu2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1113,7 +1257,7 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "custom_constants" ]
 
-[node name="Milk" type="Button" parent="FridgeMenu/GridContainer" index="0"]
+[node name="Milk" type="Button" parent="FridgeMenu2/GridContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1138,7 +1282,7 @@ flat = true
 align = 1
 _sections_unfolded = [ "Margin", "Rect", "custom_fonts", "custom_styles" ]
 
-[node name="Butter" type="Button" parent="FridgeMenu/GridContainer" index="1"]
+[node name="Butter" type="Button" parent="FridgeMenu2/GridContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1164,7 +1308,7 @@ flat = true
 align = 1
 _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
-[node name="Raw Turkey" type="Button" parent="FridgeMenu/GridContainer" index="2"]
+[node name="Raw Turkey" type="Button" parent="FridgeMenu2/GridContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1190,7 +1334,7 @@ flat = true
 align = 1
 _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
-[node name="Raw Chicken" type="Button" parent="FridgeMenu/GridContainer" index="3"]
+[node name="Raw Chicken" type="Button" parent="FridgeMenu2/GridContainer" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1216,7 +1360,7 @@ flat = true
 align = 1
 _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
-[node name="Cheese" type="Button" parent="FridgeMenu/GridContainer" index="4"]
+[node name="Cheese" type="Button" parent="FridgeMenu2/GridContainer" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1242,7 +1386,7 @@ flat = true
 align = 1
 _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
-[node name="ShelfMenu" type="NinePatchRect" parent="." index="8"]
+[node name="ShelfMenu" type="NinePatchRect" parent="." index="9"]
 
 editor/display_folded = true
 visible = false
@@ -1265,7 +1409,7 @@ patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
-script = ExtResource( 144 )
+script = ExtResource( 145 )
 _sections_unfolded = [ "Axis Stretch", "Hint", "Patch Margin", "Rect" ]
 __meta__ = {
 "_edit_group_": true
@@ -1492,7 +1636,7 @@ flat = true
 align = 1
 _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
-[node name="Pause" type="Control" parent="." index="9"]
+[node name="Pause" type="Control" parent="." index="10"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -1509,7 +1653,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 145 )
+script = ExtResource( 146 )
 _sections_unfolded = [ "Pause" ]
 
 [node name="BlackOverlay" type="ColorRect" parent="Pause" index="0"]
@@ -1526,7 +1670,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 0, 0, 0, 0.530353 )
 
-[node name="Bottom Box" type="NinePatchRect" parent="." index="10"]
+[node name="Bottom Box" type="NinePatchRect" parent="." index="11"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1562,7 +1706,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 146 )
+texture = ExtResource( 147 )
 stretch_mode = 0
 
 [node name="ColorRect" type="ColorRect" parent="Bottom Box" index="1"]
@@ -1620,10 +1764,10 @@ scroll_active = true
 scroll_following = true
 selection_enabled = false
 override_selected_font_color = true
-script = ExtResource( 148 )
+script = ExtResource( 149 )
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
-[node name="Recipe2" type="ColorRect" parent="." index="11"]
+[node name="Recipe2" type="ColorRect" parent="." index="12"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1640,7 +1784,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-script = ExtResource( 149 )
+script = ExtResource( 150 )
 _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
@@ -1714,7 +1858,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
-[node name="Recipe3" type="ColorRect" parent="." index="12"]
+[node name="Recipe3" type="ColorRect" parent="." index="13"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1731,7 +1875,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-script = ExtResource( 149 )
+script = ExtResource( 150 )
 _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
@@ -1804,7 +1948,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
-[node name="Recipe4" type="ColorRect" parent="." index="13"]
+[node name="Recipe4" type="ColorRect" parent="." index="14"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1821,7 +1965,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-script = ExtResource( 149 )
+script = ExtResource( 150 )
 _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
@@ -1926,15 +2070,21 @@ _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "T
 
 [connection signal="body_exited" from="RecipeGenerator/Window" to="RecipeGenerator/Window" method="_on_Window_body_exited"]
 
-[connection signal="pressed" from="FridgeMenu/GridContainer/Milk" to="FridgeMenu" method="_on_Milk_pressed"]
+[connection signal="pressed" from="PoisonMenu/GridContainer/Slight" to="PoisonMenu" method="_on_Slight_pressed"]
 
-[connection signal="pressed" from="FridgeMenu/GridContainer/Butter" to="FridgeMenu" method="_on_Butter_pressed"]
+[connection signal="pressed" from="PoisonMenu/GridContainer/Better" to="PoisonMenu" method="_on_Better_pressed"]
 
-[connection signal="pressed" from="FridgeMenu/GridContainer/Raw Turkey" to="FridgeMenu" method="_on_Turkey_pressed"]
+[connection signal="pressed" from="PoisonMenu/GridContainer/Killer" to="PoisonMenu" method="_on_Killer_pressed"]
 
-[connection signal="pressed" from="FridgeMenu/GridContainer/Raw Chicken" to="FridgeMenu" method="_on_Chicken_pressed"]
+[connection signal="pressed" from="FridgeMenu2/GridContainer/Milk" to="FridgeMenu2" method="_on_Milk_pressed"]
 
-[connection signal="pressed" from="FridgeMenu/GridContainer/Cheese" to="FridgeMenu" method="_on_Cheese_pressed"]
+[connection signal="pressed" from="FridgeMenu2/GridContainer/Butter" to="FridgeMenu2" method="_on_Butter_pressed"]
+
+[connection signal="pressed" from="FridgeMenu2/GridContainer/Raw Turkey" to="FridgeMenu2" method="_on_Turkey_pressed"]
+
+[connection signal="pressed" from="FridgeMenu2/GridContainer/Raw Chicken" to="FridgeMenu2" method="_on_Chicken_pressed"]
+
+[connection signal="pressed" from="FridgeMenu2/GridContainer/Cheese" to="FridgeMenu2" method="_on_Cheese_pressed"]
 
 [connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Potatoes" to="ShelfMenu" method="_on_Potatoes_pressed"]
 

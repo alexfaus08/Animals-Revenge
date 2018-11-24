@@ -98,7 +98,10 @@ func add_object(object):
 	if(typeof(object) == TYPE_STRING):
 		obj_name = object
 	else:
-		obj_name  = object.get_name()
+		if(object.is_poisoned()):
+			obj_name = "[color=red]Poisoned[/color] %s" % object.get_name() 
+		else:
+			obj_name  = object.get_name()
 	if (holding.size() == 0):
 		holding.append(object)
 		printstring = "You are holding %s \n" % obj_name 
