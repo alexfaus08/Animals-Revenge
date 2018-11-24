@@ -99,7 +99,7 @@ func add_object(object):
 		obj_name = object
 	else:
 		if(object.is_poisoned()):
-			obj_name = "Poisoned %s" % object.get_name() 
+			obj_name = "[color=red]Poisoned[/color] %s" % object.get_name() 
 		else:
 			obj_name  = object.get_name()
 	if (holding.size() == 0):
