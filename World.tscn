@@ -1,4 +1,4 @@
-[gd_scene load_steps=192 format=2]
+[gd_scene load_steps=193 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Louie Zong - levels - 10 the lost library.wav" type="AudioStream" id=2]
@@ -56,8 +56,8 @@
 [ext_resource path="res://Objects/Served Food Counter_Animation 1_3.png" type="Texture" id=54]
 [ext_resource path="res://Objects/Served Food Counter_Animation 1_4.png" type="Texture" id=55]
 [ext_resource path="res://Window.gd" type="Script" id=56]
-[ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_3.png" type="Texture" id=57]
-[ext_resource path="res://Objects/Order Table/Side Dish Order_Animation 1_2.png" type="Texture" id=58]
+[ext_resource path="res://Objects/Order Table/Side Dish Order_Animation 1_2.png" type="Texture" id=57]
+[ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_3.png" type="Texture" id=58]
 [ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_0.png" type="Texture" id=59]
 [ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_1.png" type="Texture" id=60]
 [ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_2.png" type="Texture" id=61]
@@ -351,15 +351,15 @@ extents = Vector2( 20, 20 )
 animations = [ {
 "frames": [ ExtResource( 57 ) ],
 "loop": true,
-"name": "idle",
+"name": "filled",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 58 ) ],
 "loop": true,
-"name": "filled",
+"name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 57 ) ],
+"frames": [ ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 58 ) ],
 "loop": true,
 "name": "cash out",
 "speed": 5.0
@@ -368,14 +368,14 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=27]
 
 animations = [ {
+"frames": [ ExtResource( 57 ) ],
+"loop": true,
+"name": "filled",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 62 ) ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 58 ) ],
-"loop": true,
-"name": "filled",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ) ],
@@ -383,6 +383,11 @@ animations = [ {
 "name": "cash out",
 "speed": 5.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=35]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15, 5 )
 
 [sub_resource type="CapsuleShape2D" id=28]
 
@@ -785,7 +790,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1068,6 +1073,22 @@ animation = "idle"
 position = Vector2( 184, 216 )
 frames = SubResource( 27 )
 animation = "idle"
+
+[node name="Turn In" type="Area2D" parent="RecipeGenerator" index="3"]
+
+position = Vector2( 174, 214 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecipeGenerator/Turn In" index="0"]
+
+position = Vector2( 2, 4 )
+shape = SubResource( 35 )
 
 [node name="Player" type="KinematicBody2D" parent="." index="7"]
 
@@ -2092,6 +2113,10 @@ _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "T
 [connection signal="body_entered" from="RecipeGenerator/Window" to="RecipeGenerator/Window" method="_on_Window_body_entered"]
 
 [connection signal="body_exited" from="RecipeGenerator/Window" to="RecipeGenerator/Window" method="_on_Window_body_exited"]
+
+[connection signal="body_entered" from="RecipeGenerator/Turn In" to="RecipeGenerator/Window" method="_on_Turn_In_body_entered"]
+
+[connection signal="body_exited" from="RecipeGenerator/Turn In" to="RecipeGenerator/Window" method="_on_Turn_In_body_exited"]
 
 [connection signal="pressed" from="PoisonMenu/GridContainer/Slight" to="PoisonMenu" method="_on_Slight_pressed"]
 

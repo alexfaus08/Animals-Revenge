@@ -17,9 +17,12 @@ var recipe1 = false
 var recipe2 = false
 var recipe3 = false
 var order
-var player_near_window
+var player_near_window = false
 var dishes = []
+var main_turnin = []
+var side_turnin = []
 var side_dishes = []
+var player_near_turnin = false
 #var diag = AcceptDialog.new()
 
 func _ready():
@@ -116,3 +119,12 @@ func _on_Window_body_exited(body):
 	if (body.get_name() == "Player"):
 		player_near_window = false
 		#Recipe2.hide()
+
+
+func _on_Turn_In_body_entered(body):
+	if (body.get_name() == "Player"):
+		player_near_turnin = true
+
+func _on_Turn_In_body_exited(body):
+	if (body.get_name() == "Player"):
+		player_near_turnin = false
