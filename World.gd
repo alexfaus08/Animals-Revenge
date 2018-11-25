@@ -67,6 +67,7 @@ func initrecipes():
 	var Stuffing= Recipe.new("Stuffing", ["Bread", "Celery", "Broth", "Butter", "Apples", "Onions"], 5, "Oven")
 	recipes.append(Stuffing)
 	
+
 	
 	
 func get_recipes():

@@ -20,7 +20,7 @@ func _process(delta):
 		if(player.holding.size() > 0):
 			if(Input.is_action_just_pressed("ui_select") and typeof(player.holding[0]) != TYPE_STRING):
 				popup.show()
-	elif(player.holding.size() == 0):
+	elif(player.holding.size() == 0 and player_near_mixing_station):
 		if(Input.is_action_just_pressed("ui_select") and item_ready):
 			player.add_object(item)
 			item_ready = false
