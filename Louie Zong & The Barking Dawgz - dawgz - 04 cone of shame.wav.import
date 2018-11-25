@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Louie Zong & The Barking Dawgz - dawgz - 04 cone of shame.wav-e718a5ee5645d044fb7f9ea0165e117b.sample"
+
+[deps]
+
+source_file="res://Louie Zong & The Barking Dawgz - dawgz - 04 cone of shame.wav"
+dest_files=[ "res://.import/Louie Zong & The Barking Dawgz - dawgz - 04 cone of shame.wav-e718a5ee5645d044fb7f9ea0165e117b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

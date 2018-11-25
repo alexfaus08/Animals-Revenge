@@ -1,6 +1,8 @@
 #TitleScreen.gd
 extends Control
 
+func _ready():
+	$"Title".play()
 func _on_StartGameButton_pressed():
 	get_tree().change_scene("res://World.tscn")
 	print("In World")
