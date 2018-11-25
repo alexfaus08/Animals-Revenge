@@ -52,7 +52,7 @@ func _recipes_Sides():
 	
 
 func _process(delta):
-	if(player_near_window and player.holding.size() == 0):
+	if(player_near_window):
 		var main_recipe = _recipes_Main_Course()
 		var side_recipe = _recipes_Sides()
 		if(Input.is_action_just_pressed("ui_select")):
@@ -84,32 +84,38 @@ func _process(delta):
 				print("Backed up orders")
 				screenprint.append_bbcode("Backed up orders\n")
 					
-	elif(player_near_window and player.holding.size() > 0):
+	elif(player_near_turnin and player.holding.size() > 0):
 		# the order table is gonna need an array 
 		# maybe 2 arrays? one for contents (items on the table)
 		# another for orders waiting to be turned in 
 		# if what the player is holding is not a string, it's a Recipe type
 		if(typeof(player.holding[0]) != TYPE_STRING):
 			if(player.holding[0] in dishes):
-				# the player is holding a main dish
-				# append obj to main dish slot
-				pass
+				if(main_turnin.size() == 0):
+					main_turnin.append(player.holding.pop_front())
 			else:
-				# the player is holding a side dish
-				# append obj to side dish slot
-				pass
-			# TODO: APPEND RECIPE TO ORDER TABLE
-			# dont let the player append another main dish if there is already a main dish and same w/
-			# side dishes
-			# add the recipe to the table
-			# update the order table sprite
+				if(side_turnin.size() == 0):
+					side_turnin.append(player.holding.pop_front())
+	elif(player_near_turnin and player.holding.size() == 0):
+			pass
+	
+	if(main_turnin.size() == 1 and side_turnin.size() == 1):
+		# check to see if an order is ready to be completed
+		# Recipe2?
+		if(main_turnin[0].get_name() == Recipe2.get_main().get_name() and side_turnin[0] == Recipe2.get_side().get_name()):
+			score(main_turnin[0], side_turnin[0])
+		pass
+			# allow the player to pick up a recipe either main or side dish
+			# update the turnin sprite
 			# if the order table has 2 objects:
 				# check if the main and side dish match an order that is ready
 					# if it is, complete that order, update score, (just make it an int for now), 
 					# and have order table go back to having nothing on it 
-			 pass
 			
 
+func score(main, side):
+	pass
+	
 
 func _on_Window_body_entered(body):
 	if (body.get_name() == "Player"):

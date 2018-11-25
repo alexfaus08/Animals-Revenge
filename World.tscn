@@ -1,4 +1,4 @@
-[gd_scene load_steps=193 format=2]
+[gd_scene load_steps=195 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Louie Zong - levels - 10 the lost library.wav" type="AudioStream" id=2]
@@ -157,6 +157,8 @@
 [ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=155]
 [ext_resource path="res://TextPrint.gd" type="Script" id=156]
 [ext_resource path="res://Recipe2.gd" type="Script" id=157]
+[ext_resource path="res://Recipe3.gd" type="Script" id=158]
+[ext_resource path="res://Recipe4.gd" type="Script" id=159]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -508,7 +510,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Background" type="AudioStreamPlayer2D" parent="." index="0"]
 
 stream = ExtResource( 2 )
-volume_db = -0.19
+volume_db = -10.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
@@ -790,7 +792,6 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 1
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1919,7 +1920,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-script = ExtResource( 157 )
+script = ExtResource( 158 )
 _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
@@ -2009,7 +2010,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-script = ExtResource( 157 )
+script = ExtResource( 159 )
 _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
