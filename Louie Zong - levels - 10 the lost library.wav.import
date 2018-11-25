@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Louie Zong - levels - 10 the lost library.wav-7b4f2158c89ab12394b21b40135af402.sample"
+
+[deps]
+
+source_file="res://Louie Zong - levels - 10 the lost library.wav"
+dest_files=[ "res://.import/Louie Zong - levels - 10 the lost library.wav-7b4f2158c89ab12394b21b40135af402.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

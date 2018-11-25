@@ -43,7 +43,8 @@ class Recipe:
 	func get_name():
 		return r_name
 	
-		
+func _ready():
+	$"Background".play()
 
 func initrecipes():
 	# initialize all recipes here

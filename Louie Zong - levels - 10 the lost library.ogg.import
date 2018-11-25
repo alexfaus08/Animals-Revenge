@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Louie Zong - levels - 10 the lost library.ogg-d2a8ca5e13e021bcfce781e72ebaa3ec.oggstr"
+
+[deps]
+
+source_file="res://Louie Zong - levels - 10 the lost library.ogg"
+dest_files=[ "res://.import/Louie Zong - levels - 10 the lost library.ogg-d2a8ca5e13e021bcfce781e72ebaa3ec.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
