@@ -85,19 +85,23 @@ func _process(delta):
 				screenprint.append_bbcode("Backed up orders\n")
 					
 	elif(player_near_turnin and player.holding.size() > 0):
-		# the order table is gonna need an array 
-		# maybe 2 arrays? one for contents (items on the table)
-		# another for orders waiting to be turned in 
-		# if what the player is holding is not a string, it's a Recipe type
-		if(typeof(player.holding[0]) != TYPE_STRING):
-			if(player.holding[0] in dishes):
-				if(main_turnin.size() == 0):
-					main_turnin.append(player.holding.pop_front())
-			else:
-				if(side_turnin.size() == 0):
-					side_turnin.append(player.holding.pop_front())
-	elif(player_near_turnin and player.holding.size() == 0):
-			pass
+		if(Input.is_action_just_pressed("ui_select")):
+			# the order table is gonna need an array 
+			# maybe 2 arrays? one for contents (items on the table)
+			# another for orders waiting to be turned in 
+			# if what the player is holding is not a string, it's a Recipe type
+			if(typeof(player.holding[0]) != TYPE_STRING):
+				if(player.holding[0] in dishes):
+					if(main_turnin.size() == 0):
+						main_turnin.append(player.holding.pop_front())
+						$"../main".play("filled")
+				else:
+					if(side_turnin.size() == 0):
+						side_turnin.append(player.holding.pop_front())
+						$"../side".play("filled")
+		elif(player_near_turnin and player.holding.size() == 0):
+				# have a popup that allows the player to grab a dish or destroy contents
+				pass
 	
 	if(main_turnin.size() == 1 and side_turnin.size() == 1):
 		# check to see if an order is ready to be completed
@@ -114,7 +118,15 @@ func _process(delta):
 			
 
 func score(main, side):
-	pass
+	var score = 0
+	if(main.is_poisoned()):
+		pass
+	else:
+		score += 10
+	if(side.is_poisoned()):
+		pass
+	else:
+		score += 10
 	
 
 func _on_Window_body_entered(body):

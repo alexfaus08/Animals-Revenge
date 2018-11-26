@@ -1,7 +1,8 @@
 extends Control
 onready var game_timer = $"Game Timer"
-onready var score = $"ScoreNum"
+onready var score_label = $"ScoreNum"
 onready var time_left_label = $"TimerLabel"
+var score = 0
 
 # class member variables go here, for example:
 # var a = 2
@@ -12,7 +13,7 @@ func _process(delta):
 	if(game_timer.get_time_left() == 0.0):
 		$"../Game Over".game_over()
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func updatescore(new_score):
+	score += new_score
+	score_label.set_text(score)
+	

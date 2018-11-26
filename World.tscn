@@ -841,7 +841,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1140,7 +1140,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RecipeGenerator/Turn In" index="0"]
 
-position = Vector2( 2, 4 )
+position = Vector2( 2, 0.999998 )
+scale = Vector2( 1, 1.5 )
 shape = SubResource( 35 )
 
 [node name="Player" type="KinematicBody2D" parent="." index="7"]
@@ -1769,6 +1770,7 @@ color = Color( 0, 0, 0, 0.530353 )
 
 [node name="Bottom Box" type="Control" parent="." index="12"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2134,6 +2136,7 @@ _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "T
 
 [node name="Game Over" type="Control" parent="." index="16"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -2334,7 +2337,7 @@ script = ExtResource( 161 )
 [node name="Game Timer" type="Timer" parent="Sidebar" index="0"]
 
 process_mode = 1
-wait_time = 10.0
+wait_time = 100.0
 one_shot = true
 autostart = true
 
