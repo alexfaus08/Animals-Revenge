@@ -94,11 +94,17 @@ func _process(delta):
 				if(player.holding[0] in dishes):
 					if(main_turnin.size() == 0):
 						main_turnin.append(player.holding.pop_front())
-						$"../main".play("filled")
+						if(main_turnin.front().is_poisoned()):
+							$"../main".play("poison")
+						else:
+							$"../main".play("filled")
 				elif(player.holding[0] in side_dishes):
 					if(side_turnin.size() == 0):
 						side_turnin.append(player.holding.pop_front())
-						$"../side".play("filled")
+						if(side_turnin.front().is_poisoned()):
+							$"../side".play("poison")
+						else:
+							$"../side".play("filled")
 		elif(player_near_turnin and player.holding.size() == 0):
 				# have a popup that allows the player to grab a dish or destroy contents
 				pass
@@ -109,25 +115,39 @@ func _process(delta):
 		if(main_turnin.front().get_name() == Recipe2.get_main().get_name() and side_turnin.front().get_name() == Recipe2.get_side().get_name()):
 			$"../main".play("cash out")
 			$"../side".play("cash out")
+			score(main_turnin.front(), side_turnin.front())
 
 		elif(main_turnin.front().get_name() == Recipe3.get_main().get_name() and side_turnin.front().get_name() == Recipe3.get_side().get_name()):
 			$"../main".play("cash out")
 			$"../side".play("cash out")
+			score(main_turnin.front(), side_turnin.front())
 
-		if(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name()):
+		elif(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name()):
 			$"../main".play("cash out")
 			$"../side".play("cash out")
+			score(main_turnin.front(), side_turnin.front())
+		main_turnin.clear()
+		side_turnin.clear()
 
 func score(main, side):
-	var score = 0
+	var score = 10
+	var kills = 0
+	var stringg
 	if(main.is_poisoned()):
-		pass
-	else:
-		score += 10
-	if(side.is_poisoned()):
-		pass
-	else:
-		score += 10
+		if(main.get_poison() == 1):
+			score += 5
+		else:
+			if(poison_roll(main.get_poison())):
+				score += 5
+	elif(side.is_poisoned()):
+		if(side.get_poison() == 1):
+			score += 5
+		else:
+			if(poison_roll(side.get_poison())):
+				score += 5
+	stringg = "Order complete. You got %s kill(s) for %s points." % [str(kills), str(score)]
+	screenprint.append_bbcode(stringg)
+	return score
 	
 
 func _on_Window_body_entered(body):
@@ -147,3 +167,15 @@ func _on_Turn_In_body_entered(body):
 func _on_Turn_In_body_exited(body):
 	if (body.get_name() == "Player"):
 		player_near_turnin = false
+		
+func poison_roll(percent):
+	var roll
+	# roll a 4 sided die
+	roll = randi()%5+1
+	if(percent == .25):
+		if(roll == 1):
+			return true
+	elif(percent == .50):
+		if(roll == 1 or roll == 2):
+			return true
+	return false
