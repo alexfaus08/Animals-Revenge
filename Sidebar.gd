@@ -15,5 +15,5 @@ func _process(delta):
 
 func updatescore(new_score):
 	score += new_score
-	score_label.set_text(score)
+	score_label.set_text(str(score))
 	

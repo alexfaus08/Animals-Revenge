@@ -147,6 +147,7 @@ func score(main, side):
 				score += 5
 	stringg = "Order complete. You got %s kill(s) for %s points." % [str(kills), str(score)]
 	screenprint.append_bbcode(stringg)
+	$"../../Sidebar".updatescore(score)
 	return score
 	
 
