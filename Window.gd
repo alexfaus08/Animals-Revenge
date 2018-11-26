@@ -95,7 +95,7 @@ func _process(delta):
 					if(main_turnin.size() == 0):
 						main_turnin.append(player.holding.pop_front())
 						$"../main".play("filled")
-				else:
+				elif(player.holding[0] in side_dishes):
 					if(side_turnin.size() == 0):
 						side_turnin.append(player.holding.pop_front())
 						$"../side".play("filled")
@@ -106,16 +106,17 @@ func _process(delta):
 	if(main_turnin.size() == 1 and side_turnin.size() == 1):
 		# check to see if an order is ready to be completed
 		# Recipe2?
-		if(main_turnin[0].get_name() == Recipe2.get_main().get_name() and side_turnin[0] == Recipe2.get_side().get_name()):
-			score(main_turnin[0], side_turnin[0])
-		pass
-			# allow the player to pick up a recipe either main or side dish
-			# update the turnin sprite
-			# if the order table has 2 objects:
-				# check if the main and side dish match an order that is ready
-					# if it is, complete that order, update score, (just make it an int for now), 
-					# and have order table go back to having nothing on it 
-			
+		if(main_turnin.front().get_name() == Recipe2.get_main().get_name() and side_turnin.front().get_name() == Recipe2.get_side().get_name()):
+			$"../main".play("cash out")
+			$"../side".play("cash out")
+
+		elif(main_turnin.front().get_name() == Recipe3.get_main().get_name() and side_turnin.front().get_name() == Recipe3.get_side().get_name()):
+			$"../main".play("cash out")
+			$"../side".play("cash out")
+
+		if(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name()):
+			$"../main".play("cash out")
+			$"../side".play("cash out")
 
 func score(main, side):
 	var score = 0

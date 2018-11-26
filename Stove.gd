@@ -64,6 +64,7 @@ func _process(delta):
 						player.add_object(stove_contents.pop_front())
 						# hide the !
 						ready.hide()
+						recipe_ready = false
 		elif(Input.is_action_just_pressed("right_click")):
 			# clear the stove contents 
 			stove_contents.clear()
