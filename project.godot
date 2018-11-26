@@ -16,7 +16,7 @@ config/icon="res://Turkey_Character/tile001.png"
 
 [display]
 
-window/size/width=336
+window/size/width=416
 window/size/height=336
 window/size/test_width=800
 window/size/test_height=800
