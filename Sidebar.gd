@@ -9,6 +9,8 @@ onready var time_left_label = $"TimerLabel"
 
 func _process(delta):
 	time_left_label.set_text(str(int(game_timer.get_time_left())))
+	if(game_timer.get_time_left() == 0.0):
+		$"../Game Over".game_over()
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
