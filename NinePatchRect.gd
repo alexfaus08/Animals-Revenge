@@ -30,3 +30,13 @@ func _on_Chicken_pressed():
 func _on_Cheese_pressed():
 	Player.add_object("Cheese")
 	hide()
+
+
+func _on_Ham_pressed():
+	Player.add_object("Raw Ham")
+	hide()
+
+
+func _on_Broth_pressed():
+	Player.add_object("Broth")
+	hide()

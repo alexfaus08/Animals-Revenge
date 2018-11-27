@@ -110,7 +110,7 @@ func _on_Area2D_body_exited(body):
 func _on_Top_pressed():
 	if(player.holding.size() > 0):
 			if(typeof(player.holding[0]) == TYPE_STRING):
-				if(top_oven_off):
+				if(top_oven_off and not top_recipe_ready):
 					top_oven_contents.append(player.holding.pop_front())
 	elif(top_recipe_ready and player.holding.size() == 0):
 		top_oven_contents.clear()
@@ -126,7 +126,7 @@ func _on_Top_pressed():
 func _on_Bottom_pressed():
 	if(player.holding.size() > 0):
 			if(typeof(player.holding[0]) == TYPE_STRING):
-				if(bottom_oven_off):
+				if(bottom_oven_off and not bottom_recipe_ready):
 					bottom_oven_contents.append(player.holding.pop_front())
 	elif(bottom_recipe_ready and player.holding.size() == 0):
 		bottom_oven_contents.clear()

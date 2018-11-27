@@ -36,3 +36,8 @@ func _on_Bread_pressed():
 func _on_Apples_pressed():
 	Player.add_object("Apples")
 	hide()
+
+
+func _on_Green_Beans_pressed():
+	Player.add_object("Green Beans")
+	hide()
