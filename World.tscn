@@ -1,4 +1,4 @@
-[gd_scene load_steps=209 format=2]
+[gd_scene load_steps=214 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Louie Zong - levels - 10 the lost library.wav" type="AudioStream" id=2]
@@ -71,99 +71,103 @@
 [ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_1.png" type="Texture" id=69]
 [ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_2.png" type="Texture" id=70]
 [ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_3.png" type="Texture" id=71]
-[ext_resource path="res://Player.gd" type="Script" id=72]
-[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_0.png" type="Texture" id=73]
-[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_1.png" type="Texture" id=74]
-[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_2.png" type="Texture" id=75]
-[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_3.png" type="Texture" id=76]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_00.png" type="Texture" id=77]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_01.png" type="Texture" id=78]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_02.png" type="Texture" id=79]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_03.png" type="Texture" id=80]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_04.png" type="Texture" id=81]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_05.png" type="Texture" id=82]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_06.png" type="Texture" id=83]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_07.png" type="Texture" id=84]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_08.png" type="Texture" id=85]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_09.png" type="Texture" id=86]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_10.png" type="Texture" id=87]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_11.png" type="Texture" id=88]
-[ext_resource path="res://Turkey_Character/tile031.png" type="Texture" id=89]
-[ext_resource path="res://Turkey_Character/tile032.png" type="Texture" id=90]
-[ext_resource path="res://Turkey_Character/tile033.png" type="Texture" id=91]
-[ext_resource path="res://Turkey_Character/tile034.png" type="Texture" id=92]
-[ext_resource path="res://Turkey_Character/tile035.png" type="Texture" id=93]
-[ext_resource path="res://Turkey_Character/tile036.png" type="Texture" id=94]
-[ext_resource path="res://Turkey_Character/tile037.png" type="Texture" id=95]
-[ext_resource path="res://Turkey_Character/tile038.png" type="Texture" id=96]
-[ext_resource path="res://Turkey_Character/tile039.png" type="Texture" id=97]
-[ext_resource path="res://Turkey_Character/tile040.png" type="Texture" id=98]
-[ext_resource path="res://Turkey_Character/tile041.png" type="Texture" id=99]
-[ext_resource path="res://Turkey_Character/tile042.png" type="Texture" id=100]
-[ext_resource path="res://Turkey_Character/tile016.png" type="Texture" id=101]
-[ext_resource path="res://Turkey_Character/tile017.png" type="Texture" id=102]
-[ext_resource path="res://Turkey_Character/tile018.png" type="Texture" id=103]
-[ext_resource path="res://Turkey_Character/tile019.png" type="Texture" id=104]
-[ext_resource path="res://Turkey Sprite/WalkPlateUp_WalkUpPlate_0.png" type="Texture" id=105]
-[ext_resource path="res://Turkey Sprite/WalkPlateUp_WalkUpPlate_1.png" type="Texture" id=106]
-[ext_resource path="res://Turkey Sprite/WalkPlateUp_WalkUpPlate_2.png" type="Texture" id=107]
-[ext_resource path="res://Turkey Sprite/WalkPlateUp_WalkUpPlate_3.png" type="Texture" id=108]
-[ext_resource path="res://Turkey_Character/tile001.png" type="Texture" id=109]
-[ext_resource path="res://Turkey_Character/tile002.png" type="Texture" id=110]
-[ext_resource path="res://Turkey_Character/tile003.png" type="Texture" id=111]
-[ext_resource path="res://Turkey_Character/tile004.png" type="Texture" id=112]
-[ext_resource path="res://Turkey_Character/tile005.png" type="Texture" id=113]
-[ext_resource path="res://Turkey_Character/tile006.png" type="Texture" id=114]
-[ext_resource path="res://Turkey_Character/tile007.png" type="Texture" id=115]
-[ext_resource path="res://Turkey_Character/tile008.png" type="Texture" id=116]
-[ext_resource path="res://Turkey_Character/tile009.png" type="Texture" id=117]
-[ext_resource path="res://Turkey_Character/tile010.png" type="Texture" id=118]
-[ext_resource path="res://Turkey_Character/tile011.png" type="Texture" id=119]
-[ext_resource path="res://Turkey_Character/tile012.png" type="Texture" id=120]
-[ext_resource path="res://Turkey_Character/tile046.png" type="Texture" id=121]
-[ext_resource path="res://Turkey_Character/tile047.png" type="Texture" id=122]
-[ext_resource path="res://Turkey_Character/tile048.png" type="Texture" id=123]
-[ext_resource path="res://Turkey_Character/tile049.png" type="Texture" id=124]
-[ext_resource path="res://Turkey_Character/tile026.png" type="Texture" id=125]
-[ext_resource path="res://Turkey_Character/tile027.png" type="Texture" id=126]
-[ext_resource path="res://Turkey_Character/tile028.png" type="Texture" id=127]
-[ext_resource path="res://Turkey_Character/tile029.png" type="Texture" id=128]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateUp_Idle_0.png" type="Texture" id=129]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateUp_Idle_1.png" type="Texture" id=130]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateUp_Idle_2.png" type="Texture" id=131]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateUp_Idle_3.png" type="Texture" id=132]
-[ext_resource path="res://Turkey Sprite/WalkPlateDown_WalkPlate_0.png" type="Texture" id=133]
-[ext_resource path="res://Turkey Sprite/WalkPlateDown_WalkPlate_1.png" type="Texture" id=134]
-[ext_resource path="res://Turkey Sprite/WalkPlateDown_WalkPlate_2.png" type="Texture" id=135]
-[ext_resource path="res://Turkey Sprite/WalkPlateDown_WalkPlate_3.png" type="Texture" id=136]
-[ext_resource path="res://Turkey_Character/tile021.png" type="Texture" id=137]
-[ext_resource path="res://Turkey_Character/tile022.png" type="Texture" id=138]
-[ext_resource path="res://Turkey_Character/tile023.png" type="Texture" id=139]
-[ext_resource path="res://Turkey_Character/tile024.png" type="Texture" id=140]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_00.png" type="Texture" id=141]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_01.png" type="Texture" id=142]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_02.png" type="Texture" id=143]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_03.png" type="Texture" id=144]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_04.png" type="Texture" id=145]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_05.png" type="Texture" id=146]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_06.png" type="Texture" id=147]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_07.png" type="Texture" id=148]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_08.png" type="Texture" id=149]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_09.png" type="Texture" id=150]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_10.png" type="Texture" id=151]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_11.png" type="Texture" id=152]
-[ext_resource path="res://PoisonMenu.gd" type="Script" id=153]
-[ext_resource path="res://NinePatchRect.gd" type="Script" id=154]
-[ext_resource path="res://ShelfMenu.gd" type="Script" id=155]
-[ext_resource path="res://Pause.gd" type="Script" id=156]
-[ext_resource path="res://UI/Notepad.png" type="Texture" id=157]
-[ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=158]
-[ext_resource path="res://TextPrint.gd" type="Script" id=159]
-[ext_resource path="res://Recipe2.gd" type="Script" id=160]
-[ext_resource path="res://Recipe3.gd" type="Script" id=161]
-[ext_resource path="res://Recipe4.gd" type="Script" id=162]
-[ext_resource path="res://Game Over.gd" type="Script" id=163]
-[ext_resource path="res://Sidebar.gd" type="Script" id=164]
+[ext_resource path="res://UI/Cash Animation_Animation 1_0.png" type="Texture" id=72]
+[ext_resource path="res://UI/Cash Animation_Animation 1_1.png" type="Texture" id=73]
+[ext_resource path="res://UI/Cash Animation_Animation 1_2.png" type="Texture" id=74]
+[ext_resource path="res://UI/Cash Animation_Animation 1_3.png" type="Texture" id=75]
+[ext_resource path="res://Player.gd" type="Script" id=76]
+[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_0.png" type="Texture" id=77]
+[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_1.png" type="Texture" id=78]
+[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_2.png" type="Texture" id=79]
+[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_3.png" type="Texture" id=80]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_00.png" type="Texture" id=81]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_01.png" type="Texture" id=82]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_02.png" type="Texture" id=83]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_03.png" type="Texture" id=84]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_04.png" type="Texture" id=85]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_05.png" type="Texture" id=86]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_06.png" type="Texture" id=87]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_07.png" type="Texture" id=88]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_08.png" type="Texture" id=89]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_09.png" type="Texture" id=90]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_10.png" type="Texture" id=91]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_11.png" type="Texture" id=92]
+[ext_resource path="res://Turkey_Character/tile031.png" type="Texture" id=93]
+[ext_resource path="res://Turkey_Character/tile032.png" type="Texture" id=94]
+[ext_resource path="res://Turkey_Character/tile033.png" type="Texture" id=95]
+[ext_resource path="res://Turkey_Character/tile034.png" type="Texture" id=96]
+[ext_resource path="res://Turkey_Character/tile035.png" type="Texture" id=97]
+[ext_resource path="res://Turkey_Character/tile036.png" type="Texture" id=98]
+[ext_resource path="res://Turkey_Character/tile037.png" type="Texture" id=99]
+[ext_resource path="res://Turkey_Character/tile038.png" type="Texture" id=100]
+[ext_resource path="res://Turkey_Character/tile039.png" type="Texture" id=101]
+[ext_resource path="res://Turkey_Character/tile040.png" type="Texture" id=102]
+[ext_resource path="res://Turkey_Character/tile041.png" type="Texture" id=103]
+[ext_resource path="res://Turkey_Character/tile042.png" type="Texture" id=104]
+[ext_resource path="res://Turkey_Character/tile016.png" type="Texture" id=105]
+[ext_resource path="res://Turkey_Character/tile017.png" type="Texture" id=106]
+[ext_resource path="res://Turkey_Character/tile018.png" type="Texture" id=107]
+[ext_resource path="res://Turkey_Character/tile019.png" type="Texture" id=108]
+[ext_resource path="res://Turkey Sprite/WalkPlateUp_WalkUpPlate_0.png" type="Texture" id=109]
+[ext_resource path="res://Turkey Sprite/WalkPlateUp_WalkUpPlate_1.png" type="Texture" id=110]
+[ext_resource path="res://Turkey Sprite/WalkPlateUp_WalkUpPlate_2.png" type="Texture" id=111]
+[ext_resource path="res://Turkey Sprite/WalkPlateUp_WalkUpPlate_3.png" type="Texture" id=112]
+[ext_resource path="res://Turkey_Character/tile001.png" type="Texture" id=113]
+[ext_resource path="res://Turkey_Character/tile002.png" type="Texture" id=114]
+[ext_resource path="res://Turkey_Character/tile003.png" type="Texture" id=115]
+[ext_resource path="res://Turkey_Character/tile004.png" type="Texture" id=116]
+[ext_resource path="res://Turkey_Character/tile005.png" type="Texture" id=117]
+[ext_resource path="res://Turkey_Character/tile006.png" type="Texture" id=118]
+[ext_resource path="res://Turkey_Character/tile007.png" type="Texture" id=119]
+[ext_resource path="res://Turkey_Character/tile008.png" type="Texture" id=120]
+[ext_resource path="res://Turkey_Character/tile009.png" type="Texture" id=121]
+[ext_resource path="res://Turkey_Character/tile010.png" type="Texture" id=122]
+[ext_resource path="res://Turkey_Character/tile011.png" type="Texture" id=123]
+[ext_resource path="res://Turkey_Character/tile012.png" type="Texture" id=124]
+[ext_resource path="res://Turkey_Character/tile046.png" type="Texture" id=125]
+[ext_resource path="res://Turkey_Character/tile047.png" type="Texture" id=126]
+[ext_resource path="res://Turkey_Character/tile048.png" type="Texture" id=127]
+[ext_resource path="res://Turkey_Character/tile049.png" type="Texture" id=128]
+[ext_resource path="res://Turkey_Character/tile026.png" type="Texture" id=129]
+[ext_resource path="res://Turkey_Character/tile027.png" type="Texture" id=130]
+[ext_resource path="res://Turkey_Character/tile028.png" type="Texture" id=131]
+[ext_resource path="res://Turkey_Character/tile029.png" type="Texture" id=132]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateUp_Idle_0.png" type="Texture" id=133]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateUp_Idle_1.png" type="Texture" id=134]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateUp_Idle_2.png" type="Texture" id=135]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateUp_Idle_3.png" type="Texture" id=136]
+[ext_resource path="res://Turkey Sprite/WalkPlateDown_WalkPlate_0.png" type="Texture" id=137]
+[ext_resource path="res://Turkey Sprite/WalkPlateDown_WalkPlate_1.png" type="Texture" id=138]
+[ext_resource path="res://Turkey Sprite/WalkPlateDown_WalkPlate_2.png" type="Texture" id=139]
+[ext_resource path="res://Turkey Sprite/WalkPlateDown_WalkPlate_3.png" type="Texture" id=140]
+[ext_resource path="res://Turkey_Character/tile021.png" type="Texture" id=141]
+[ext_resource path="res://Turkey_Character/tile022.png" type="Texture" id=142]
+[ext_resource path="res://Turkey_Character/tile023.png" type="Texture" id=143]
+[ext_resource path="res://Turkey_Character/tile024.png" type="Texture" id=144]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_00.png" type="Texture" id=145]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_01.png" type="Texture" id=146]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_02.png" type="Texture" id=147]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_03.png" type="Texture" id=148]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_04.png" type="Texture" id=149]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_05.png" type="Texture" id=150]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_06.png" type="Texture" id=151]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_07.png" type="Texture" id=152]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_08.png" type="Texture" id=153]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_09.png" type="Texture" id=154]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_10.png" type="Texture" id=155]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlateSide_Idle_11.png" type="Texture" id=156]
+[ext_resource path="res://PoisonMenu.gd" type="Script" id=157]
+[ext_resource path="res://NinePatchRect.gd" type="Script" id=158]
+[ext_resource path="res://ShelfMenu.gd" type="Script" id=159]
+[ext_resource path="res://Pause.gd" type="Script" id=160]
+[ext_resource path="res://UI/Notepad.png" type="Texture" id=161]
+[ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=162]
+[ext_resource path="res://TextPrint.gd" type="Script" id=163]
+[ext_resource path="res://Recipe2.gd" type="Script" id=164]
+[ext_resource path="res://Recipe3.gd" type="Script" id=165]
+[ext_resource path="res://Recipe4.gd" type="Script" id=166]
+[ext_resource path="res://Game Over.gd" type="Script" id=167]
+[ext_resource path="res://Sidebar.gd" type="Script" id=168]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -414,6 +418,15 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="SpriteFrames" id=49]
+
+animations = [ {
+"frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [sub_resource type="RectangleShape2D" id=30]
 
 custom_solver_bias = 0.0
@@ -428,62 +441,62 @@ height = 16.0
 [sub_resource type="SpriteFrames" id=32]
 
 animations = [ {
-"frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
+"frames": [ ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ) ],
 "loop": true,
 "name": "Holding Right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ) ],
+"frames": [ ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ) ],
 "loop": true,
 "name": "Idle Down Plate",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"frames": [ ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ) ],
 "loop": true,
 "name": "Idle Right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ) ],
+"frames": [ ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ) ],
 "loop": true,
 "name": "Walk Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ) ],
+"frames": [ ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ) ],
 "loop": true,
 "name": "Holding Up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ) ],
+"frames": [ ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ) ],
 "loop": true,
 "name": "Idle Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ) ],
+"frames": [ ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ) ],
 "loop": true,
 "name": "Walk Right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ) ],
+"frames": [ ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ) ],
 "loop": true,
 "name": "Walk Up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ) ],
+"frames": [ ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ) ],
 "loop": true,
 "name": "Idle Up Plate",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ) ],
+"frames": [ ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ) ],
 "loop": true,
 "name": "Holding Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ) ],
+"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ) ],
 "loop": true,
 "name": "Idle Up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 152 ) ],
+"frames": [ ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ) ],
 "loop": true,
 "name": "Idle Right Plate",
 "speed": 5.0
@@ -519,7 +532,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 10
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 158 )
+font_data = ExtResource( 162 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Settings" ]
 
 [sub_resource type="DynamicFont" id=37]
@@ -874,7 +887,6 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 1
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1250,7 +1262,14 @@ position = Vector2( 184, 216 )
 frames = SubResource( 29 )
 animation = "idle"
 
-[node name="Turn In" type="Area2D" parent="RecipeGenerator" index="3"]
+[node name="Cash Out" type="AnimatedSprite" parent="RecipeGenerator" index="3"]
+
+visible = false
+position = Vector2( 176, 208 )
+frames = SubResource( 49 )
+animation = "default"
+
+[node name="Turn In" type="Area2D" parent="RecipeGenerator" index="4"]
 
 position = Vector2( 174, 214 )
 input_pickable = true
@@ -1275,7 +1294,7 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 72 )
+script = ExtResource( 76 )
 _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "collision" ]
 __meta__ = {
 "_edit_group_": true
@@ -1317,7 +1336,7 @@ patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
-script = ExtResource( 153 )
+script = ExtResource( 157 )
 _sections_unfolded = [ "Axis Stretch", "Patch Margin" ]
 __meta__ = {
 "_edit_group_": true
@@ -1451,7 +1470,7 @@ patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
-script = ExtResource( 154 )
+script = ExtResource( 158 )
 _sections_unfolded = [ "Axis Stretch", "Patch Margin" ]
 __meta__ = {
 "_edit_group_": true
@@ -1703,7 +1722,7 @@ patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
-script = ExtResource( 155 )
+script = ExtResource( 159 )
 _sections_unfolded = [ "Axis Stretch", "Hint", "Patch Margin", "Rect" ]
 __meta__ = {
 "_edit_group_": true
@@ -1973,7 +1992,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 156 )
+script = ExtResource( 160 )
 _sections_unfolded = [ "Pause" ]
 
 [node name="BlackOverlay" type="ColorRect" parent="Pause" index="0"]
@@ -2019,7 +2038,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 157 )
+texture = ExtResource( 161 )
 expand = true
 stretch_mode = 0
 
@@ -2078,7 +2097,7 @@ scroll_active = true
 scroll_following = true
 selection_enabled = false
 override_selected_font_color = true
-script = ExtResource( 159 )
+script = ExtResource( 163 )
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="Recipe2" type="ColorRect" parent="." index="13"]
@@ -2098,7 +2117,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-script = ExtResource( 160 )
+script = ExtResource( 164 )
 _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
@@ -2224,7 +2243,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-script = ExtResource( 161 )
+script = ExtResource( 165 )
 _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
@@ -2315,7 +2334,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-script = ExtResource( 162 )
+script = ExtResource( 166 )
 _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
@@ -2390,7 +2409,6 @@ _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "T
 
 [node name="Game Over" type="Control" parent="." index="16"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -2406,7 +2424,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 163 )
+script = ExtResource( 167 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Game Over" index="0"]
 
@@ -2573,7 +2591,6 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Sidebar" type="Control" parent="." index="17"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2587,7 +2604,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 164 )
+script = ExtResource( 168 )
 
 [node name="Game Timer" type="Timer" parent="Sidebar" index="0"]
 

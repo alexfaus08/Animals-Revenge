@@ -1,4 +1,5 @@
 extends Control
+var score = 0
 
 
 func _ready():
@@ -6,6 +7,8 @@ func _ready():
 
 func game_over():
 	show()
+	score = $"../Sidebar".get_score()
+	$"SCORE NUM".set_text(str(score))
 	get_tree().paused = true
 	# print the score
 

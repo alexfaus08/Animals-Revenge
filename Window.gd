@@ -113,22 +113,19 @@ func _process(delta):
 		# check to see if an order is ready to be completed
 		# Recipe2?
 		if(main_turnin.front().get_name() == Recipe2.get_main().get_name() and side_turnin.front().get_name() == Recipe2.get_side().get_name()):
-			$"../main".play("cash out")
-			$"../side".play("cash out")
+			cash_out()
 			recipe1 = false
 			Recipe2.hide()
 			score(main_turnin.front(), side_turnin.front())
 
 		elif(main_turnin.front().get_name() == Recipe3.get_main().get_name() and side_turnin.front().get_name() == Recipe3.get_side().get_name()):
-			$"../main".play("cash out")
-			$"../side".play("cash out")
+			cash_out()
 			recipe2 = false
 			Recipe3.hide()
 			score(main_turnin.front(), side_turnin.front())
 
 		elif(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name()):
-			$"../main".play("cash out")
-			$"../side".play("cash out")
+			cash_out()
 			recipe3 = false
 			Recipe4.hide()
 			score(main_turnin.front(), side_turnin.front())
@@ -186,3 +183,19 @@ func poison_roll(percent):
 		if(roll == 1 or roll == 2):
 			return true
 	return false
+
+func cash_out():
+	$"../main".play("idle")
+	$"../side".play("idle")
+	$"../Cash Out".show()
+	$"../Cash Out".play("default")
+	var t = Timer.new()
+	t.set_wait_time(2)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	t.queue_free()
+	$"../Cash Out".hide()
+	
+	
