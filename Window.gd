@@ -115,16 +115,22 @@ func _process(delta):
 		if(main_turnin.front().get_name() == Recipe2.get_main().get_name() and side_turnin.front().get_name() == Recipe2.get_side().get_name()):
 			$"../main".play("cash out")
 			$"../side".play("cash out")
+			recipe1 = false
+			Recipe2.hide()
 			score(main_turnin.front(), side_turnin.front())
 
 		elif(main_turnin.front().get_name() == Recipe3.get_main().get_name() and side_turnin.front().get_name() == Recipe3.get_side().get_name()):
 			$"../main".play("cash out")
 			$"../side".play("cash out")
+			recipe2 = false
+			Recipe3.hide()
 			score(main_turnin.front(), side_turnin.front())
 
 		elif(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name()):
 			$"../main".play("cash out")
 			$"../side".play("cash out")
+			recipe3 = false
+			Recipe4.hide()
 			score(main_turnin.front(), side_turnin.front())
 		main_turnin.clear()
 		side_turnin.clear()

@@ -1,15 +1,17 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://TitleScreen.gd" type="Script" id=1]
-[ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Louie Zong & The Barking Dawgz - dawgz - 04 cone of shame.wav" type="AudioStream" id=3]
+[ext_resource path="res://Demo.png" type="Texture" id=2]
+[ext_resource path="res://Title and Main Menu/Title Logo and Menu.png" type="Texture" id=3]
+[ext_resource path="res://munro/munro.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Louie Zong & The Barking Dawgz - dawgz - 04 cone of shame.wav" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 30
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 2 )
+font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -17,7 +19,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 20
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 2 )
+font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=3]
@@ -25,15 +27,17 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 20
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 2 )
+font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="TitleScreen" type="Control" index="0"]
+[node name="TitleScreen" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = 4.0
+margin_bottom = -6.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -43,9 +47,31 @@ size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Rect" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="." index="0"]
+[node name="Demo" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
+visible = false
+position = Vector2( 208, 154 )
+scale = Vector2( 0.400794, 0.400794 )
+texture = ExtResource( 2 )
+
+[node name="Title Logo and Menu" type="TextureRect" parent="." index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="." index="2"]
+
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -64,10 +90,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 109.0
-margin_top = 116.0
-margin_right = 306.0
-margin_bottom = 219.0
+margin_left = 111.0
+margin_top = 113.0
+margin_right = 308.0
+margin_bottom = 216.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -152,9 +178,9 @@ flat = false
 align = 1
 _sections_unfolded = [ "custom_fonts", "custom_styles" ]
 
-[node name="Title" type="AudioStreamPlayer" parent="." index="1"]
+[node name="Title" type="AudioStreamPlayer" parent="." index="3"]
 
-stream = ExtResource( 3 )
+stream = ExtResource( 5 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false

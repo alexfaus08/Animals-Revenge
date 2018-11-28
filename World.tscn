@@ -1,4 +1,4 @@
-[gd_scene load_steps=213 format=2]
+[gd_scene load_steps=209 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Louie Zong - levels - 10 the lost library.wav" type="AudioStream" id=2]
@@ -72,34 +72,34 @@
 [ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_2.png" type="Texture" id=70]
 [ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_3.png" type="Texture" id=71]
 [ext_resource path="res://Player.gd" type="Script" id=72]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_00.png" type="Texture" id=73]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_01.png" type="Texture" id=74]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_02.png" type="Texture" id=75]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_03.png" type="Texture" id=76]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_04.png" type="Texture" id=77]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_05.png" type="Texture" id=78]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_06.png" type="Texture" id=79]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_07.png" type="Texture" id=80]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_08.png" type="Texture" id=81]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_09.png" type="Texture" id=82]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_10.png" type="Texture" id=83]
-[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_11.png" type="Texture" id=84]
-[ext_resource path="res://Turkey_Character/tile031.png" type="Texture" id=85]
-[ext_resource path="res://Turkey_Character/tile032.png" type="Texture" id=86]
-[ext_resource path="res://Turkey_Character/tile033.png" type="Texture" id=87]
-[ext_resource path="res://Turkey_Character/tile034.png" type="Texture" id=88]
-[ext_resource path="res://Turkey_Character/tile035.png" type="Texture" id=89]
-[ext_resource path="res://Turkey_Character/tile036.png" type="Texture" id=90]
-[ext_resource path="res://Turkey_Character/tile037.png" type="Texture" id=91]
-[ext_resource path="res://Turkey_Character/tile038.png" type="Texture" id=92]
-[ext_resource path="res://Turkey_Character/tile039.png" type="Texture" id=93]
-[ext_resource path="res://Turkey_Character/tile040.png" type="Texture" id=94]
-[ext_resource path="res://Turkey_Character/tile041.png" type="Texture" id=95]
-[ext_resource path="res://Turkey_Character/tile042.png" type="Texture" id=96]
-[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_0.png" type="Texture" id=97]
-[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_1.png" type="Texture" id=98]
-[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_2.png" type="Texture" id=99]
-[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_3.png" type="Texture" id=100]
+[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_0.png" type="Texture" id=73]
+[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_1.png" type="Texture" id=74]
+[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_2.png" type="Texture" id=75]
+[ext_resource path="res://Turkey Sprite/WalkPlateSide_WalkSidePlate_3.png" type="Texture" id=76]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_00.png" type="Texture" id=77]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_01.png" type="Texture" id=78]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_02.png" type="Texture" id=79]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_03.png" type="Texture" id=80]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_04.png" type="Texture" id=81]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_05.png" type="Texture" id=82]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_06.png" type="Texture" id=83]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_07.png" type="Texture" id=84]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_08.png" type="Texture" id=85]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_09.png" type="Texture" id=86]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_10.png" type="Texture" id=87]
+[ext_resource path="res://Turkey Sprite/Idle Plate/IdlePlate_Idle_11.png" type="Texture" id=88]
+[ext_resource path="res://Turkey_Character/tile031.png" type="Texture" id=89]
+[ext_resource path="res://Turkey_Character/tile032.png" type="Texture" id=90]
+[ext_resource path="res://Turkey_Character/tile033.png" type="Texture" id=91]
+[ext_resource path="res://Turkey_Character/tile034.png" type="Texture" id=92]
+[ext_resource path="res://Turkey_Character/tile035.png" type="Texture" id=93]
+[ext_resource path="res://Turkey_Character/tile036.png" type="Texture" id=94]
+[ext_resource path="res://Turkey_Character/tile037.png" type="Texture" id=95]
+[ext_resource path="res://Turkey_Character/tile038.png" type="Texture" id=96]
+[ext_resource path="res://Turkey_Character/tile039.png" type="Texture" id=97]
+[ext_resource path="res://Turkey_Character/tile040.png" type="Texture" id=98]
+[ext_resource path="res://Turkey_Character/tile041.png" type="Texture" id=99]
+[ext_resource path="res://Turkey_Character/tile042.png" type="Texture" id=100]
 [ext_resource path="res://Turkey_Character/tile016.png" type="Texture" id=101]
 [ext_resource path="res://Turkey_Character/tile017.png" type="Texture" id=102]
 [ext_resource path="res://Turkey_Character/tile018.png" type="Texture" id=103]
@@ -281,12 +281,12 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 10, 8.93284 )
 
-[sub_resource type="RectangleShape2D" id=47]
+[sub_resource type="RectangleShape2D" id=16]
 
 custom_solver_bias = 0.0
 extents = Vector2( 7, 12.8 )
 
-[sub_resource type="DynamicFont" id=46]
+[sub_resource type="DynamicFont" id=17]
 
 size = 10
 use_mipmaps = false
@@ -294,17 +294,17 @@ use_filter = false
 font_data = ExtResource( 41 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=18]
 
 custom_solver_bias = 0.0
 extents = Vector2( 7.42857, 10 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=19]
 
 custom_solver_bias = 0.0
 extents = Vector2( 22.0957, 10 )
 
-[sub_resource type="SpriteFrames" id=18]
+[sub_resource type="SpriteFrames" id=20]
 
 animations = [ {
 "frames": [ ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
@@ -318,17 +318,17 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=21]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=20]
+[sub_resource type="RectangleShape2D" id=22]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 14.4762 )
 
-[sub_resource type="SpriteFrames" id=21]
+[sub_resource type="SpriteFrames" id=23]
 
 animations = [ {
 "frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
@@ -337,12 +337,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=22]
+[sub_resource type="RectangleShape2D" id=24]
 
 custom_solver_bias = 0.0
 extents = Vector2( 120, 5 )
 
-[sub_resource type="SpriteFrames" id=23]
+[sub_resource type="SpriteFrames" id=25]
 
 animations = [ {
 "frames": [ ExtResource( 52 ) ],
@@ -356,17 +356,17 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=24]
+[sub_resource type="RectangleShape2D" id=26]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=25]
+[sub_resource type="RectangleShape2D" id=27]
 
 custom_solver_bias = 0.0
 extents = Vector2( 20, 20 )
 
-[sub_resource type="SpriteFrames" id=26]
+[sub_resource type="SpriteFrames" id=28]
 
 animations = [ {
 "frames": [ ExtResource( 59 ) ],
@@ -390,7 +390,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=27]
+[sub_resource type="SpriteFrames" id=29]
 
 animations = [ {
 "frames": [ ExtResource( 65 ) ],
@@ -414,33 +414,33 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=35]
+[sub_resource type="RectangleShape2D" id=30]
 
 custom_solver_bias = 0.0
 extents = Vector2( 15, 5 )
 
-[sub_resource type="CapsuleShape2D" id=28]
+[sub_resource type="CapsuleShape2D" id=31]
 
 custom_solver_bias = 0.0
 radius = 11.0
 height = 16.0
 
-[sub_resource type="SpriteFrames" id=29]
+[sub_resource type="SpriteFrames" id=32]
 
 animations = [ {
-"frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ) ],
+"frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "Holding Right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ) ],
 "loop": true,
 "name": "Idle Down Plate",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ) ],
+"frames": [ ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
 "loop": true,
 "name": "Idle Right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
-"loop": true,
-"name": "Holding Right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ) ],
@@ -490,45 +490,13 @@ animations = [ {
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="DynamicFont" id=30]
-
-size = 30
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 41 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=48]
-
-size = 10
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 41 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=31]
-
-size = 30
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 41 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=32]
-
-size = 10
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 158 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Settings" ]
-
 [sub_resource type="DynamicFont" id=33]
 
-size = 20
+size = 30
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 41 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=34]
 
@@ -536,67 +504,33 @@ size = 10
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 41 )
-_sections_unfolded = [ "Font", "Resource", "Settings" ]
+_sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="StyleBoxFlat" id=42]
+[sub_resource type="DynamicFont" id=35]
 
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-bg_color = Color( 0.0941176, 0.0784314, 0.145098, 1 )
-draw_center = true
-border_width_left = 0
-border_width_top = 0
-border_width_right = 0
-border_width_bottom = 0
-border_color = Color( 0.8, 0.8, 0.8, 1 )
-border_blend = false
-corner_radius_top_left = 0
-corner_radius_top_right = 0
-corner_radius_bottom_right = 0
-corner_radius_bottom_left = 0
-corner_detail = 1
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Corner Radius" ]
+size = 30
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 41 )
+_sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="StyleBoxFlat" id=43]
+[sub_resource type="DynamicFont" id=36]
 
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-bg_color = Color( 0.243137, 0.537255, 0.282353, 1 )
-draw_center = true
-border_width_left = 0
-border_width_top = 0
-border_width_right = 0
-border_width_bottom = 0
-border_color = Color( 0.8, 0.8, 0.8, 1 )
-border_blend = false
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Expand Margin" ]
+size = 10
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 158 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Settings" ]
 
-[sub_resource type="DynamicFont" id=44]
+[sub_resource type="DynamicFont" id=37]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 41 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=38]
 
 size = 10
 use_mipmaps = false
@@ -604,38 +538,28 @@ use_filter = false
 font_data = ExtResource( 41 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="Theme" id=45]
-
-default_font = SubResource( 44 )
-ProgressBar/colors/font_color = Color( 0.941176, 0.941176, 0.941176, 1 )
-ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
-ProgressBar/fonts/font = null
-ProgressBar/styles/bg = SubResource( 42 )
-ProgressBar/styles/fg = SubResource( 43 )
-_sections_unfolded = [ "ProgressBar", "ProgressBar/colors", "ProgressBar/fonts", "ProgressBar/styles" ]
-
-[sub_resource type="DynamicFontData" id=39]
+[sub_resource type="DynamicFontData" id=43]
 
 hinting = 2
 font_path = "res://munro/munro.ttf"
 
-[sub_resource type="DynamicFont" id=40]
+[sub_resource type="DynamicFont" id=44]
 
 size = 50
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 39 )
+font_data = SubResource( 43 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=41]
+[sub_resource type="DynamicFont" id=45]
 
 size = 30
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 39 )
+font_data = SubResource( 43 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=36]
+[sub_resource type="DynamicFont" id=46]
 
 size = 30
 use_mipmaps = false
@@ -643,7 +567,7 @@ use_filter = false
 font_data = ExtResource( 41 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFont" id=37]
+[sub_resource type="DynamicFont" id=47]
 
 size = 31
 use_mipmaps = false
@@ -651,7 +575,7 @@ use_filter = false
 font_data = ExtResource( 41 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=38]
+[sub_resource type="DynamicFont" id=48]
 
 size = 30
 use_mipmaps = false
@@ -659,7 +583,7 @@ use_filter = false
 font_data = ExtResource( 41 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -950,7 +874,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1015,7 +939,7 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Oven/Area2D" index="0"]
 
 position = Vector2( 7, -5.6 )
-shape = SubResource( 47 )
+shape = SubResource( 16 )
 
 [node name="Control" type="Control" parent="Appliances/Oven" index="6"]
 
@@ -1071,7 +995,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 17 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1098,7 +1022,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 17 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1134,7 +1058,7 @@ texture = ExtResource( 43 )
 
 position = Vector2( 0.000427246, -9.14286 )
 scale = Vector2( 3.5332, 1.51923 )
-shape = SubResource( 16 )
+shape = SubResource( 18 )
 
 [node name="Area2D" type="Area2D" parent="Appliances/Shelf" index="2"]
 
@@ -1150,7 +1074,7 @@ audio_bus_name = "Master"
 
 position = Vector2( 0.000427246, 3.63095 )
 scale = Vector2( 1, 1.95147 )
-shape = SubResource( 17 )
+shape = SubResource( 19 )
 
 [node name="Mixing Station" type="StaticBody2D" parent="Appliances" index="4"]
 
@@ -1167,7 +1091,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="MixSprite" type="AnimatedSprite" parent="Appliances/Mixing Station" index="0"]
 
-frames = SubResource( 18 )
+frames = SubResource( 20 )
 animation = "Mix"
 frame = 4
 
@@ -1175,7 +1099,7 @@ frame = 4
 
 position = Vector2( 0, 3.02381 )
 scale = Vector2( 1, 1.40842 )
-shape = SubResource( 19 )
+shape = SubResource( 21 )
 
 [node name="MixingTimer" type="Timer" parent="Appliances/Mixing Station" index="2"]
 
@@ -1200,13 +1124,13 @@ audio_bus_name = "Master"
 
 visible = false
 position = Vector2( -8.38095, 11.3778 )
-shape = SubResource( 20 )
+shape = SubResource( 22 )
 
 [node name="MixingDone" type="AnimatedSprite" parent="Appliances/Mixing Station" index="4"]
 
 visible = false
 position = Vector2( 0, -16 )
-frames = SubResource( 21 )
+frames = SubResource( 23 )
 animation = "ready"
 
 [node name="L Counter" type="Node2D" parent="." index="5"]
@@ -1236,7 +1160,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="L Counter/StaticBody2D" index="0"]
 
 position = Vector2( 198, 217 )
-shape = SubResource( 22 )
+shape = SubResource( 24 )
 
 [node name="Fillers" type="Node2D" parent="L Counter" index="2"]
 
@@ -1245,25 +1169,25 @@ editor/display_folded = true
 [node name="1" type="AnimatedSprite" parent="L Counter/Fillers" index="0"]
 
 position = Vector2( 103, 215 )
-frames = SubResource( 23 )
+frames = SubResource( 25 )
 animation = "default"
 
 [node name="2" type="AnimatedSprite" parent="L Counter/Fillers" index="1"]
 
 position = Vector2( 119, 215 )
-frames = SubResource( 23 )
+frames = SubResource( 25 )
 animation = "default"
 
 [node name="3" type="AnimatedSprite" parent="L Counter/Fillers" index="2"]
 
 position = Vector2( 135, 215 )
-frames = SubResource( 23 )
+frames = SubResource( 25 )
 animation = "default"
 
 [node name="4" type="AnimatedSprite" parent="L Counter/Fillers" index="3"]
 
 position = Vector2( 151, 215 )
-frames = SubResource( 23 )
+frames = SubResource( 25 )
 animation = "default"
 
 [node name="5" type="Sprite" parent="L Counter/Fillers" index="4"]
@@ -1272,8 +1196,6 @@ position = Vector2( 167, 215 )
 texture = ExtResource( 52 )
 
 [node name="RecipeGenerator" type="Node2D" parent="." index="6"]
-
-editor/display_folded = true
 
 [node name="Window" type="Area2D" parent="RecipeGenerator" index="0"]
 
@@ -1296,7 +1218,7 @@ __meta__ = {
 
 visible = false
 scale = Vector2( 4, 4 )
-shape = SubResource( 24 )
+shape = SubResource( 26 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Order Table2" type="StaticBody2D" parent="RecipeGenerator/Window" index="1"]
@@ -1314,18 +1236,18 @@ bounce = 0.0
 
 position = Vector2( 11.5, -11.5 )
 scale = Vector2( 0.5, 1.19565 )
-shape = SubResource( 25 )
+shape = SubResource( 27 )
 
 [node name="main" type="AnimatedSprite" parent="RecipeGenerator" index="1"]
 
 position = Vector2( 168, 216 )
-frames = SubResource( 26 )
+frames = SubResource( 28 )
 animation = "idle"
 
 [node name="side" type="AnimatedSprite" parent="RecipeGenerator" index="2"]
 
 position = Vector2( 184, 216 )
-frames = SubResource( 27 )
+frames = SubResource( 29 )
 animation = "idle"
 
 [node name="Turn In" type="Area2D" parent="RecipeGenerator" index="3"]
@@ -1343,7 +1265,7 @@ audio_bus_name = "Master"
 
 position = Vector2( 2, 0.999998 )
 scale = Vector2( 1, 1.5 )
-shape = SubResource( 35 )
+shape = SubResource( 30 )
 
 [node name="Player" type="KinematicBody2D" parent="." index="7"]
 
@@ -1364,12 +1286,12 @@ motion_speed = 150
 
 position = Vector2( 0.250001, -0.5 )
 scale = Vector2( 1.13462, 1 )
-shape = SubResource( 28 )
+shape = SubResource( 31 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player" index="1"]
 
-frames = SubResource( 29 )
+frames = SubResource( 32 )
 animation = "Holding Down"
 
 [node name="PoisonMenu" type="NinePatchRect" parent="." index="8"]
@@ -1441,7 +1363,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 30 )
+custom_fonts/font = SubResource( 33 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1469,7 +1391,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 30 )
+custom_fonts/font = SubResource( 33 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1497,7 +1419,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 30 )
+custom_fonts/font = SubResource( 33 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1593,7 +1515,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 48 )
+custom_fonts/font = SubResource( 34 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1619,7 +1541,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 48 )
+custom_fonts/font = SubResource( 34 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1645,7 +1567,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 48 )
+custom_fonts/font = SubResource( 34 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1671,7 +1593,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 48 )
+custom_fonts/font = SubResource( 34 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1697,7 +1619,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 48 )
+custom_fonts/font = SubResource( 34 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1723,7 +1645,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 48 )
+custom_fonts/font = SubResource( 34 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1749,7 +1671,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 48 )
+custom_fonts/font = SubResource( 34 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1842,7 +1764,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1868,7 +1790,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1894,7 +1816,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1920,7 +1842,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1946,7 +1868,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1972,7 +1894,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1998,7 +1920,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2024,7 +1946,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2137,7 +2059,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 32 )
+custom_fonts/normal_font = SubResource( 36 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "Use WASD or Arrow Keys to Move
@@ -2161,7 +2083,6 @@ _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Hint", "M
 
 [node name="Recipe2" type="ColorRect" parent="." index="13"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2207,7 +2128,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 33 )
+custom_fonts/normal_font = SubResource( 37 )
 custom_colors/default_color = Color( 0.228937, 0.417969, 0.086515, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Turkey[/center]"
@@ -2236,7 +2157,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 34 )
+custom_fonts/normal_font = SubResource( 38 )
 custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Cranberry Sauce[/center]"
@@ -2251,38 +2172,39 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
-[node name="ProgressBar" type="ProgressBar" parent="Recipe2" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 70.0
-margin_right = 64.0
-margin_bottom = 83.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-theme = SubResource( 45 )
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 70.0
-exp_edit = false
-rounded = false
-percent_visible = false
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Percent", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
-
-[node name="Timer" type="Timer" parent="Recipe2" index="4"]
+[node name="Timer" type="Timer" parent="Recipe2" index="3"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
+
+[node name="T" type="RichTextLabel" parent="Recipe2" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 56.0
+margin_right = 64.0
+margin_bottom = 88.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
 [node name="Recipe3" type="ColorRect" parent="." index="14"]
 
@@ -2331,7 +2253,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 33 )
+custom_fonts/normal_font = SubResource( 37 )
 custom_colors/default_color = Color( 0.228937, 0.417969, 0.086515, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Ham[/center]"
@@ -2360,7 +2282,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 34 )
+custom_fonts/normal_font = SubResource( 38 )
 custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Cranberry Sauce[/center]"
@@ -2422,7 +2344,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 33 )
+custom_fonts/normal_font = SubResource( 37 )
 custom_colors/default_color = Color( 0.228937, 0.417969, 0.086515, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Ham[/center]"
@@ -2451,7 +2373,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 34 )
+custom_fonts/normal_font = SubResource( 38 )
 custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Cranberry Sauce[/center]"
@@ -2519,7 +2441,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 40 )
+custom_fonts/font = SubResource( 44 )
 custom_colors/font_color = Color( 0.535156, 0.0618595, 0.0618595, 1 )
 text = "GAME OVER"
 align = 1
@@ -2543,7 +2465,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 41 )
+custom_fonts/font = SubResource( 45 )
 custom_colors/font_color = Color( 0.0760039, 0.116394, 0.300781, 1 )
 text = "Final Score"
 align = 1
@@ -2567,7 +2489,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 41 )
+custom_fonts/font = SubResource( 45 )
 custom_colors/font_color = Color( 0.0760039, 0.116394, 0.300781, 1 )
 text = "0"
 align = 1
@@ -2701,7 +2623,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 36 )
+custom_fonts/font = SubResource( 46 )
 text = "SCORE:"
 align = 1
 percent_visible = 1.0
@@ -2725,7 +2647,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 37 )
+custom_fonts/normal_font = SubResource( 47 )
 bbcode_enabled = true
 bbcode_text = "[center]0[/center]"
 visible_characters = -1
@@ -2753,7 +2675,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 38 )
+custom_fonts/font = SubResource( 48 )
 text = "0:00"
 align = 1
 valign = 1
