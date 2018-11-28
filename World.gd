@@ -2,6 +2,8 @@ extends Node2D
 
 onready var textprint = $"Bottom Box/TextPrint"
 var recipes = []
+export var order_expire_time = 25
+export var game_length = 180
 
 class Recipe:
 	var r_name
@@ -46,23 +48,26 @@ class Recipe:
 	
 func _ready():
 	$"Background".play()
-	
+	$"Recipe2/rt1".set_wait_time(order_expire_time)
+	$"Recipe4/rt3".set_wait_time(order_expire_time)
+	$"Recipe3/rt2".set_wait_time(order_expire_time)
+	$"Sidebar/Game Timer".set_wait_time(game_length)
 
 func initrecipes():
 	# initialize all recipes here
-	var Turkey = Recipe.new("Turkey", ["Raw Turkey"], 5, "Oven")
+	var Turkey = Recipe.new("Turkey", ["Raw Turkey"], 8, "Oven")
 	recipes.append(Turkey)
-	var Chicken = Recipe.new("Chicken", ["Raw Chicken"], 20, "Oven")
+	var Chicken = Recipe.new("Chicken", ["Raw Chicken"], 5, "Oven")
 	recipes.append(Chicken)
-	var Ham = Recipe.new("Ham", ["Raw Ham"], 20, "Oven")
+	var Ham = Recipe.new("Ham", ["Raw Ham"], 5, "Oven")
 	recipes.append(Ham)
-	var Mashed_Potatoes = Recipe.new("Mashed Potatoes", ["Potatoes", "Butter", "Milk"], 10, "Stove")
+	var Mashed_Potatoes = Recipe.new("Mashed Potatoes", ["Potatoes", "Butter", "Milk"], 5, "Stove")
 	recipes.append(Mashed_Potatoes)
-	var Green_Beans = Recipe.new("Green Beans", ["Green Beans", "Butter"], 10, "Stove")
+	var Green_Beans = Recipe.new("Green Beans", ["Green Beans", "Butter"], 5, "Stove")
 	recipes.append(Green_Beans) 
 	var Cranberry_Sauce = Recipe.new("Cranberry Sauce", ["Cranberries"], 8, "Stove")
 	recipes.append(Cranberry_Sauce)
-	var Creamed_Corn = Recipe.new("Creamed Corn", ["Corn", "Milk", "Cheese"], 10, "Oven")
+	var Creamed_Corn = Recipe.new("Creamed Corn", ["Corn", "Milk", "Cheese"], 3, "Oven")
 	recipes.append(Creamed_Corn)
 	var Stuffing= Recipe.new("Stuffing", ["Bread", "Celery", "Broth", "Butter", "Apples", "Onions"], 5, "Oven")
 	recipes.append(Stuffing)
@@ -81,5 +86,5 @@ func recipe_lookup(arr):
 	arr.sort()
 	for r in recipes:
 		if (r.get_ingredients() == arr):
-			return r
+			return Recipe.new(r.get_name(), r.get_ingredients(), r.get_cook_time(), r.get_appliance())
 

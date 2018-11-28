@@ -1,4 +1,4 @@
-[gd_scene load_steps=215 format=2]
+[gd_scene load_steps=216 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Louie Zong - levels - 10 the lost library.wav" type="AudioStream" id=2]
@@ -53,11 +53,11 @@
 [ext_resource path="res://Objects/L Counter.png" type="Texture" id=51]
 [ext_resource path="res://Fillers.gd" type="Script" id=52]
 [ext_resource path="res://Objects/Empty Counter_Animation 1_0.png" type="Texture" id=53]
-[ext_resource path="res://Objects/Served Food Counter_Animation 1_0.png" type="Texture" id=54]
-[ext_resource path="res://Objects/Served Food Counter_Animation 1_1.png" type="Texture" id=55]
-[ext_resource path="res://Objects/Served Food Counter_Animation 1_2.png" type="Texture" id=56]
-[ext_resource path="res://Objects/Served Food Counter_Animation 1_3.png" type="Texture" id=57]
-[ext_resource path="res://Objects/Served Food Counter_Animation 1_4.png" type="Texture" id=58]
+[ext_resource path="res://Objects/Empty Counter_Animation 1_2.png" type="Texture" id=54]
+[ext_resource path="res://Objects/Empty Counter_Animation 1_1.png" type="Texture" id=55]
+[ext_resource path="res://Objects/Served Food Counter_Animation 1_0.png" type="Texture" id=56]
+[ext_resource path="res://Objects/Served Food Counter_Animation 1_4.png" type="Texture" id=57]
+[ext_resource path="res://Objects/Served Food Counter_Animation 1_2.png" type="Texture" id=58]
 [ext_resource path="res://Window.gd" type="Script" id=59]
 [ext_resource path="res://Objects/Order Table/Main Dish Order_Animation 1_2.png" type="Texture" id=60]
 [ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_3.png" type="Texture" id=61]
@@ -347,19 +347,10 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 120, 5 )
 
-[sub_resource type="SpriteFrames" id=25]
+[sub_resource type="RectangleShape2D" id=50]
 
-animations = [ {
-"frames": [ ExtResource( 53 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ) ],
-"loop": true,
-"name": "food",
-"speed": 5.0
-} ]
+custom_solver_bias = 0.0
+extents = Vector2( 25.6, 32.5619 )
 
 [sub_resource type="RectangleShape2D" id=26]
 
@@ -552,6 +543,14 @@ use_filter = false
 font_data = ExtResource( 41 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
+[sub_resource type="DynamicFont" id=51]
+
+size = 31
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 41 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
 [sub_resource type="DynamicFontData" id=43]
 
 hinting = 2
@@ -601,6 +600,8 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
+order_expire_time = 100
+game_length = 180
 
 [node name="Background" type="AudioStreamPlayer2D" parent="." index="0"]
 
@@ -776,7 +777,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Appliances" type="Node2D" parent="." index="4"]
 
-editor/display_folded = true
 position = Vector2( 207, 65 )
 _sections_unfolded = [ "Transform" ]
 
@@ -888,11 +888,12 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
 
+editor/display_folded = true
 position = Vector2( -142, -29 )
 input_pickable = false
 collision_layer = 1
@@ -1092,6 +1093,7 @@ shape = SubResource( 19 )
 
 [node name="Mixing Station" type="StaticBody2D" parent="Appliances" index="4"]
 
+editor/display_folded = true
 position = Vector2( -175, -17 )
 input_pickable = false
 collision_layer = 1
@@ -1102,6 +1104,12 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 44 )
 _sections_unfolded = [ "Transform" ]
+simple_poison_percent = 0.25
+simple_runtime = 10
+better_poison_percent = 0.5
+better_runtime = 15
+killer_poison_percent = 1
+killer_runtime = 25
 
 [node name="MixSprite" type="AnimatedSprite" parent="Appliances/Mixing Station" index="0"]
 
@@ -1149,15 +1157,16 @@ animation = "ready"
 
 [node name="L Counter" type="Node2D" parent="." index="5"]
 
+editor/display_folded = true
 position = Vector2( 1, 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="L Counter" index="0"]
 
-position = Vector2( 199, 199 )
+position = Vector2( 200, 199 )
 texture = ExtResource( 51 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="L Counter" index="1"]
 
@@ -1178,42 +1187,109 @@ shape = SubResource( 24 )
 
 script = ExtResource( 52 )
 
-[node name="1" type="AnimatedSprite" parent="L Counter/Fillers" index="0"]
+[node name="1" type="TextureButton" parent="L Counter/Fillers" index="0"]
 
-position = Vector2( 103, 215 )
-frames = SubResource( 25 )
-animation = "default"
-_sections_unfolded = [ "Visibility" ]
-__meta__ = {
-"_edit_lock_": true
-}
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_top = 207.0
+margin_right = 112.0
+margin_bottom = 223.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 53 )
+texture_pressed = ExtResource( 54 )
+texture_hover = ExtResource( 55 )
+_sections_unfolded = [ "Focus", "Mouse", "Rect", "Size Flags", "Textures", "Theme", "Visibility" ]
 
-[node name="2" type="AnimatedSprite" parent="L Counter/Fillers" index="1"]
+[node name="2" type="TextureButton" parent="L Counter/Fillers" index="1"]
 
-position = Vector2( 119, 215 )
-frames = SubResource( 25 )
-animation = "default"
-__meta__ = {
-"_edit_lock_": true
-}
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 112.0
+margin_top = 207.0
+margin_right = 128.0
+margin_bottom = 223.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 53 )
+texture_pressed = ExtResource( 54 )
+texture_hover = ExtResource( 55 )
+_sections_unfolded = [ "Textures", "Visibility" ]
 
-[node name="3" type="AnimatedSprite" parent="L Counter/Fillers" index="2"]
+[node name="3" type="TextureButton" parent="L Counter/Fillers" index="2"]
 
-position = Vector2( 135, 215 )
-frames = SubResource( 25 )
-animation = "default"
-__meta__ = {
-"_edit_lock_": true
-}
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 128.0
+margin_top = 207.0
+margin_right = 144.0
+margin_bottom = 223.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 53 )
+texture_pressed = ExtResource( 54 )
+texture_hover = ExtResource( 55 )
+_sections_unfolded = [ "Textures", "Visibility" ]
 
-[node name="4" type="AnimatedSprite" parent="L Counter/Fillers" index="3"]
+[node name="4" type="TextureButton" parent="L Counter/Fillers" index="3"]
 
-position = Vector2( 151, 215 )
-frames = SubResource( 25 )
-animation = "default"
-__meta__ = {
-"_edit_lock_": true
-}
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_top = 207.0
+margin_right = 160.0
+margin_bottom = 223.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 53 )
+texture_pressed = ExtResource( 54 )
+texture_hover = ExtResource( 55 )
+_sections_unfolded = [ "Textures", "Visibility" ]
 
 [node name="5" type="Sprite" parent="L Counter/Fillers" index="4"]
 
@@ -1225,6 +1301,8 @@ __meta__ = {
 
 [node name="Area2D" type="Area2D" parent="L Counter/Fillers" index="5"]
 
+position = Vector2( 120, 212 )
+scale = Vector2( 1.25, 0.625 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -1235,8 +1313,13 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="L Counter/Fillers/Area2D" index="0"]
 
+position = Vector2( 5.59999, 3.89999 )
+scale = Vector2( 1, 0.807692 )
+shape = SubResource( 50 )
+
 [node name="f1" type="TextureButton" parent="L Counter/Fillers" index="6"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1256,13 +1339,14 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 54 )
-texture_pressed = ExtResource( 58 )
-texture_hover = ExtResource( 56 )
-_sections_unfolded = [ "Textures" ]
+texture_normal = ExtResource( 56 )
+texture_pressed = ExtResource( 57 )
+texture_hover = ExtResource( 58 )
+_sections_unfolded = [ "Hint", "Textures" ]
 
 [node name="f2" type="TextureButton" parent="L Counter/Fillers" index="7"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1282,13 +1366,14 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 54 )
-texture_pressed = ExtResource( 58 )
-texture_hover = ExtResource( 56 )
+texture_normal = ExtResource( 56 )
+texture_pressed = ExtResource( 57 )
+texture_hover = ExtResource( 58 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="f3" type="TextureButton" parent="L Counter/Fillers" index="8"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1308,13 +1393,14 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 54 )
-texture_pressed = ExtResource( 58 )
-texture_hover = ExtResource( 56 )
+texture_normal = ExtResource( 56 )
+texture_pressed = ExtResource( 57 )
+texture_hover = ExtResource( 58 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="f4" type="TextureButton" parent="L Counter/Fillers" index="9"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1334,9 +1420,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 54 )
-texture_pressed = ExtResource( 58 )
-texture_hover = ExtResource( 56 )
+texture_normal = ExtResource( 56 )
+texture_pressed = ExtResource( 57 )
+texture_hover = ExtResource( 58 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="RecipeGenerator" type="Node2D" parent="." index="6"]
@@ -1447,7 +1533,6 @@ animation = "Holding Down"
 
 [node name="PoisonMenu" type="NinePatchRect" parent="." index="8"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -2323,43 +2408,46 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
-[node name="Timer" type="Timer" parent="Recipe2" index="3"]
+[node name="rt1" type="Timer" parent="Recipe2" index="3"]
 
 process_mode = 1
-wait_time = 1.0
-one_shot = false
+wait_time = 25.0
+one_shot = true
 autostart = false
 
-[node name="T" type="RichTextLabel" parent="Recipe2" index="4"]
+[node name="T2" type="RichTextLabel" parent="Recipe2" index="4"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 56.0
-margin_right = 64.0
-margin_bottom = 88.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = 21.0
+margin_right = 39.0
+margin_bottom = 69.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-bbcode_enabled = false
+custom_fonts/normal_font = SubResource( 51 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
 bbcode_text = ""
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
 text = ""
-scroll_active = true
+scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
 
 [node name="Recipe3" type="ColorRect" parent="." index="14"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2448,9 +2536,46 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
+[node name="rt2" type="Timer" parent="Recipe3" index="3"]
+
+process_mode = 1
+wait_time = 25.0
+one_shot = true
+autostart = false
+
+[node name="T3" type="RichTextLabel" parent="Recipe3" index="4"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = 21.0
+margin_right = 31.0
+margin_bottom = 69.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 51 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
+
 [node name="Recipe4" type="ColorRect" parent="." index="15"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2538,6 +2663,44 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Hint", "Margin", "Rect", "Theme", "custom_colors", "custom_fonts" ]
+
+[node name="rt3" type="Timer" parent="Recipe4" index="3"]
+
+process_mode = 1
+wait_time = 25.0
+one_shot = true
+autostart = false
+
+[node name="T4" type="RichTextLabel" parent="Recipe4" index="4"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = 21.0
+margin_right = 39.0
+margin_bottom = 69.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 51 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
 
 [node name="Game Over" type="Control" parent="." index="16"]
 
@@ -2865,6 +3028,26 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [connection signal="body_exited" from="Appliances/Mixing Station/Area2D" to="Appliances/Mixing Station" method="_on_Area2D_body_exited"]
 
+[connection signal="pressed" from="L Counter/Fillers/1" to="L Counter/Fillers" method="_on_1_pressed"]
+
+[connection signal="pressed" from="L Counter/Fillers/2" to="L Counter/Fillers" method="_on_2_pressed"]
+
+[connection signal="pressed" from="L Counter/Fillers/3" to="L Counter/Fillers" method="_on_3_pressed"]
+
+[connection signal="pressed" from="L Counter/Fillers/4" to="L Counter/Fillers" method="_on_4_pressed"]
+
+[connection signal="body_entered" from="L Counter/Fillers/Area2D" to="L Counter/Fillers" method="_on_Area2D_body_entered"]
+
+[connection signal="body_exited" from="L Counter/Fillers/Area2D" to="L Counter/Fillers" method="_on_Area2D_body_exited"]
+
+[connection signal="pressed" from="L Counter/Fillers/f1" to="L Counter/Fillers" method="_on_f1_pressed"]
+
+[connection signal="pressed" from="L Counter/Fillers/f2" to="L Counter/Fillers" method="_on_f2_pressed"]
+
+[connection signal="pressed" from="L Counter/Fillers/f3" to="L Counter/Fillers" method="_on_f3_pressed"]
+
+[connection signal="pressed" from="L Counter/Fillers/f4" to="L Counter/Fillers" method="_on_f4_pressed"]
+
 [connection signal="body_entered" from="RecipeGenerator/Window" to="RecipeGenerator/Window" method="_on_Window_body_entered"]
 
 [connection signal="body_exited" from="RecipeGenerator/Window" to="RecipeGenerator/Window" method="_on_Window_body_exited"]
@@ -2908,6 +3091,12 @@ _sections_unfolded = [ "custom_fonts" ]
 [connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Onions" to="ShelfMenu" method="_on_Onions_pressed"]
 
 [connection signal="pressed" from="ShelfMenu/GridContainer/VBoxContainer/Green Beans" to="ShelfMenu" method="_on_Green_Beans_pressed"]
+
+[connection signal="timeout" from="Recipe2/rt1" to="RecipeGenerator/Window" method="_on_rt1_timeout"]
+
+[connection signal="timeout" from="Recipe3/rt2" to="RecipeGenerator/Window" method="_on_rt2_timeout"]
+
+[connection signal="timeout" from="Recipe4/rt3" to="RecipeGenerator/Window" method="_on_rt3_timeout"]
 
 [connection signal="pressed" from="Game Over/HBoxContainer/New Game" to="Game Over" method="_on_New_Game_pressed"]
 

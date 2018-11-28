@@ -9,6 +9,12 @@ var runtime
 onready var player = $"../../Player"
 onready var t = get_node("MixingTimer")
 onready var popup  = $"../../PoisonMenu"
+export var simple_poison_percent = .25
+export var simple_runtime = 10
+export var better_poison_percent = .50
+export var better_runtime = 15
+export var killer_poison_percent = 1
+export var killer_runtime = 25
 
 func _ready():
 	player_near_mixing_station = false
@@ -31,12 +37,12 @@ func _process(delta):
 	
 func which_poison(percent):
 	poison_type = percent
-	if(percent == .25):
-		runtime = 10
-	elif(percent == .50):
-		runtime = 30
-	elif(percent == 1):
-		runtime = 50
+	if(percent == simple_poison_percent):
+		runtime = simple_runtime
+	elif(percent == better_poison_percent):
+		runtime = better_runtime
+	elif(percent == killer_poison_percent):
+		runtime = killer_runtime
 		
 func poison():
 	item = player.holding.pop_front()

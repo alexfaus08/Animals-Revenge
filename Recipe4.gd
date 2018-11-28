@@ -1,10 +1,21 @@
 extends ColorRect
 var main_dish
 var side_dish
+onready var t = $"rt3"
+var time
 
 func _ready():
 	$"Main1".clear()
 	$"Side1".clear()
+	
+	
+func _process(delta):
+	if(t.get_time_left() < 15):
+		time = "[center][color=red]%s[/color][center]" % str(int(t.get_time_left()))
+	else:
+		time = "[center][color=black]%s[/color][center]" % str(int(t.get_time_left()))
+	$"T4".clear()
+	$"T4".append_bbcode(time)
 
 func set_main(main):
 	main_dish = main

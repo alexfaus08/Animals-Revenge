@@ -46,7 +46,7 @@ func _recipes_Main_Course():
 #List ot side dishes	
 func _recipes_Sides():
 	#randomly pick a side
-	var side_dish_number = randi()%5
+	var side_dish_number = randi()%4
 	#return the side dish
 	return side_dishes[side_dish_number]
 	
@@ -64,6 +64,7 @@ func _process(delta):
 				print(main_recipe.get_ingredients())
 				print(side_recipe.get_ingredients())
 				print("\n")
+				$"../../Recipe2/rt1".start()
 			elif(recipe1 == true and recipe2 == false):
 				recipe2 = true
 				Recipe3.show()
@@ -72,6 +73,7 @@ func _process(delta):
 				print(main_recipe.get_ingredients())
 				print(side_recipe.get_ingredients())
 				print("\n")
+				$"../../Recipe3/rt2".start()
 			elif(recipe1 == true and recipe2 == true and recipe3 == false):
 				recipe3 = true
 				Recipe4.show()
@@ -80,6 +82,7 @@ func _process(delta):
 				print(main_recipe.get_ingredients())
 				print(side_recipe.get_ingredients())
 				print("\n")
+				$"../../Recipe4/rt3".start()
 			elif(recipe1 == true and recipe2 == true and recipe3 == true):
 				print("Backed up orders")
 				screenprint.append_bbcode("Backed up orders\n")
@@ -91,7 +94,7 @@ func _process(delta):
 			# another for orders waiting to be turned in 
 			# if what the player is holding is not a string, it's a Recipe type
 			if(typeof(player.holding[0]) != TYPE_STRING):
-				if(player.holding[0] in dishes):
+				if(player.holding[0].get_name() == "Turkey" or player.holding[0].get_name() == "Chicken" or player.holding[0].get_name() == "Ham"):
 					if(main_turnin.size() == 0):
 						main_turnin.append(player.holding.pop_front())
 						if(main_turnin.front().is_poisoned()):
@@ -106,7 +109,7 @@ func _process(delta):
 						else:
 							$"../side".play("filled")
 		elif(player_near_turnin and player.holding.size() == 0):
-				# have a popup that allows the player to grab a dish or destroy contents
+				# TODO have a popup that allows the player to grab a dish or destroy contents
 				pass
 	
 	if(main_turnin.size() == 1 and side_turnin.size() == 1):
@@ -116,12 +119,14 @@ func _process(delta):
 			cash_out()
 			recipe1 = false
 			Recipe2.hide()
+			$"../../Recipe2/rt1".stop()
 			score(main_turnin.front(), side_turnin.front())
 
 		elif(main_turnin.front().get_name() == Recipe3.get_main().get_name() and side_turnin.front().get_name() == Recipe3.get_side().get_name()):
 			cash_out()
 			recipe2 = false
 			Recipe3.hide()
+			$"../../Recipe3/rt2".stop()
 			score(main_turnin.front(), side_turnin.front())
 
 		elif(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name()):
@@ -129,6 +134,7 @@ func _process(delta):
 			recipe3 = false
 			Recipe4.hide()
 			score(main_turnin.front(), side_turnin.front())
+			$"../../Recipe4/rt3".stop()
 		main_turnin.clear()
 		side_turnin.clear()
 
@@ -199,3 +205,20 @@ func cash_out():
 	$"../Cash Out".hide()
 	
 	
+
+func _on_rt1_timeout():
+	recipe1 = false
+	$"../../Sidebar".updatescore(-5)
+	$"../../Recipe2".hide()
+
+
+func _on_rt2_timeout():
+	recipe2 = false
+	$"../../Sidebar".updatescore(-5)
+	$"../../Recipe3".hide()
+
+
+func _on_rt3_timeout():
+	recipe3 = false
+	$"../../Sidebar".updatescore(-5)
+	$"../../Recipe4".hide()
