@@ -10,9 +10,9 @@ config_version=3
 
 [application]
 
-config/name="Animals Revenge"
+config/name="Gobblers Gourmet Killer Buffet"
 run/main_scene="res://TitleScreen.tscn"
-config/icon="res://Turkey_Character/tile001.png"
+config/icon="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_03.png"
 
 [display]
 
