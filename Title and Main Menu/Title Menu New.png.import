@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Title Menu New.png-1e92ca4300f3947f0c16a12c14f0d318.stex"
+
+[deps]
+
+source_file="res://Title and Main Menu/Title Menu New.png"
+dest_files=[ "res://.import/Title Menu New.png-1e92ca4300f3947f0c16a12c14f0d318.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

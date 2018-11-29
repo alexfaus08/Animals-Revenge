@@ -1,43 +1,44 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://TitleScreen.gd" type="Script" id=1]
-[ext_resource path="res://Title and Main Menu/Title Logo and Menu.png" type="Texture" id=2]
-[ext_resource path="res://Title and Main Menu/button.png" type="Texture" id=3]
-[ext_resource path="res://Title and Main Menu/click.png" type="Texture" id=4]
-[ext_resource path="res://Title and Main Menu/hover.png" type="Texture" id=5]
-[ext_resource path="res://Title and Main Menu/quit.png" type="Texture" id=6]
-[ext_resource path="res://Title and Main Menu/quit_pressed.png" type="Texture" id=7]
-[ext_resource path="res://Title and Main Menu/quit_hover.png" type="Texture" id=8]
-[ext_resource path="res://Louie Zong & The Barking Dawgz - dawgz - 04 cone of shame.wav" type="AudioStream" id=9]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_00.png" type="Texture" id=10]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_00.png" type="Texture" id=11]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_01.png" type="Texture" id=12]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_01.png" type="Texture" id=13]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_02.png" type="Texture" id=14]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_02.png" type="Texture" id=15]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_03.png" type="Texture" id=16]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_03.png" type="Texture" id=17]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_04.png" type="Texture" id=18]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_04.png" type="Texture" id=19]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_05.png" type="Texture" id=20]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_05.png" type="Texture" id=21]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_06.png" type="Texture" id=22]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_06.png" type="Texture" id=23]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_07.png" type="Texture" id=24]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_07.png" type="Texture" id=25]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_08.png" type="Texture" id=26]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_08.png" type="Texture" id=27]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_09.png" type="Texture" id=28]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_09.png" type="Texture" id=29]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_10.png" type="Texture" id=30]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_10.png" type="Texture" id=31]
-[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_11.png" type="Texture" id=32]
-[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_11.png" type="Texture" id=33]
+[ext_resource path="res://Title and Main Menu/Kitchen Main Menu.png" type="Texture" id=2]
+[ext_resource path="res://Title and Main Menu/Title Menu New.png" type="Texture" id=3]
+[ext_resource path="res://Title and Main Menu/button.png" type="Texture" id=4]
+[ext_resource path="res://Title and Main Menu/click.png" type="Texture" id=5]
+[ext_resource path="res://Title and Main Menu/hover.png" type="Texture" id=6]
+[ext_resource path="res://Title and Main Menu/quit.png" type="Texture" id=7]
+[ext_resource path="res://Title and Main Menu/quit_pressed.png" type="Texture" id=8]
+[ext_resource path="res://Title and Main Menu/quit_hover.png" type="Texture" id=9]
+[ext_resource path="res://Louie Zong & The Barking Dawgz - dawgz - 04 cone of shame.wav" type="AudioStream" id=10]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_00.png" type="Texture" id=11]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_00.png" type="Texture" id=12]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_01.png" type="Texture" id=13]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_01.png" type="Texture" id=14]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_02.png" type="Texture" id=15]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_02.png" type="Texture" id=16]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_03.png" type="Texture" id=17]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_03.png" type="Texture" id=18]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_04.png" type="Texture" id=19]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_04.png" type="Texture" id=20]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_05.png" type="Texture" id=21]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_05.png" type="Texture" id=22]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_06.png" type="Texture" id=23]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_06.png" type="Texture" id=24]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_07.png" type="Texture" id=25]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_07.png" type="Texture" id=26]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_08.png" type="Texture" id=27]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_08.png" type="Texture" id=28]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_09.png" type="Texture" id=29]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_09.png" type="Texture" id=30]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_10.png" type="Texture" id=31]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_10.png" type="Texture" id=32]
+[ext_resource path="res://Evil Turkey/Evil Turkey_Evil_11.png" type="Texture" id=33]
+[ext_resource path="res://Title and Main Menu/Evil Turkey/Evil Turkey_Evil_11.png" type="Texture" id=34]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
 "loop": true,
 "name": "default",
 "speed": 12.0
@@ -76,7 +77,26 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 0.0941176, 0.0784314, 0.145098, 1 )
 
-[node name="Title Logo and Menu" type="TextureRect" parent="." index="1"]
+[node name="kitchen" type="TextureRect" parent="." index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.0
+margin_top = -120.0
+margin_right = 168.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="Title Logo and Menu" type="TextureRect" parent="." index="2"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -92,20 +112,19 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." index="2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="3"]
 
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -25.0
-margin_top = 5.0
-margin_right = 25.0
-margin_bottom = 45.0
+margin_left = -24.0
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 74.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -123,7 +142,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 50.0
+margin_right = 64.0
 margin_bottom = 16.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -136,9 +155,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
 _sections_unfolded = [ "Anchor", "Focus", "Hint", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_fonts", "custom_styles" ]
 
 [node name="QuitGameButton" type="TextureButton" parent="VBoxContainer" index="1"]
@@ -147,9 +166,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 20.0
-margin_right = 50.0
-margin_bottom = 36.0
+margin_top = 23.0
+margin_right = 64.0
+margin_bottom = 39.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -161,23 +180,23 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 7 )
-texture_hover = ExtResource( 8 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
 _sections_unfolded = [ "Rect", "Textures", "custom_fonts", "custom_styles" ]
 
-[node name="Title" type="AudioStreamPlayer" parent="." index="3"]
+[node name="Title" type="AudioStreamPlayer" parent="." index="4"]
 
-stream = ExtResource( 9 )
+stream = ExtResource( 10 )
 volume_db = -10.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="evil" type="AnimatedSprite" parent="." index="4"]
+[node name="evil" type="AnimatedSprite" parent="." index="5"]
 
-position = Vector2( 180, 222 )
+position = Vector2( 120, 202 )
 frames = SubResource( 1 )
 animation = "default"
 frame = 6

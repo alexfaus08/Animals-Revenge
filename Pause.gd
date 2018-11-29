@@ -17,3 +17,8 @@ func _input(event):
 		get_tree().paused = new_pause_state
 		visible = new_pause_state 
 		
+
+
+func _on_Button_pressed():
+	get_tree().reload_current_scene()
+	get_tree().paused = false
