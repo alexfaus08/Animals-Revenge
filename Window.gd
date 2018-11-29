@@ -159,16 +159,20 @@ func score(main, side):
 	if(main.is_poisoned()):
 		if(main.get_poison() == 1):
 			score += 5
+			kills+=1
 		else:
 			if(poison_roll(main.get_poison())):
 				score += 5
+				kills+=1
 	elif(side.is_poisoned()):
 		if(side.get_poison() == 1):
 			score += 5
+			kills += 1
 		else:
 			if(poison_roll(side.get_poison())):
 				score += 5
-	stringg = "Order complete. You got %s kill(s) for %s points." % [str(kills), str(score)]
+				kills += 1
+	stringg = "Order complete. You got %s kill(s) for %s points.\n" % [str(kills), str(score)]
 	screenprint.append_bbcode(stringg)
 	$"../../Sidebar".updatescore(score)
 	return score

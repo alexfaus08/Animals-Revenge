@@ -48,12 +48,12 @@
 [ext_resource path="res://Shelf.gd" type="Script" id=46]
 [ext_resource path="res://Full_Shelf.png" type="Texture" id=47]
 [ext_resource path="res://Mixing Station.gd" type="Script" id=48]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_0.png" type="Texture" id=49]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_1.png" type="Texture" id=50]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_2.png" type="Texture" id=51]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_3.png" type="Texture" id=52]
-[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_4.png" type="Texture" id=53]
-[ext_resource path="res://Mixing Station/Mixing_Station_Idle.png" type="Texture" id=54]
+[ext_resource path="res://Mixing Station/Mixing_Station_Idle.png" type="Texture" id=49]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_0.png" type="Texture" id=50]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_1.png" type="Texture" id=51]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_2.png" type="Texture" id=52]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_3.png" type="Texture" id=53]
+[ext_resource path="res://Mixing Station/Mixing_Station_Animation_1_4.png" type="Texture" id=54]
 [ext_resource path="res://Objects/L Counter.png" type="Texture" id=55]
 [ext_resource path="res://Fillers.gd" type="Script" id=56]
 [ext_resource path="res://Objects/Empty Counter_Animation 1_0.png" type="Texture" id=57]
@@ -316,15 +316,15 @@ extents = Vector2( 22.0957, 10 )
 [sub_resource type="SpriteFrames" id=20]
 
 animations = [ {
-"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ) ],
-"loop": true,
-"name": "Mix",
-"speed": 6.0
-}, {
-"frames": [ ExtResource( 54 ) ],
+"frames": [ ExtResource( 49 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ) ],
+"loop": true,
+"name": "Mix",
+"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=21]
@@ -351,7 +351,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 120, 5 )
 
-[sub_resource type="RectangleShape2D" id=50]
+[sub_resource type="RectangleShape2D" id=25]
 
 custom_solver_bias = 0.0
 extents = Vector2( 25.6, 32.5619 )
@@ -414,7 +414,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=49]
+[sub_resource type="SpriteFrames" id=30]
 
 animations = [ {
 "frames": [ ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ) ],
@@ -423,18 +423,18 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=30]
+[sub_resource type="RectangleShape2D" id=31]
 
 custom_solver_bias = 0.0
 extents = Vector2( 15, 5 )
 
-[sub_resource type="CapsuleShape2D" id=31]
+[sub_resource type="CapsuleShape2D" id=32]
 
 custom_solver_bias = 0.0
 radius = 11.0
 height = 16.0
 
-[sub_resource type="SpriteFrames" id=32]
+[sub_resource type="SpriteFrames" id=33]
 
 animations = [ {
 "frames": [ ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ) ],
@@ -499,17 +499,9 @@ animations = [ {
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="DynamicFont" id=33]
-
-size = 30
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 45 )
-_sections_unfolded = [ "Font", "Settings" ]
-
 [sub_resource type="DynamicFont" id=34]
 
-size = 10
+size = 30
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 45 )
@@ -517,7 +509,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=35]
 
-size = 30
+size = 10
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 45 )
@@ -525,13 +517,21 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=36]
 
+size = 30
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 45 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=37]
+
 size = 10
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 167 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Settings" ]
 
-[sub_resource type="DynamicFont" id=37]
+[sub_resource type="DynamicFont" id=38]
 
 size = 20
 use_mipmaps = false
@@ -539,7 +539,7 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=38]
+[sub_resource type="DynamicFont" id=39]
 
 size = 10
 use_mipmaps = false
@@ -547,7 +547,7 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFont" id=51]
+[sub_resource type="DynamicFont" id=40]
 
 size = 31
 use_mipmaps = false
@@ -555,28 +555,28 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=43]
+[sub_resource type="DynamicFontData" id=41]
 
 hinting = 2
 font_path = "res://munro/munro.ttf"
 
-[sub_resource type="DynamicFont" id=44]
+[sub_resource type="DynamicFont" id=42]
 
 size = 50
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 43 )
+font_data = SubResource( 41 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=45]
+[sub_resource type="DynamicFont" id=43]
 
 size = 30
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 43 )
+font_data = SubResource( 41 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=46]
+[sub_resource type="DynamicFont" id=44]
 
 size = 30
 use_mipmaps = false
@@ -584,7 +584,7 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFont" id=47]
+[sub_resource type="DynamicFont" id=45]
 
 size = 31
 use_mipmaps = false
@@ -592,7 +592,7 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=48]
+[sub_resource type="DynamicFont" id=46]
 
 size = 30
 use_mipmaps = false
@@ -911,6 +911,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
+frame = 2
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1340,7 +1341,7 @@ audio_bus_name = "Master"
 
 position = Vector2( 5.59999, 3.89999 )
 scale = Vector2( 1, 0.807692 )
-shape = SubResource( 50 )
+shape = SubResource( 25 )
 
 [node name="f1" type="TextureButton" parent="L Counter/Fillers" index="6"]
 
@@ -1509,7 +1510,7 @@ animation = "idle"
 
 visible = false
 position = Vector2( 176, 208 )
-frames = SubResource( 49 )
+frames = SubResource( 30 )
 animation = "default"
 
 [node name="Turn In" type="Area2D" parent="RecipeGenerator" index="4"]
@@ -1527,7 +1528,7 @@ audio_bus_name = "Master"
 
 position = Vector2( 2, 0.999998 )
 scale = Vector2( 1, 1.5 )
-shape = SubResource( 30 )
+shape = SubResource( 31 )
 
 [node name="Player" type="KinematicBody2D" parent="." index="7"]
 
@@ -1548,12 +1549,12 @@ motion_speed = 110
 
 position = Vector2( 0.250001, -0.5 )
 scale = Vector2( 1.13462, 1 )
-shape = SubResource( 31 )
+shape = SubResource( 32 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player" index="1"]
 
-frames = SubResource( 32 )
+frames = SubResource( 33 )
 animation = "Holding Down"
 
 [node name="PoisonMenu" type="NinePatchRect" parent="." index="8"]
@@ -1623,7 +1624,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 34 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1649,7 +1650,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 34 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1675,7 +1676,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 34 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1772,7 +1773,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1798,7 +1799,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1824,7 +1825,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1850,7 +1851,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1876,7 +1877,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1902,7 +1903,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1928,7 +1929,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2022,7 +2023,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 36 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2048,7 +2049,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 36 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2074,7 +2075,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 36 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2100,7 +2101,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 36 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2126,7 +2127,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 36 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2152,7 +2153,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 36 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2178,7 +2179,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 36 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2204,7 +2205,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 36 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2317,21 +2318,15 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 36 )
+custom_fonts/normal_font = SubResource( 37 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "Use WASD or Arrow Keys to Move
-Use Space Bar or Right Mouse to interact
-
-"
+bbcode_text = ""
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Use WASD or Arrow Keys to Move
-Use Space Bar or Right Mouse to interact
-
-"
+text = ""
 scroll_active = true
 scroll_following = true
 selection_enabled = false
@@ -2387,7 +2382,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 37 )
+custom_fonts/normal_font = SubResource( 38 )
 custom_colors/default_color = Color( 0.228937, 0.417969, 0.086515, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Turkey[/center]"
@@ -2416,7 +2411,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 38 )
+custom_fonts/normal_font = SubResource( 39 )
 custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Cranberry Sauce[/center]"
@@ -2454,7 +2449,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 51 )
+custom_fonts/normal_font = SubResource( 40 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = ""
@@ -2515,7 +2510,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 37 )
+custom_fonts/normal_font = SubResource( 38 )
 custom_colors/default_color = Color( 0.228937, 0.417969, 0.086515, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Ham[/center]"
@@ -2544,7 +2539,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 38 )
+custom_fonts/normal_font = SubResource( 39 )
 custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Cranberry Sauce[/center]"
@@ -2582,7 +2577,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 51 )
+custom_fonts/normal_font = SubResource( 40 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = ""
@@ -2643,7 +2638,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 37 )
+custom_fonts/normal_font = SubResource( 38 )
 custom_colors/default_color = Color( 0.228937, 0.417969, 0.086515, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Ham[/center]"
@@ -2672,7 +2667,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 38 )
+custom_fonts/normal_font = SubResource( 39 )
 custom_colors/default_color = Color( 0.0583732, 0.356892, 0.425781, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Cranberry Sauce[/center]"
@@ -2710,7 +2705,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 51 )
+custom_fonts/normal_font = SubResource( 40 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = ""
@@ -2777,7 +2772,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 44 )
+custom_fonts/font = SubResource( 42 )
 custom_colors/font_color = Color( 0.535156, 0.0618595, 0.0618595, 1 )
 text = "GAME OVER"
 align = 1
@@ -2801,7 +2796,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 43 )
 custom_colors/font_color = Color( 0.0760039, 0.116394, 0.300781, 1 )
 text = "Final Score"
 align = 1
@@ -2825,7 +2820,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 43 )
 custom_colors/font_color = Color( 0.0760039, 0.116394, 0.300781, 1 )
 text = "0"
 align = 1
@@ -2958,7 +2953,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 44 )
 text = "SCORE:"
 align = 1
 percent_visible = 1.0
@@ -2982,7 +2977,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 47 )
+custom_fonts/normal_font = SubResource( 45 )
 bbcode_enabled = true
 bbcode_text = "[center]0[/center]"
 visible_characters = -1
@@ -3010,7 +3005,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 48 )
+custom_fonts/font = SubResource( 46 )
 text = "0:00"
 align = 1
 valign = 1
