@@ -3,14 +3,14 @@ var main_dish
 var side_dish
 onready var t = $"rt1"
 var time
-
+export var crit_time = 5
 
 func _ready():
 	$"Main1".clear()
 	$"Side1".clear()
 	
 func _process(delta):
-	if(t.get_time_left() < 15):
+	if(t.get_time_left() < crit_time):
 		time = "[center][color=red]%s[/color][center]" % str(int(t.get_time_left()))
 	else:
 		time = "[center][color=black]%s[/color][center]" % str(int(t.get_time_left()))

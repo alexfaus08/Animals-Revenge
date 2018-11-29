@@ -11,6 +11,14 @@ onready var slide2 = $"../../Recipe3/slide2"
 onready var slide3 = $"../../Recipe4/slide3"
 onready var player = $"../../Player"
 onready var screenprint = $"../../Bottom Box/TextPrint"
+var main1
+var side1
+var m1
+var s1
+var m2
+var s2
+var m3
+var s3
 
 #onready var animation = $"../../slide"
 var recipe1 = false
@@ -101,40 +109,46 @@ func _process(delta):
 							$"../main".play("poison")
 						else:
 							$"../main".play("filled")
-				elif(player.holding[0] in side_dishes):
+				else:
 					if(side_turnin.size() == 0):
 						side_turnin.append(player.holding.pop_front())
 						if(side_turnin.front().is_poisoned()):
 							$"../side".play("poison")
 						else:
 							$"../side".play("filled")
-		elif(player_near_turnin and player.holding.size() == 0):
-				# TODO have a popup that allows the player to grab a dish or destroy contents
-				pass
+	if(player_near_turnin):
+		if(Input.is_action_just_pressed("right_click")):
+			main_turnin.clear()
+			side_turnin.clear()
+			$"../main".play("idle")
+			$"../side".play("idle")
+					
 	
 	if(main_turnin.size() == 1 and side_turnin.size() == 1):
-		# check to see if an order is ready to be completed
-		# Recipe2?
-		if(main_turnin.front().get_name() == Recipe2.get_main().get_name() and side_turnin.front().get_name() == Recipe2.get_side().get_name()):
-			cash_out()
-			recipe1 = false
-			Recipe2.hide()
-			$"../../Recipe2/rt1".stop()
-			score(main_turnin.front(), side_turnin.front())
 
-		elif(main_turnin.front().get_name() == Recipe3.get_main().get_name() and side_turnin.front().get_name() == Recipe3.get_side().get_name()):
-			cash_out()
-			recipe2 = false
-			Recipe3.hide()
-			$"../../Recipe3/rt2".stop()
-			score(main_turnin.front(), side_turnin.front())
-
-		elif(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name()):
-			cash_out()
-			recipe3 = false
-			Recipe4.hide()
-			score(main_turnin.front(), side_turnin.front())
-			$"../../Recipe4/rt3".stop()
+		if(recipe1):
+			if(main_turnin.front().get_name() == Recipe2.get_main().get_name() and side_turnin.front().get_name() == Recipe2.get_side().get_name() and recipe1):
+				cash_out()
+				recipe1 = false
+				Recipe2.hide()
+				$"../../Recipe2/rt1".stop()
+				score(main_turnin.front(), side_turnin.front())
+		elif(recipe2):
+			if(main_turnin.front().get_name() == Recipe3.get_main().get_name() and side_turnin.front().get_name() == Recipe3.get_side().get_name() and recipe2):
+				cash_out()
+				recipe2 = false
+				Recipe3.hide()
+				$"../../Recipe3/rt2".stop()
+				score(main_turnin.front(), side_turnin.front())
+		elif(recipe3):
+			if(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name() and recipe3):
+				cash_out()
+				recipe3 = false
+				Recipe4.hide()
+				score(main_turnin.front(), side_turnin.front())
+				$"../../Recipe4/rt3".stop()
+		
+		#TODO: if two recipes match, choose the one with the least time left of the timer
 		main_turnin.clear()
 		side_turnin.clear()
 

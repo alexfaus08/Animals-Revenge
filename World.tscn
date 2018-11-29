@@ -600,8 +600,8 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-order_expire_time = 100
-game_length = 180
+order_expire_time = 60
+game_length = 240
 
 [node name="Background" type="AudioStreamPlayer2D" parent="." index="0"]
 
@@ -888,7 +888,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1105,11 +1105,11 @@ bounce = 0.0
 script = ExtResource( 44 )
 _sections_unfolded = [ "Transform" ]
 simple_poison_percent = 0.25
-simple_runtime = 10
+simple_runtime = 5
 better_poison_percent = 0.5
-better_runtime = 15
+better_runtime = 8
 killer_poison_percent = 1
-killer_runtime = 25
+killer_runtime = 11
 
 [node name="MixSprite" type="AnimatedSprite" parent="Appliances/Mixing Station" index="0"]
 
@@ -1517,7 +1517,7 @@ _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibi
 __meta__ = {
 "_edit_group_": true
 }
-motion_speed = 150
+motion_speed = 110
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="Player" index="0"]
 
@@ -1592,8 +1592,6 @@ margin_right = 97.0
 margin_bottom = 41.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-hint_tooltip = "Has a 10% chance of killing subject.
-10 sec production time."
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -1620,8 +1618,6 @@ margin_right = 97.0
 margin_bottom = 86.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-hint_tooltip = "Has a 30% chance of killing subject.
-25 sec production time."
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -1648,8 +1644,6 @@ margin_right = 97.0
 margin_bottom = 131.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-hint_tooltip = "Has a 100% chance of killing subject.
-45 sec production time."
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -2339,6 +2333,7 @@ _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "
 __meta__ = {
 "_edit_group_": true
 }
+crit_time = 5
 
 [node name="slide1" type="AnimationPlayer" parent="Recipe2" index="0"]
 

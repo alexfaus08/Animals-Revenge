@@ -44,8 +44,8 @@ func _on_2_pressed():
 		if(typeof(two) == TYPE_STRING):
 			obj_name = two
 		else:
-			if(two.is_poistwod()):
-				obj_name = "[color=red]Poistwod[/color] %s" % two.get_name() 
+			if(two.is_poisoned()):
+				obj_name = "[color=red]Poisoned[/color] %s" % two.get_name() 
 			else:
 				obj_name  = two.get_name()
 		$"f2".set_tooltip(obj_name)
@@ -76,7 +76,7 @@ func _on_4_pressed():
 		if(typeof(four) == TYPE_STRING):
 			obj_name = four
 		else:
-			if(four.is_poisoined()):
+			if(four.is_poisoned()):
 				obj_name = "[color=red]Poisoined[/color] %s" % four.get_name() 
 			else:
 				obj_name  = four.get_name()

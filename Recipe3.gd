@@ -10,7 +10,7 @@ func _ready():
 	
 	
 func _process(delta):
-	if(t.get_time_left() < 15):
+	if(t.get_time_left() < $"../Recipe2".crit_time):
 		time = "[center][color=red]%s[/color][center]" % str(int(t.get_time_left()))
 	else:
 		time = "[center][color=black]%s[/color][center]" % str(int(t.get_time_left()))
