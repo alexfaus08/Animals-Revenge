@@ -2,6 +2,7 @@
 extends Control
 
 func _ready():
+	$"AcceptDialog".popup()
 	$"Title".play()
 	$"evil".play("default")
 func _on_StartGameButton_pressed():
