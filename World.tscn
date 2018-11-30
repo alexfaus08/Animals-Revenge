@@ -688,6 +688,7 @@ texture = ExtResource( 7 )
 
 [node name="TrashCan" type="StaticBody2D" parent="." index="2"]
 
+editor/display_folded = true
 position = Vector2( 32, 208 )
 input_pickable = false
 collision_layer = 1
@@ -727,6 +728,7 @@ shape = SubResource( 2 )
 
 [node name="Counters" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( 322, 73 )
 _sections_unfolded = [ "Transform" ]
 
@@ -875,6 +877,7 @@ shape = SubResource( 8 )
 
 [node name="Stove" type="StaticBody2D" parent="Appliances" index="1"]
 
+editor/display_folded = true
 position = Vector2( -22, -16 )
 input_pickable = false
 collision_layer = 1
@@ -935,7 +938,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1283,6 +1286,7 @@ animation = "ready"
 
 [node name="L Counter" type="Node2D" parent="." index="5"]
 
+editor/display_folded = true
 position = Vector2( 1, 1 )
 
 [node name="Sprite" type="Sprite" parent="L Counter" index="0"]
@@ -1552,6 +1556,8 @@ texture_hover = ExtResource( 62 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="RecipeGenerator" type="Node2D" parent="." index="6"]
+
+editor/display_folded = true
 
 [node name="Window" type="Area2D" parent="RecipeGenerator" index="0"]
 

@@ -28,7 +28,8 @@ func _physics_process(delta):
 	# if the up arrow is being held down (see Project Settings: Input Map)
 	if Input.is_action_pressed("ui_up"):
 		# negative values for the y part of the vectors make the object move up
-		motion.y = -motion_speed 
+		motion.y = -motion_speed
+		motion.x = 0
 		if(holding.size() > 0):
 			$AnimatedSprite.play("Holding Up")
 		else:
@@ -37,6 +38,7 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("ui_down"):
 		# positive y values for Vector2 make the object move down
 		motion.y = motion_speed
+		motion.x = 0
 		if(holding.size() > 0):
 			$AnimatedSprite.play("Holding Down")
 		else:
@@ -60,8 +62,9 @@ func _physics_process(delta):
 				$AnimatedSprite.play("Idle Down")
 	
 	# if the left arrow key is being pressed down
-	if Input.is_action_pressed("ui_left"):
+	if (Input.is_action_pressed("ui_left")):
 		# negative x values for Vector2 indicate left motion
+		motion.y = 0
 		motion.x = -motion_speed
 		# the default animated sprite for the walk right is facing right
 		# using .flip_h, it flips the animation to now face left
@@ -72,6 +75,7 @@ func _physics_process(delta):
 			$AnimatedSprite.play("Walk Right")
 	
 	elif Input.is_action_pressed("ui_right"):
+		motion.y = 0
 		motion.x = motion_speed
 		$AnimatedSprite.flip_h = false
 		if(holding.size() > 0):
