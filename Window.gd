@@ -124,6 +124,7 @@ func _process(delta):
 			side_turnin.clear()
 			$"../main".play("idle")
 			$"../side".play("idle")
+			screenprint.append_bbcode("You have cleared the turnin area.\n")
 					
 	
 	if(main_turnin.size() == 1 and side_turnin.size() == 1):
@@ -143,9 +144,9 @@ func _process(delta):
 				recipe2 = false
 				Recipe3.hide()
 				$"../../Recipe3/rt2".stop()
+				score(main_turnin.front(), side_turnin.front())
 				main_turnin.clear()
 				side_turnin.clear()
-				score(main_turnin.front(), side_turnin.front())
 		if(recipe3 and (main_turnin.size() == 1 and side_turnin.size() == 1)):
 			if(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name() and recipe3):
 				cash_out()

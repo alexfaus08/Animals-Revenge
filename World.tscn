@@ -939,10 +939,12 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
+frame = 1
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
 
+editor/display_folded = true
 position = Vector2( -142, -29 )
 input_pickable = false
 collision_layer = 1
@@ -1554,8 +1556,6 @@ texture_hover = ExtResource( 62 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="RecipeGenerator" type="Node2D" parent="." index="6"]
-
-editor/display_folded = true
 
 [node name="Window" type="Area2D" parent="RecipeGenerator" index="0"]
 
