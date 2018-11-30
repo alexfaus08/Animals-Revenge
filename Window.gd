@@ -3,9 +3,9 @@ extends Area2D
 # Stove.gd uses a very similiar layout. See Stove.gd for documentation.
 
 onready var world = $"../../../World"
-onready var Recipe2 = $"../../Recipe2"
-onready var Recipe3 = $"../../Recipe3"
-onready var Recipe4 = $"../../Recipe4"
+onready var Recipe2 = world.find_node("Recipe2")
+onready var Recipe3 = world.find_node("Recipe3")
+onready var Recipe4 = world.find_node("Recipe4")
 onready var slide1 = $"../../Recipe2/slide1"
 onready var slide2 = $"../../Recipe3/slide2"
 onready var slide3 = $"../../Recipe4/slide3"

@@ -1,6 +1,6 @@
 extends Node2D
-
-onready var textprint = $"Bottom Box/TextPrint"
+onready var world = $"."
+onready var textprint = world.find_node("TextPrint")
 var recipes = []
 var order_expire_time = 25
 var game_length = 180
