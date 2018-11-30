@@ -112,6 +112,7 @@ func _on_Top_pressed():
 			if(typeof(player.holding[0]) == TYPE_STRING):
 				if(top_oven_off and not top_recipe_ready):
 					top_oven_contents.append(player.holding.pop_front())
+					screen_print.append_bbcode("The top oven now contains %s\n" % screen_print.get_object_name(top_oven_contents))
 	elif(top_recipe_ready and player.holding.size() == 0):
 		top_oven_contents.clear()
 		player.add_object(top_recipe)
@@ -128,6 +129,7 @@ func _on_Bottom_pressed():
 			if(typeof(player.holding[0]) == TYPE_STRING):
 				if(bottom_oven_off and not bottom_recipe_ready):
 					bottom_oven_contents.append(player.holding.pop_front())
+					screen_print.append_bbcode("The bottom oven now contains %s\n" % screen_print.get_object_name(bottom_oven_contents))
 	elif(bottom_recipe_ready and player.holding.size() == 0):
 		bottom_oven_contents.clear()
 		player.add_object(bottom_recipe)

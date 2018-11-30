@@ -105,6 +105,7 @@ func _process(delta):
 				if(player.holding[0].get_name() == "Turkey" or player.holding[0].get_name() == "Chicken" or player.holding[0].get_name() == "Ham"):
 					if(main_turnin.size() == 0):
 						main_turnin.append(player.holding.pop_front())
+						screenprint.append_bbcode("You have turned in the main dish: %s \n" % screenprint.get_object_name(main_turnin.front()))
 						if(main_turnin.front().is_poisoned()):
 							$"../main".play("poison")
 						else:
@@ -112,6 +113,7 @@ func _process(delta):
 				else:
 					if(side_turnin.size() == 0):
 						side_turnin.append(player.holding.pop_front())
+						screenprint.append_bbcode("You have turned in the main dish: %s \n" % screenprint.get_object_name(main_turnin.front()))
 						if(side_turnin.front().is_poisoned()):
 							$"../side".play("poison")
 						else:
@@ -126,21 +128,21 @@ func _process(delta):
 	
 	if(main_turnin.size() == 1 and side_turnin.size() == 1):
 
-		if(recipe1):
+		if(recipe1 and (main_turnin.size() == 1 and side_turnin.size() == 1)):
 			if(main_turnin.front().get_name() == Recipe2.get_main().get_name() and side_turnin.front().get_name() == Recipe2.get_side().get_name() and recipe1):
 				cash_out()
 				recipe1 = false
 				Recipe2.hide()
 				$"../../Recipe2/rt1".stop()
 				score(main_turnin.front(), side_turnin.front())
-		elif(recipe2):
+		if(recipe2 and (main_turnin.size() == 1 and side_turnin.size() == 1)):
 			if(main_turnin.front().get_name() == Recipe3.get_main().get_name() and side_turnin.front().get_name() == Recipe3.get_side().get_name() and recipe2):
 				cash_out()
 				recipe2 = false
 				Recipe3.hide()
 				$"../../Recipe3/rt2".stop()
 				score(main_turnin.front(), side_turnin.front())
-		elif(recipe3):
+		if(recipe3 and (main_turnin.size() == 1 and side_turnin.size() == 1)):
 			if(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name() and recipe3):
 				cash_out()
 				recipe3 = false

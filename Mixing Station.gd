@@ -15,6 +15,7 @@ export var better_poison_percent = .50
 export var better_runtime = 15
 export var killer_poison_percent = 1
 export var killer_runtime = 25
+onready var screen_print = $"../../Bottom Box/TextPrint"
 
 func _ready():
 	player_near_mixing_station = false
@@ -46,6 +47,7 @@ func which_poison(percent):
 		
 func poison():
 	item = player.holding.pop_front()
+	screen_print.append_bbcode("%s is now being poisoned\n" % screen_print.get_object_name(item))
 	item.poison(poison_type)
 	# the mixing station is now mixing
 	mixing = true

@@ -32,7 +32,9 @@ func _process(delta):
 		if(Input.is_action_just_pressed("ui_select")):
 			if(player.holding.size() > 0):
 				# removes item from the players holding array and adds it to the stove content array
+				
 				stove_contents.append(player.holding.pop_front())
+				screen_print.append_bbcode("The stove now contains %s\n" % screen_print.get_object_name(stove_contents))
 				# all the recipes need to be sorted in order to be recognized
 				stove_contents.sort()
 				# does the stove contain a valid recipe?
