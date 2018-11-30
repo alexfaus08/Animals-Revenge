@@ -65,17 +65,17 @@
 [ext_resource path="res://Window.gd" type="Script" id=63]
 [ext_resource path="res://Objects/Order Table/Main Dish Order_Animation 1_2.png" type="Texture" id=64]
 [ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_3.png" type="Texture" id=65]
-[ext_resource path="res://Objects/Order Table/Main Dish Order_Animation 1_1.png" type="Texture" id=66]
-[ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_0.png" type="Texture" id=67]
-[ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_1.png" type="Texture" id=68]
-[ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_2.png" type="Texture" id=69]
+[ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_0.png" type="Texture" id=66]
+[ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_1.png" type="Texture" id=67]
+[ext_resource path="res://Objects/Order Table/Main Dish Cash Out_Animation 1_2.png" type="Texture" id=68]
+[ext_resource path="res://Objects/Order Table/Main Dish Order_Animation 1_1.png" type="Texture" id=69]
 [ext_resource path="res://Objects/Order Table/Side Dish Order_Animation 1_2.png" type="Texture" id=70]
 [ext_resource path="res://Objects/Order Table/Side Dish Order_Animation 1_0.png" type="Texture" id=71]
-[ext_resource path="res://Objects/Order Table/Side Dish Order_Animation 1_1.png" type="Texture" id=72]
-[ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_0.png" type="Texture" id=73]
-[ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_1.png" type="Texture" id=74]
-[ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_2.png" type="Texture" id=75]
-[ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_3.png" type="Texture" id=76]
+[ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_0.png" type="Texture" id=72]
+[ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_1.png" type="Texture" id=73]
+[ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_2.png" type="Texture" id=74]
+[ext_resource path="res://Objects/Order Table/Side Dish Cash Out_Animation 1_3.png" type="Texture" id=75]
+[ext_resource path="res://Objects/Order Table/Side Dish Order_Animation 1_1.png" type="Texture" id=76]
 [ext_resource path="res://UI/Cash Animation_Animation 1_0.png" type="Texture" id=77]
 [ext_resource path="res://UI/Cash Animation_Animation 1_1.png" type="Texture" id=78]
 [ext_resource path="res://UI/Cash Animation_Animation 1_2.png" type="Texture" id=79]
@@ -379,14 +379,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 66 ) ],
-"loop": true,
-"name": "poison",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 65 ) ],
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 65 ) ],
 "loop": true,
 "name": "cash out",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 69 ) ],
+"loop": true,
+"name": "poison",
 "speed": 5.0
 } ]
 
@@ -403,14 +403,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 72 ) ],
-"loop": true,
-"name": "poison",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
+"frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
 "loop": true,
 "name": "cash out",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 76 ) ],
+"loop": true,
+"name": "poison",
 "speed": 5.0
 } ]
 
@@ -555,7 +555,7 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=47]
+[sub_resource type="DynamicFont" id=41]
 
 size = 20
 use_mipmaps = false
@@ -563,7 +563,7 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="Theme" id=48]
+[sub_resource type="Theme" id=42]
 
 PopupMenu/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
@@ -571,7 +571,7 @@ PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
 PopupMenu/colors/font_color_hover = Color( 0.878431, 0.878431, 0.878431, 1 )
 PopupMenu/constants/hseparation = 4
 PopupMenu/constants/vseparation = 4
-PopupMenu/fonts/font = SubResource( 47 )
+PopupMenu/fonts/font = SubResource( 41 )
 PopupMenu/icons/checked = null
 PopupMenu/icons/radio_checked = null
 PopupMenu/icons/radio_unchecked = null
@@ -583,28 +583,28 @@ PopupMenu/styles/panel_disabled = null
 PopupMenu/styles/separator = null
 _sections_unfolded = [ "PopupMenu", "PopupMenu/constants", "PopupMenu/fonts", "PopupMenu/styles" ]
 
-[sub_resource type="DynamicFontData" id=41]
+[sub_resource type="DynamicFontData" id=43]
 
 hinting = 2
 font_path = "res://munro/munro.ttf"
 
-[sub_resource type="DynamicFont" id=42]
+[sub_resource type="DynamicFont" id=44]
 
 size = 50
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 41 )
+font_data = SubResource( 43 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=43]
+[sub_resource type="DynamicFont" id=45]
 
 size = 30
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 41 )
+font_data = SubResource( 43 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=44]
+[sub_resource type="DynamicFont" id=46]
 
 size = 30
 use_mipmaps = false
@@ -612,7 +612,7 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFont" id=45]
+[sub_resource type="DynamicFont" id=47]
 
 size = 31
 use_mipmaps = false
@@ -620,7 +620,7 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=46]
+[sub_resource type="DynamicFont" id=48]
 
 size = 30
 use_mipmaps = false
@@ -828,7 +828,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Appliances" type="Node2D" parent="." index="4"]
 
-editor/display_folded = true
 position = Vector2( 207, 65 )
 _sections_unfolded = [ "Transform" ]
 
@@ -940,12 +939,10 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 3
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
 
-editor/display_folded = true
 position = Vector2( -142, -29 )
 input_pickable = false
 collision_layer = 1
@@ -1030,6 +1027,7 @@ size_flags_vertical = 1
 
 [node name="OvenPopUp" type="NinePatchRect" parent="Appliances/Oven/Control" index="0"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1098,6 +1096,81 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "Bottom"
+flat = true
+align = 1
+_sections_unfolded = [ "Theme", "custom_colors", "custom_fonts" ]
+
+[node name="clearOven" type="NinePatchRect" parent="Appliances/Oven/Control" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 44 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+_sections_unfolded = [ "Patch Margin" ]
+
+[node name="CTop" type="Button" parent="Appliances/Oven/Control/clearOven" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -26.5
+margin_top = -17.5
+margin_right = 24.5
+margin_bottom = 2.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 17 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Clear Top"
+flat = true
+align = 1
+_sections_unfolded = [ "Theme", "custom_colors", "custom_fonts" ]
+
+[node name="CBottom" type="Button" parent="Appliances/Oven/Control/clearOven" index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.5
+margin_top = -4.5
+margin_right = 32.5
+margin_bottom = 15.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 17 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Clear Bottom"
 flat = true
 align = 1
 _sections_unfolded = [ "Theme", "custom_colors", "custom_fonts" ]
@@ -2784,6 +2857,7 @@ _sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
 [node name="PopupMenu" type="PopupMenu" parent="." index="16"]
 
 pause_mode = 2
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -2799,7 +2873,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 48 )
+theme = SubResource( 42 )
 popup_exclusive = false
 items = [ "Easy", null, 0, false, false, -1, 0, null, "", false, "Medium", null, 0, false, false, -1, 0, null, "", false, "Hard", null, 0, false, false, -1, 0, null, "", false ]
 hide_on_state_item_selection = false
@@ -2858,7 +2932,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 42 )
+custom_fonts/font = SubResource( 44 )
 custom_colors/font_color = Color( 0.535156, 0.0618595, 0.0618595, 1 )
 text = "GAME OVER"
 align = 1
@@ -2882,7 +2956,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 43 )
+custom_fonts/font = SubResource( 45 )
 custom_colors/font_color = Color( 0.0760039, 0.116394, 0.300781, 1 )
 text = "Final Score"
 align = 1
@@ -2906,7 +2980,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 43 )
+custom_fonts/font = SubResource( 45 )
 custom_colors/font_color = Color( 0.0760039, 0.116394, 0.300781, 1 )
 text = "0"
 align = 1
@@ -3040,7 +3114,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 44 )
+custom_fonts/font = SubResource( 46 )
 text = "SCORE:"
 align = 1
 percent_visible = 1.0
@@ -3064,7 +3138,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 45 )
+custom_fonts/normal_font = SubResource( 47 )
 bbcode_enabled = true
 bbcode_text = "[center]0[/center]"
 visible_characters = -1
@@ -3092,7 +3166,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 48 )
 text = "0:00"
 align = 1
 valign = 1
@@ -3124,6 +3198,10 @@ _sections_unfolded = [ "custom_fonts" ]
 [connection signal="pressed" from="Appliances/Oven/Control/OvenPopUp/Top" to="Appliances/Oven" method="_on_Top_pressed"]
 
 [connection signal="pressed" from="Appliances/Oven/Control/OvenPopUp/Bottom" to="Appliances/Oven" method="_on_Bottom_pressed"]
+
+[connection signal="pressed" from="Appliances/Oven/Control/clearOven/CTop" to="Appliances/Oven" method="_on_CTop_pressed"]
+
+[connection signal="pressed" from="Appliances/Oven/Control/clearOven/CBottom" to="Appliances/Oven" method="_on_CBottom_pressed"]
 
 [connection signal="body_entered" from="Appliances/Shelf/Area2D" to="Appliances/Shelf" method="_on_Area2D_body_entered"]
 

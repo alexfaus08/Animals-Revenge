@@ -26,11 +26,15 @@ func _ready():
 	
 func _process(delta):
 	# is the player near the oven and did they click left click? 
+	if(player_near_oven and Input.is_action_just_pressed("right_click")):
+		$"Control/clearOven".show()
 	if(player_near_oven and Input.is_action_just_pressed("ui_select")):
 		# are they holding an ingredient?
 		$"Control/OvenPopUp".show()
 	if(not player_near_oven):
 		$"Control/OvenPopUp".hide()
+		$"Control/clearOven".hide()
+		
 	if(top_recipe_ready or bottom_recipe_ready):
 		$OvenReady.show()
 		$OvenReady.play("ready")
@@ -139,3 +143,18 @@ func _on_Bottom_pressed():
 		screen_print.append_bbcode("[color=red]The bottom oven is still cooking.[/color]\n")
 	$"Control/OvenPopUp".hide()
 	
+
+
+func _on_CTop_pressed():
+	if(top_oven_off):
+		top_oven_contents.clear()
+		screen_print.append_bbcode("Top oven contents cleared\n")
+		$"Control/clearOven".hide()
+
+
+func _on_CBottom_pressed():
+	if(bottom_oven_off):
+		bottom_oven_contents.clear()
+		$"Control/clearOven".hide()
+		screen_print.append_bbcode("Top oven contents cleared\n")
+		
