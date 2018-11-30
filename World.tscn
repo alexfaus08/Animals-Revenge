@@ -628,7 +628,7 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -940,7 +940,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1481,6 +1481,8 @@ texture_hover = ExtResource( 62 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="RecipeGenerator" type="Node2D" parent="." index="6"]
+
+editor/display_folded = true
 
 [node name="Window" type="Area2D" parent="RecipeGenerator" index="0"]
 
@@ -2247,6 +2249,7 @@ _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 [node name="Pause" type="Control" parent="." index="11"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -2305,6 +2308,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Bottom Box" type="Control" parent="." index="12"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2390,6 +2394,7 @@ _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Hint", "M
 
 [node name="Recipe2" type="ColorRect" parent="." index="13"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2520,6 +2525,7 @@ _sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
 
 [node name="Recipe3" type="ColorRect" parent="." index="14"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2648,6 +2654,7 @@ _sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
 
 [node name="Recipe4" type="ColorRect" parent="." index="15"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2983,6 +2990,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Sidebar" type="Control" parent="." index="18"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
