@@ -939,7 +939,6 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 1
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -2488,7 +2487,7 @@ _sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "
 __meta__ = {
 "_edit_group_": true
 }
-crit_time = 5
+crit_time = 16
 
 [node name="slide1" type="AnimationPlayer" parent="Recipe2" index="0"]
 

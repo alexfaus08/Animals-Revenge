@@ -95,10 +95,10 @@ func recipe_lookup(arr):
 func _on_PopupMenu_index_pressed(index):
 	if(index == 0):
 		game_length = 180
-		order_expire_time = 60
+		order_expire_time = 70
 	elif(index == 1):
 		game_length = 180
-		order_expire_time = 45
+		order_expire_time = 50
 	elif(index == 2):
 		game_length = 180
 		order_expire_time = 35
