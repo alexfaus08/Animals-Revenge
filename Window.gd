@@ -135,12 +135,16 @@ func _process(delta):
 				Recipe2.hide()
 				$"../../Recipe2/rt1".stop()
 				score(main_turnin.front(), side_turnin.front())
+				main_turnin.clear()
+				side_turnin.clear()
 		if(recipe2 and (main_turnin.size() == 1 and side_turnin.size() == 1)):
 			if(main_turnin.front().get_name() == Recipe3.get_main().get_name() and side_turnin.front().get_name() == Recipe3.get_side().get_name() and recipe2):
 				cash_out()
 				recipe2 = false
 				Recipe3.hide()
 				$"../../Recipe3/rt2".stop()
+				main_turnin.clear()
+				side_turnin.clear()
 				score(main_turnin.front(), side_turnin.front())
 		if(recipe3 and (main_turnin.size() == 1 and side_turnin.size() == 1)):
 			if(main_turnin.front().get_name() == Recipe4.get_main().get_name() and side_turnin.front().get_name() == Recipe4.get_side().get_name() and recipe3):
@@ -149,10 +153,11 @@ func _process(delta):
 				Recipe4.hide()
 				score(main_turnin.front(), side_turnin.front())
 				$"../../Recipe4/rt3".stop()
+				main_turnin.clear()
+				side_turnin.clear()
 		
 		#TODO: if two recipes match, choose the one with the least time left of the timer
-		main_turnin.clear()
-		side_turnin.clear()
+		
 
 func score(main, side):
 	var score = 10
