@@ -177,7 +177,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 13 )
+extents = Vector2( 7, 11 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -628,7 +628,7 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -688,7 +688,6 @@ texture = ExtResource( 7 )
 
 [node name="TrashCan" type="StaticBody2D" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( 32, 208 )
 input_pickable = false
 collision_layer = 1
@@ -728,13 +727,11 @@ shape = SubResource( 2 )
 
 [node name="Counters" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
 position = Vector2( 322, 73 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Counter" type="StaticBody2D" parent="Counters" index="0"]
 
-editor/display_folded = true
 position = Vector2( -226, -9 )
 input_pickable = false
 collision_layer = 1
@@ -759,8 +756,8 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Counters/Counter" index="1"]
 
-position = Vector2( 0, -8.43953 )
-scale = Vector2( 1.56889, 0.279943 )
+position = Vector2( 0, -11.2385 )
+scale = Vector2( 1.56889, 0.21485 )
 shape = SubResource( 4 )
 
 [node name="Side Counter" type="StaticBody2D" parent="Counters" index="1"]
@@ -878,7 +875,6 @@ shape = SubResource( 8 )
 
 [node name="Stove" type="StaticBody2D" parent="Appliances" index="1"]
 
-editor/display_folded = true
 position = Vector2( -22, -16 )
 input_pickable = false
 collision_layer = 1
@@ -908,7 +904,7 @@ animation = "Cooking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Appliances/Stove" index="2"]
 
-position = Vector2( 6, 10 )
+position = Vector2( -2, 6 )
 scale = Vector2( 1.02533, 1.83379 )
 shape = SubResource( 10 )
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
@@ -939,7 +935,7 @@ visible = false
 position = Vector2( 0, -16 )
 frames = SubResource( 12 )
 animation = "ready"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Oven" type="StaticBody2D" parent="Appliances" index="2"]
@@ -1287,7 +1283,6 @@ animation = "ready"
 
 [node name="L Counter" type="Node2D" parent="." index="5"]
 
-editor/display_folded = true
 position = Vector2( 1, 1 )
 
 [node name="Sprite" type="Sprite" parent="L Counter" index="0"]
@@ -1310,7 +1305,8 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="L Counter/StaticBody2D" index="0"]
 
-position = Vector2( 198, 217 )
+position = Vector2( 202, 217 )
+scale = Vector2( 0.96748, 1 )
 shape = SubResource( 24 )
 
 [node name="Fillers" type="Node2D" parent="L Counter" index="2"]
