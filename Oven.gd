@@ -28,7 +28,7 @@ func _process(delta):
 	# is the player near the oven and did they click left click? 
 	if(player_near_oven and Input.is_action_just_pressed("right_click")):
 		$"Control/clearOven".show()
-	if(player_near_oven and Input.is_action_just_pressed("ui_select")):
+	elif(player_near_oven and Input.is_action_just_pressed("ui_select")):
 		# are they holding an ingredient?
 		$"Control/OvenPopUp".show()
 	if(not player_near_oven):
@@ -148,13 +148,16 @@ func _on_Bottom_pressed():
 func _on_CTop_pressed():
 	if(top_oven_off):
 		top_oven_contents.clear()
+		top_recipe_ready = false
 		screen_print.append_bbcode("Top oven contents cleared\n")
 		$"Control/clearOven".hide()
+		$OvenReady.hide()
 
 
 func _on_CBottom_pressed():
 	if(bottom_oven_off):
 		bottom_oven_contents.clear()
+		bottom_recipe_ready = false
 		$"Control/clearOven".hide()
-		screen_print.append_bbcode("Top oven contents cleared\n")
-		
+		screen_print.append_bbcode("Bottom oven contents cleared\n")
+		$OvenReady.hide()
