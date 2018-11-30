@@ -113,7 +113,7 @@ func _process(delta):
 				else:
 					if(side_turnin.size() == 0):
 						side_turnin.append(player.holding.pop_front())
-						screenprint.append_bbcode("You have turned in the main dish: %s \n" % screenprint.get_object_name(main_turnin.front()))
+						screenprint.append_bbcode("You have turned in the main dish: %s \n" % screenprint.get_object_name(side_turnin.front()))
 						if(side_turnin.front().is_poisoned()):
 							$"../side".play("poison")
 						else:

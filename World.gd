@@ -2,8 +2,9 @@ extends Node2D
 
 onready var textprint = $"Bottom Box/TextPrint"
 var recipes = []
-export var order_expire_time = 25
-export var game_length = 180
+var order_expire_time = 25
+var game_length = 180
+var start
 
 class Recipe:
 	var r_name
@@ -47,11 +48,12 @@ class Recipe:
 	
 	
 func _ready():
+	var center = Vector2(123,63)
+	$"PopupMenu".set_position(center)
+	$"PopupMenu".popup()
+	get_tree().paused = true
+	start = false
 	$"Background".play()
-	$"Recipe2/rt1".set_wait_time(order_expire_time)
-	$"Recipe4/rt3".set_wait_time(order_expire_time)
-	$"Recipe3/rt2".set_wait_time(order_expire_time)
-	$"Sidebar/Game Timer".set_wait_time(game_length)
 
 func initrecipes():
 	# initialize all recipes here
@@ -88,3 +90,24 @@ func recipe_lookup(arr):
 		if (r.get_ingredients() == arr):
 			return Recipe.new(r.get_name(), r.get_ingredients(), r.get_cook_time(), r.get_appliance())
 
+
+
+func _on_PopupMenu_index_pressed(index):
+	if(index == 0):
+		game_length = 180
+		order_expire_time = 60
+	elif(index == 1):
+		game_length = 180
+		order_expire_time = 45
+	elif(index == 2):
+		game_length = 180
+		order_expire_time = 35
+	else:
+		get_tree().quit()
+	get_tree().paused = false
+	$"Recipe2/rt1".set_wait_time(order_expire_time)
+	$"Recipe4/rt3".set_wait_time(order_expire_time)
+	$"Recipe3/rt2".set_wait_time(order_expire_time)
+	$"Sidebar/Game Timer".set_wait_time(game_length)
+	$"Sidebar/Game Timer".start()
+	

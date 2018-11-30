@@ -1,4 +1,4 @@
-[gd_scene load_steps=220 format=2]
+[gd_scene load_steps=222 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Louie Zong - levels - 10 the lost library.wav" type="AudioStream" id=2]
@@ -555,6 +555,34 @@ use_filter = false
 font_data = ExtResource( 45 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
+[sub_resource type="DynamicFont" id=47]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 45 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=48]
+
+PopupMenu/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
+PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
+PopupMenu/colors/font_color_hover = Color( 0.878431, 0.878431, 0.878431, 1 )
+PopupMenu/constants/hseparation = 4
+PopupMenu/constants/vseparation = 4
+PopupMenu/fonts/font = SubResource( 47 )
+PopupMenu/icons/checked = null
+PopupMenu/icons/radio_checked = null
+PopupMenu/icons/radio_unchecked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = null
+PopupMenu/styles/panel = null
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+_sections_unfolded = [ "PopupMenu", "PopupMenu/constants", "PopupMenu/fonts", "PopupMenu/styles" ]
+
 [sub_resource type="DynamicFontData" id=41]
 
 hinting = 2
@@ -604,8 +632,6 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-order_expire_time = 120
-game_length = 240
 
 [node name="Background" type="AudioStreamPlayer2D" parent="." index="0"]
 
@@ -620,6 +646,7 @@ area_mask = 1
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
+editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 16, 16 )
@@ -701,6 +728,7 @@ shape = SubResource( 2 )
 
 [node name="Counters" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( 322, 73 )
 _sections_unfolded = [ "Transform" ]
 
@@ -800,6 +828,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Appliances" type="Node2D" parent="." index="4"]
 
+editor/display_folded = true
 position = Vector2( 207, 65 )
 _sections_unfolded = [ "Transform" ]
 
@@ -2744,8 +2773,33 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
 
-[node name="Game Over" type="Control" parent="." index="16"]
+[node name="PopupMenu" type="PopupMenu" parent="." index="16"]
 
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 91.0
+margin_top = 31.0
+margin_right = 167.0
+margin_bottom = 131.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 48 )
+popup_exclusive = false
+items = [ "Easy", null, 0, false, false, -1, 0, null, "", false, "Medium", null, 0, false, false, -1, 0, null, "", false, "Hard", null, 0, false, false, -1, 0, null, "", false ]
+hide_on_state_item_selection = false
+_sections_unfolded = [ "Anchor", "Margin", "Material", "Pause", "Popup", "Rect", "Theme", "Visibility" ]
+
+[node name="Game Over" type="Control" parent="." index="17"]
+
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -2926,7 +2980,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Pause" ]
 
-[node name="Sidebar" type="Control" parent="." index="17"]
+[node name="Sidebar" type="Control" parent="." index="18"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -2948,7 +3002,7 @@ script = ExtResource( 173 )
 process_mode = 1
 wait_time = 100.0
 one_shot = true
-autostart = true
+autostart = false
 
 [node name="ColorRect" type="ColorRect" parent="Sidebar" index="1"]
 
@@ -3141,6 +3195,8 @@ _sections_unfolded = [ "custom_fonts" ]
 [connection signal="timeout" from="Recipe3/rt2" to="RecipeGenerator/Window" method="_on_rt2_timeout"]
 
 [connection signal="timeout" from="Recipe4/rt3" to="RecipeGenerator/Window" method="_on_rt3_timeout"]
+
+[connection signal="index_pressed" from="PopupMenu" to="." method="_on_PopupMenu_index_pressed"]
 
 [connection signal="pressed" from="Game Over/HBoxContainer/New Game" to="Game Over" method="_on_New_Game_pressed"]
 
